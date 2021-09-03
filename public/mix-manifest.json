@@ -1,4 +1,19 @@
 {
-    "/js/app.js": "/js/app.js?id=b7eda51bd24c029dba11",
-    "/css/app.css": "/css/app.css?id=8e1e74cb939e862e7c26"
+    "/js/app.js": "/js/app.js?id=33afa87495a6ea5b0d8c",
+    "/js/jquery.min.js": "/js/jquery.min.js?id=59efb65cbd4685d44a8f",
+    "/js/bootstrap.js": "/js/bootstrap.js?id=588a9ddbfe9bd960eb56",
+    "/js/jquery.ajaxchimp.min.js": "/js/jquery.ajaxchimp.min.js?id=204fd4c2b39db40f5b0d",
+    "/js/jquery.appear.js": "/js/jquery.appear.js?id=35b1507ca4f1d3cbdaeb",
+    "/js/jquery.magnific-popup.min.js": "/js/jquery.magnific-popup.min.js?id=e5b6fa0e029aba7e37a1",
+    "/js/form-validator.min.js": "/js/form-validator.min.js?id=958b4334c78b88e2d5bb",
+    "/js/meanmenu.min.js": "/js/meanmenu.min.js?id=a175839726e391229f38",
+    "/js/odometer.min.js": "/js/odometer.min.js?id=c0d0aa9824456c7e9c84",
+    "/js/owl.carousel.min.js": "/js/owl.carousel.min.js?id=d02c04626b8be6dffbb6",
+    "/js/popper.min.js": "/js/popper.min.js?id=761000e9771c17f64b9c",
+    "/js/wow.min.js": "/js/wow.min.js?id=06e522cfe08cdb15819b",
+    "/js/contact-form-script.js": "/js/contact-form-script.js?id=478c481bfd5f4962b913",
+    "/js/custom.js": "/js/custom.js?id=8cb48a8bea45f7737d35",
+    "/js/admin.js": "/js/admin.js?id=1713b4da23b4d02e9379",
+    "/css/admin.css": "/css/admin.css?id=10ab645a918fc228c4e5",
+    "/css/app.css": "/css/app.css?id=63e51b6048d5dec4500b"
 }

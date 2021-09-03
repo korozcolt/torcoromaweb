@@ -19,461 +19,1068 @@
     <link rel="manifest" href="assets/img/favicons/manifest.json">
     <meta name="msapplication-TileImage" content="assets/img/favicons/mstile-150x150.png">
     <meta name="theme-color" content="#ffffff">
+
     <!-- ===============================================-->
     <!--    Stylesheets-->
     <!-- ===============================================-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="{{asset('assets/css/theme.css')}}" rel="stylesheet" />
-    <link href="{{asset('assets/css/chat.css')}}" rel="stylesheet" />
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{{asset('css/app.css')}}">
+    <link rel="stylesheet" href="{{asset('css/admin.css')}}">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}">
+    <!-- Icofont CSS -->
+    <link rel="stylesheet" href="{{asset('css/boxicons.min.css')}}">
+    <!-- Meanmenu CSS -->
+    <link rel="stylesheet" href="{{asset('css/meanmenu.min.css')}}">
+    <!-- Magnific CSS -->
+    <link rel="stylesheet" href="{{asset('css/magnific-popup.css')}}">
+    <!-- Owl Carousel CSS -->
+    <link rel="stylesheet" href="{{asset('css/owl.carousel.min.css')}}">
+    <link rel="stylesheet" href="{{asset('css/owl.theme.default.min.css')}}">
+    <!-- Odometer CSS -->
+    <link rel="stylesheet" href="{{asset('css/odometer.css')}}">
+    <!-- Animate CSS -->
+    <link rel="stylesheet" href="{{asset('css/animate.min.css')}}">
+    <!-- Stylesheet CSS -->
+    <link rel="stylesheet" href="{{asset('css/style.css')}}">
+    <!-- Stylesheet Responsive CSS -->
+    <link rel="stylesheet" href="{{asset('css/responsive.css')}}">
 </head>
 
 
 <body>
 
-<!-- ===============================================-->
-<!--    Main Content-->
-<!-- ===============================================-->
-<main class="main" id="top">
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top py-4 d-block" data-navbar-on-scroll="data-navbar-on-scroll">
-        <div class="container"><a class="navbar-brand" href="index.html"><img src="{{asset('assets/img/gallery/logo.png')}}" height="24" alt="..." /></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"> </span></button>
-            <div class="collapse navbar-collapse border-top border-lg-0 mt-4 mt-lg-0" id="navbarSupportedContent">
-                <ul class="navbar-nav ms-auto pt-2 pt-lg-0 font-base">
-                    <li class="nav-item px-2" data-anchor="data-anchor"><a class="nav-link fw-medium active" aria-current="page" href="#home">Home</a></li>
-                    <li class="nav-item px-2" data-anchor="data-anchor"><a class="nav-link" href="#aboutUs">About us</a></li>
-                    <li class="nav-item px-2" data-anchor="data-anchor"><a class="nav-link" href="#clients">Clients</a></li>
-                    <li class="nav-item px-2" data-anchor="data-anchor"><a class="nav-link" href="#faq">FAQ's</a></li>
-                </ul>
-                <form class="ps-lg-5"><a class="btn btn-primary order-1 order-lg-0" href="#!">CONTACTO</a></form>
-            </div>
+<body>
+<!-- Preloder -->
+<div class="preloader">
+    <div class="d-table">
+        <div class="d-table-cell">
+            <div class="lds-ring"><div></div><div></div><div></div><div></div></div>
         </div>
-    </nav>
-    <section id="home">
-        <div class="bg-holder" style="background-image:url({{asset('assets/img/gallery/header-bg.png')}});background-position:center;background-size:cover;">
-        </div>
-        <!--/.bg-holder-->
+    </div>
+</div>
+<!-- End Preloder -->
 
-        <div class="container">
-            <div class="row align-items-center min-vh-50 min-vh-sm-100">
-                <div class="col-md-7 col-lg-6 text-md-start text-center">
-                    <h1 class="text-light fs-6 fs-xl-8 font-cursive fw-normal mb-5">Your awesome<br />traffic permit <br />consultant.</h1><a class="btn btn-primary" href="#" role="button">GET STARTED
-                        <svg class="bi bi-arrow-right" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"></path>
-                        </svg></a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <!-- ============================================-->
-    <!-- <section> begin ============================-->
-    <section id="aboutUs">
-
+<!-- Heder Area -->
+<header class="header-area">
+    <div class="top-header">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-md-6 text-center mb-6 mb-md-0 order-0 order-md-1"><img class="w-100" src="assets/img/gallery/about-us.png" alt="..." /></div>
-                <div class="col-md-6 text-center text-md-start mb-6">
-                    <h4 class="text-danger">ABOUT US</h4>
-                    <p class="my-5 fs-1 pe-xl-8">The occupational traffic permit is one of the most important things in the company when carrying out freight transport. In fact, it is a prerequisite for doing business traffic at all. </p>
-                    <div class="card card-span bg-soft-primary border-start border-primary border-5 mt-3">
-                        <div class="card-body">
-                            <h4 class="lh-base px-lg-5 py-3">
-                                How do you do when you need to obtain a commercial traffic permit for freight transport
-                                to your business?
-                            </h4>
-                        </div>
-                    </div>
+                <div class="col-lg-6 col-sm-6">
+                    <ul class="left-info">
+                        <li>
+                            <a href="mailto:hello@ferry.com">
+                                <i class='bx bxs-envelope'></i>
+                                hello@ferry.com
+                            </a>
+                        </li>
+                        <li>
+                            <a href="tel:+823-456-879">
+                                <i class='bx bxs-phone-call'></i>
+                                +0123 456 789
+                            </a>
+                        </li>
+                    </ul>
                 </div>
-            </div>
-        </div>
-        <!-- end of .container-->
 
-    </section>
-    <!-- <section> close ============================-->
-    <!-- ============================================-->
-
-
-
-
-    <!-- ============================================-->
-    <!-- <section> begin ============================-->
-    <section>
-
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-md-6 text-center mb-6 mb-md-0"><img class="w-100" src="assets/img/gallery/how-to-apply.png" alt="..." /></div>
-                <div class="col-md-6 text-center text-md-start mb-6 px-4">
-                    <h4 class="text-danger text-uppercase">How to apply</h4>
-                    <p class="my-5 fs-1 pe-xl-7">When applying for a traffic permit, there are certain requirements that you must meet that are included in the examination: requirements for professional knowledge, solid establishment, good reputation and financial resources. Important to remember is to confirm your application for a traffic permit by the company's company signer or CEO.</p>
-                </div>
-            </div>
-        </div>
-        <!-- end of .container-->
-
-    </section>
-    <!-- <section> close ============================-->
-    <!-- ============================================-->
-
-
-    <section class="bg-primary-gradient" id="faq">
-        <div class="bg-holder" style="background-image:url(assets/img/gallery/faq-bg.png);background-position:right;background-size:contain;">
-        </div>
-        <!--/.bg-holder-->
-
-        <div class="container">
-            <div class="row flex-center">
-                <div class="col-md-6">
-                    <h4 class="text-danger text-uppercase">faq</h4>
-                    <h1 class="font-cursive fw-normal mb-5">Questions and Answers <br class="d-none d-lg-block" />on Professional Traffic<br class="d-none d-lg-block" />Permits:</h1>
-                </div>
-                <div class="col-md-6"><img class="w-100" src="{{ asset('assets/img/gallery/faq.png') }}" alt="..." /></div>
-            </div>
-            <div class="row flex-center py-4">
-                <div class="col-md-6">
-                    <div class="accordion" id="accordionExample1">
-                        <div class="accordion-item mb-2 rounded overflow-hidden">
-                            <h2 class="accordion-header" id="heading1">
-                                <button class="accordion-button px-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="true" aria-controls="collapse1"><span class="mb-0 text-start fs-0 text-900 fw-medium">What is a professional traffic permit?</span></button>
-                            </h2>
-                            <div class="accordion-collapse collapse show" id="collapse1" aria-labelledby="heading1" data-bs-parent="#accordionExample">
-                                <div class="accordion-body bg-primary-gradient px-4">Traffic permits are a requirement for conducting professional traffic.</div>
-                            </div>
-                        </div>
-                        <div class="accordion-item mb-2 rounded overflow-hidden">
-                            <h2 class="accordion-header" id="heading2">
-                                <button class="accordion-button px-4 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="true" aria-controls="collapse2"><span class="mb-0 text-start fs-0 text-900 fw-medium">How to check the traffic condition?</span></button>
-                            </h2>
-                            <div class="accordion-collapse collapse" id="collapse2" aria-labelledby="heading2" data-bs-parent="#accordionExample">
-                                <div class="accordion-body bg-primary-gradient px-4">You can issue either partial or full refunds. There are no fees to refund a charge, but the fees from the original charge are not returned.</div>
-                            </div>
-                        </div>
-                        <div class="accordion-item mb-2 rounded overflow-hidden">
-                            <h2 class="accordion-header" id="heading3">
-                                <button class="accordion-button px-4 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="true" aria-controls="collapse3"><span class="mb-0 text-start fs-0 text-900 fw-medium">What are the requirements for a professional traffic permit?</span></button>
-                            </h2>
-                            <div class="accordion-collapse collapse" id="collapse3" aria-labelledby="heading3" data-bs-parent="#accordionExample">
-                                <div class="accordion-body bg-primary-gradient px-4">Disputed payments (also known as chargebacks) incur a $15.00 fee. If the customer’s bank resolves the dispute in your favor, the fee is fully refunded.</div>
-                            </div>
-                        </div>
-                        <div class="accordion-item mb-2 rounded overflow-hidden">
-                            <h2 class="accordion-header" id="heading4">
-                                <button class="accordion-button px-4 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="true" aria-controls="collapse4"><span class="mb-0 text-start fs-0 text-900 fw-medium">Are there professional traffic permit training courses at a distance?</span></button>
-                            </h2>
-                            <div class="accordion-collapse collapse" id="collapse4" aria-labelledby="heading4" data-bs-parent="#accordionExample">
-                                <div class="accordion-body bg-primary-gradient px-4">There are no additional fees for using our mobile SDKs or to accept payments using consumer wallets like Apple Pay or Google Pay.</div>
-                            </div>
-                        </div>
-                        <div class="accordion-item mb-2 rounded overflow-hidden">
-                            <h2 class="accordion-header" id="heading5">
-                                <button class="accordion-button px-4 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5" aria-expanded="true" aria-controls="collapse5"><span class="mb-0 text-start fs-0 text-900 fw-medium">When is a professional traffic permit needed?</span></button>
-                            </h2>
-                            <div class="accordion-collapse collapse" id="collapse5" aria-labelledby="heading5" data-bs-parent="#accordionExample">
-                                <div class="accordion-body bg-primary-gradient px-4">There are no additional fees for using our mobile SDKs or to accept payments using consumer wallets like Apple Pay or Google Pay.</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="accordion" id="accordionExample2">
-                        <div class="accordion-item mb-2 rounded overflow-hidden">
-                            <h2 class="accordion-header" id="heading6">
-                                <button class="accordion-button px-4 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse6" aria-expanded="true" aria-controls="collapse6"><span class="mb-0 text-start fs-0 text-900 fw-medium">Where to look for a traffic permit?</span></button>
-                            </h2>
-                            <div class="accordion-collapse collapse" id="collapse6" aria-labelledby="heading6" data-bs-parent="#accordionExample">
-                                <div class="accordion-body bg-primary-gradient px-4">There are no additional fees for using our mobile SDKs or to accept payments using consumer wallets like Apple Pay or Google Pay.</div>
-                            </div>
-                        </div>
-                        <div class="accordion-item mb-2 rounded overflow-hidden">
-                            <h2 class="accordion-header" id="heading7">
-                                <button class="accordion-button px-4 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse7" aria-expanded="true" aria-controls="collapse7"><span class="mb-0 text-start fs-0 text-900 fw-medium">Are there differences between a traffic permit and a professional traffic permit?</span></button>
-                            </h2>
-                            <div class="accordion-collapse collapse" id="collapse7" aria-labelledby="heading7" data-bs-parent="#accordionExample">
-                                <div class="accordion-body bg-primary-gradient px-4">There are no additional fees for using our mobile SDKs or to accept payments using consumer wallets like Apple Pay or Google Pay.</div>
-                            </div>
-                        </div>
-                        <div class="accordion-item mb-2 rounded overflow-hidden">
-                            <h2 class="accordion-header" id="heading8">
-                                <button class="accordion-button px-4 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse8" aria-expanded="true" aria-controls="collapse8"><span class="mb-0 text-start fs-0 text-900 fw-medium">How much does a commercial traffic permit cost for goods?</span></button>
-                            </h2>
-                            <div class="accordion-collapse collapse" id="collapse8" aria-labelledby="heading8" data-bs-parent="#accordionExample">
-                                <div class="accordion-body bg-primary-gradient px-4">There are no additional fees for using our mobile SDKs or to accept payments using consumer wallets like Apple Pay or Google Pay.</div>
-                            </div>
-                        </div>
-                        <div class="accordion-item mb-2 rounded overflow-hidden">
-                            <h2 class="accordion-header" id="heading9">
-                                <button class="accordion-button px-4 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse9" aria-expanded="true" aria-controls="collapse9"><span class="mb-0 text-start fs-0 text-900 fw-medium">How to plug in for the traffic permit test?</span></button>
-                            </h2>
-                            <div class="accordion-collapse collapse" id="collapse9" aria-labelledby="heading9" data-bs-parent="#accordionExample">
-                                <div class="accordion-body bg-primary-gradient px-4">There are no additional fees for using our mobile SDKs or to accept payments using consumer wallets like Apple Pay or Google Pay.</div>
-                            </div>
-                        </div>
-                        <div class="accordion-item mb-2 rounded overflow-hidden">
-                            <h2 class="accordion-header" id="heading10">
-                                <button class="accordion-button px-4 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse10" aria-expanded="true" aria-controls="collapse10"><span class="mb-0 text-start fs-0 text-900 fw-medium">How is the sample for a professional traffic permit booked?</span></button>
-                            </h2>
-                            <div class="accordion-collapse collapse" id="collapse10" aria-labelledby="heading10" data-bs-parent="#accordionExample">
-                                <div class="accordion-body bg-primary-gradient px-4">There are no additional fees for using our mobile SDKs or to accept payments using consumer wallets like Apple Pay or Google Pay.</div>
-                            </div>
-                        </div>
-                        <div class="accordion-item mb-2 rounded overflow-hidden">
-                            <h2 class="accordion-header" id="heading11">
-                                <button class="accordion-button px-4 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse11" aria-expanded="true" aria-controls="collapse11"><span class="mb-0 text-start fs-0 text-900 fw-medium">LOAD MORE</span></button>
-                            </h2>
-                            <div class="accordion-collapse collapse" id="collapse11" aria-labelledby="heading11" data-bs-parent="#accordionExample">
-                                <div class="accordion-body bg-primary-gradient px-4">There are no additional fees for using our mobile SDKs or to accept payments using consumer wallets like Apple Pay or Google Pay.</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <!-- ============================================-->
-    <!-- <section> begin ============================-->
-    <section id="clients">
-
-        <div class="container">
-            <div class="row">
-                <div class="col-md-11 col-lg-6 col-xl-4 col-xxl-3">
-                    <h4 class="text-danger text-uppercase">Testimonial</h4>
-                    <h1 class="font-cursive fw-normal mb-5">Our Awesome <br />Clients </h1>
-                </div>
-                <div class="col-xxl-9">
-                    <div class="position-relative offset-9 offset-sm-10 offset-lg-11 mb-3"><a class="carousel-control-prev carousel-icon z-index-2" href="#carouselExampleDark" role="button" data-bs-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="visually-hidden">Previous</span></a><a class="carousel-control-next carousel-icon z-index-2" href="#carouselExampleDark" role="button" data-bs-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span class="visually-hidden">Next</span></a></div>
-                    <div class="carousel slide" id="carouselExampleDark" data-bs-ride="carousel">
-                        <div class="carousel-inner">
-                            <div class="carousel-item active" data-bs-interval="10000">
-                                <div class="row h-100 mx-1 mb-5 mt-3 gx-md-2 gx-lg-4">
-                                    <div class="col-md-4 mb-5 mb-md-0">
-                                        <div class="card card-span h-100 shadow-primary">
-                                            <div class="card-body my-3">
-                                                <p class="mb-0 px-3 px-md-2 px-xxl-3">Yes, you will need to have the land owner sign the permit application as the Permittee, and you sign the permit as the Applicant or Agent for the Permittee.</p>
-                                                <div class="align-items-xl-center d-block d-xl-flex px-3 mt-3 align-self-end"><img class="img-fluid me-3 me-md-2 me-lg-3" src="{{asset('assets/img/gallery/isak.png')}}" width="50" alt="" />
-                                                    <div class="flex-1 align-items-center pt-2">
-                                                        <h6 class="mb-0">Isak Pettersson</h6>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4 mb-5 mb-md-0">
-                                        <div class="card card-span h-100 shadow-primary">
-                                            <div class="card-body my-3">
-                                                <p class="mb-0 px-3 px-md-2 px-xxl-3">From most barricade or traffic control companies located in the phone book. They employ certified Traffic Control Supervisors (TCS) who can generate and certify the traffic control plan. </p>
-                                                <div class="align-items-xl-center d-block d-xl-flex px-3 mt-3 align-self-end"><img class="img-fluid me-3 me-md-2 me-lg-3" src="{{asset('assets/img/gallery/simon.png')}}" width="50" alt="" />
-                                                    <div class="flex-1 align-items-center pt-2">
-                                                        <h6 class="mb-0">Simon Sandberg</h6>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4 mb-5 mb-md-0">
-                                        <div class="card card-span h-100 shadow-primary">
-                                            <div class="card-body my-3">
-                                                <p class="mb-0 px-3 px-md-2 px-xxl-3">An A-Line, or access restriction deed is a property right that has been obtained by CDOT for the sole purpose of prohibiting direct</p>
-                                                <div class="align-items-xl-center d-block d-xl-flex px-3 mt-3 align-self-end"><img class="img-fluid me-3 me-md-2 me-lg-3" src="{{asset('assets/img/gallery/petter.png')}}" width="50" alt="" />
-                                                    <div class="flex-1 align-items-center pt-2">
-                                                        <h6 class="mb-0">Pettersson</h6>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="carousel-item" data-bs-interval="2000">
-                                <div class="row h-100 mx-1 mb-5 mt-3 gx-md-2 gx-lg-4">
-                                    <div class="col-md-4 mb-5 mb-md-0">
-                                        <div class="card card-span h-100 shadow-primary">
-                                            <div class="card-body my-3">
-                                                <p class="mb-0 px-3 px-md-2 px-xxl-3">Yes, you will need to have the land owner sign the permit application as the Permittee, and you sign the permit as the Applicant or Agent for the Permittee.</p>
-                                                <div class="align-items-xl-center d-block d-xl-flex px-3 mt-3 align-self-end"><img class="img-fluid me-3 me-md-2 me-lg-3" src="{{asset('assets/img/gallery/isak.png')}}" width="50" alt="" />
-                                                    <div class="flex-1 align-items-center pt-2">
-                                                        <h6 class="mb-0">Isak Pettersson</h6>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4 mb-5 mb-md-0">
-                                        <div class="card card-span h-100 shadow-primary">
-                                            <div class="card-body my-3">
-                                                <p class="mb-0 px-3 px-md-2 px-xxl-3">From most barricade or traffic control companies located in the phone book. They employ certified Traffic Control Supervisors (TCS) who can generate and certify the traffic control plan. </p>
-                                                <div class="align-items-xl-center d-block d-xl-flex px-3 mt-3 align-self-end"><img class="img-fluid me-3 me-md-2 me-lg-3" src="assets/img/gallery/simon.png" width="50" alt="" />
-                                                    <div class="flex-1 align-items-center pt-2">
-                                                        <h6 class="mb-0">Simon Sandberg</h6>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4 mb-5 mb-md-0">
-                                        <div class="card card-span h-100 shadow-primary">
-                                            <div class="card-body my-3">
-                                                <p class="mb-0 px-3 px-md-2 px-xxl-3">An A-Line, or access restriction deed is a property right that has been obtained by CDOT for the sole purpose of prohibiting direct</p>
-                                                <div class="align-items-xl-center d-block d-xl-flex px-3 mt-3 align-self-end"><img class="img-fluid me-3 me-md-2 me-lg-3" src="assets/img/gallery/petter.png" width="50" alt="" />
-                                                    <div class="flex-1 align-items-center pt-2">
-                                                        <h6 class="mb-0">Pettersson</h6>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="carousel-item">
-                                <div class="row h-100 mx-1 mb-5 mt-3 gx-md-2 gx-lg-4">
-                                    <div class="col-md-4 mb-5 mb-md-0">
-                                        <div class="card card-span h-100 shadow-primary">
-                                            <div class="card-body my-3">
-                                                <p class="mb-0 px-3 px-md-2 px-xxl-3">Yes, you will need to have the land owner sign the permit application as the Permittee, and you sign the permit as the Applicant or Agent for the Permittee.</p>
-                                                <div class="align-items-xl-center d-block d-xl-flex px-3 mt-3 align-self-end"><img class="img-fluid me-3 me-md-2 me-lg-3" src="assets/img/gallery/isak.png" width="50" alt="" />
-                                                    <div class="flex-1 align-items-center pt-2">
-                                                        <h6 class="mb-0">Isak Pettersson</h6>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4 mb-5 mb-md-0">
-                                        <div class="card card-span h-100 shadow-primary">
-                                            <div class="card-body my-3">
-                                                <p class="mb-0 px-3 px-md-2 px-xxl-3">From most barricade or traffic control companies located in the phone book. They employ certified Traffic Control Supervisors (TCS) who can generate and certify the traffic control plan. </p>
-                                                <div class="align-items-xl-center d-block d-xl-flex px-3 mt-3 align-self-end"><img class="img-fluid me-3 me-md-2 me-lg-3" src="assets/img/gallery/simon.png" width="50" alt="" />
-                                                    <div class="flex-1 align-items-center pt-2">
-                                                        <h6 class="mb-0">Simon Sandberg</h6>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4 mb-5 mb-md-0">
-                                        <div class="card card-span h-100 shadow-primary">
-                                            <div class="card-body my-3">
-                                                <p class="mb-0 px-3 px-md-2 px-xxl-3">An A-Line, or access restriction deed is a property right that has been obtained by CDOT for the sole purpose of prohibiting direct</p>
-                                                <div class="align-items-xl-center d-block d-xl-flex px-3 mt-3 align-self-end"><img class="img-fluid me-3 me-md-2 me-lg-3" src="assets/img/gallery/petter.png" width="50" alt="" />
-                                                    <div class="flex-1 align-items-center pt-2">
-                                                        <h6 class="mb-0">Pettersson</h6>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- end of .container-->
-
-    </section>
-    <!-- <section> close ============================-->
-    <!-- ============================================-->
-
-
-    <section>
-        <div class="bg-holder" style="background-image:url({{asset('assets/img/gallery/footer-bg.png')}});background-position:left;background-size:contain;padding:5px 3px;">
-        </div>
-        <!--/.bg-holder-->
-
-        <div class="container">
-            <div class="row min-vh-lg-50 min-vh-xl-75">
-                <div class="col-lg-6 col-xl-5 my-2 py-9 d-none d-lg-block">
-                    <div class="card card-span bg-transparent border-start border-primary border-5 mt-3">
-                        <div class="card-body">
-                            <p class="text-light fs-2 lh-lg px-lg-3">We provide traffic management consultants so you get started quickly, contact us for a quote today!</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-xl-5 mb-3">
-                    <div class="card card-span shadow py-4 px-5">
-                        <div class="card-body">
-                            <form class="row g-3 align-items-center">
-                                <div class="mb-3">
-                                    <label class="form-label" for="formGroupExampleInput">Name</label>
-                                    <input class="form-control form-traffico-control" id="formGroupExampleInput" type="text" placeholder="Name" />
-                                </div>
-                                <div class="mb-3">
-                                    <label class="form-label" for="formGroupExampleInput2">Email address</label>
-                                    <input class="form-control form-traffico-control" id="formGroupExampleInput2" type="text" placeholder="Your email address" />
-                                </div>
-                                <div class="col-12">
-                                    <button class="btn btn-primary" type="submit">GET STARTED
-                                        <svg class="bi bi-arrow-right ms-2" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                                            <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"></path>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ============================================-->
-    <!-- <section> begin ============================-->
-    <section class="py-5">
-
-        <div class="container">
-            <div class="row flex-center">
-                <div class="col-md-6 col-xl-8 order-0">
-                    <p class="text-center text-md-start">Todos los derechos reservador &copy; Torcoroma, 2021</p>
-                </div>
-                <div class="col-md-6 col-xl-3 order-1">
-                    <p class="text-center text-md-end text-xl-start">Hecho con&nbsp;
-                        <svg class="bi bi-suit-heart-fill" xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="#EE4D47" viewBox="0 0 16 16">
-                            <path d="M4 1c2.21 0 4 1.755 4 3.92C8 2.755 9.79 1 12 1s4 1.755 4 3.92c0 3.263-3.234 4.414-7.608 9.608a.513.513 0 0 1-.784 0C3.234 9.334 0 8.183 0 4.92 0 2.755 1.79 1 4 1z"></path>
-                        </svg>&nbsp;by&nbsp;<a class="text-1000 fw-bold" href="https://themewagon.com/" target="_blank">Kronnos Dev </a>
-                    </p>
-                    <ul class="list-unstyled list-inline mb-6 mb-md-0 text-center text-md-end text-xl-start">
-                        <li class="list-inline-item mr-2"><a class="text-decoration-none" href="#!"><img class="list-social-icon" src="assets/img/icons/i.png" alt="..." /></a></li>
-                        <li class="list-inline-item mr-2"><a class="text-decoration-none" href="#!"><img class="list-social-icon" src="assets/img/icons/t.png" alt="..." /></a></li>
-                        <li class="list-inline-item mr-2"><a class="text-decoration-none" href="#!"><img class="list-social-icon" src="assets/img/icons/f.png" alt="..." /></a></li>
+                <div class="col-lg-6 col-sm-6">
+                    <ul class="right-info">
+                        <li class="mr-20">
+                            <a href="#">Contact</a>
+                        </li>
+                        <li  class="mr-20">
+                            <a href="#">Career</a>
+                        </li>
+                        <li  class="mr-20">
+                            <a href="#">News & Media</a>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank">
+                                <i class='bx bxl-facebook'></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank">
+                                <i class='bx bxl-twitter'></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank">
+                                <i class='bx bxl-linkedin'></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank">
+                                <i class='bx bxl-instagram'></i>
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </div>
         </div>
-        <!-- end of .container-->
-
-    </section>
-    <!-- <section> close ============================-->
-    <!-- ============================================-->
-    <input type="checkbox" id="check"> <label class="chat-btn" for="check"> <i class="fa fa-commenting-o comment"></i> <i class="fa fa-close close"></i> </label>
-    <div class="wrapper">
-        <div class="chat-header">
-            <h6>Let's Chat - Online</h6>
-        </div>
-        <div class="text-center p-2"> <span>Please fill out the form to start chat!</span> </div>
-        <div class="chat-form"> <input type="text" class="form-control" placeholder="Name"> <input type="text" class="form-control" placeholder="Email"> <textarea class="form-control" placeholder="Your Text Message"></textarea> <button class="btn btn-success btn-block">Submit</button> </div>
     </div>
 
-</main>
-<!-- ===============================================-->
-<!--    End of Main Content-->
-<!-- ===============================================-->
+    <!-- Start Navbar Area -->
+    <div class="navbar-area">
+        <div class="ferry-responsive-nav">
+            <div class="container">
+                <div class="ferry-responsive-menu">
+                    <div class="logo">
+                        <a href="index.html">
+                            <img src="assets/img/logo.png" alt="logo">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
 
+        <div class="ferry-nav">
+            <div class="container">
+                <nav class="navbar navbar-expand-md navbar-light">
+                    <a class="navbar-brand" href="index.html">
+                        <img src="assets/img/logo.png" alt="logo">
+                    </a>
 
+                    <div class="collapse navbar-collapse mean-menu">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item">
+                                <a href="#" class="nav-link active">
+                                    Home <i class='bx bx-chevron-down'></i>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li class="nav-item">
+                                        <a href="index.html" class="nav-link active">Home Demo - 1</a>
+                                    </li>
 
+                                    <li class="nav-item">
+                                        <a href="index-2.html" class="nav-link">Home Demo - 2</a>
+                                    </li>
 
-<!-- ===============================================-->
-<!--    JavaScripts-->
-<!-- ===============================================-->
-<script src="vendors/@popperjs/popper.min.js"></script>
-<script src="vendors/bootstrap/bootstrap.min.js"></script>
-<script src="vendors/is/is.min.js"></script>
-<script src="https://polyfill.io/v3/polyfill.min.js?features=window.scroll"></script>
-<script src="vendors/fontawesome/all.min.js"></script>
-<script src="assets/js/theme.js"></script>
+                                    <li class="nav-item">
+                                        <a href="index-3.html" class="nav-link">Home Demo - 3</a>
+                                    </li>
+                                </ul>
+                            </li>
 
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&amp;family=Rubik:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet">
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                    Pages <i class='bx bx-chevron-down'></i>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li class="nav-item">
+                                        <a href="about.html" class="nav-link">About</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="team.html" class="nav-link">Team</a>
+                                    </li>
+
+                                    <li class="nav-item">
+                                        <a href="testimonials.html" class="nav-link">Testimonials</a>
+                                    </li>
+
+                                    <li class="nav-item">
+                                        <a href="gallery.html" class="nav-link">Gallery</a>
+                                    </li>
+
+                                    <li class="nav-item">
+                                        <a href="faq.html" class="nav-link">FAQ</a>
+                                    </li>
+
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link">
+                                            User <i class='bx bx-chevron-right'></i>
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <li class="nav-item">
+                                                <a href="sign-in.html" class="nav-link">Sign In</a>
+                                            </li>
+
+                                            <li class="nav-item">
+                                                <a href="sign-up.html" class="nav-link">Sign Up</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+
+                                    <li class="nav-item">
+                                        <a href="privacy-policy.html" class="nav-link">Privacy Policy</a>
+                                    </li>
+
+                                    <li class="nav-item">
+                                        <a href="terms-condition.html" class="nav-link">Terms & Condition</a>
+                                    </li>
+
+                                    <li class="nav-item">
+                                        <a href="coming-soon.html" class="nav-link">Coming Soon</a>
+                                    </li>
+
+                                    <li class="nav-item">
+                                        <a href="error-404.html" class="nav-link">404 Error Page</a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li class="nav-item">
+                                <a href="about.html" class="nav-link">
+                                    About Us
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                    Services <i class='bx bx-chevron-down'></i>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li class="nav-item">
+                                        <a href="services.html" class="nav-link">Services</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="service-details.html" class="nav-link">Single Services</a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                    Blog <i class='bx bx-chevron-down'></i>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li class="nav-item">
+                                        <a href="blog.html" class="nav-link">Blog</a>
+                                    </li>
+
+                                    <li class="nav-item">
+                                        <a href="blog-details.html" class="nav-link">Single Blog</a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li class="nav-item">
+                                <a href="contact.html" class="nav-link">Contact</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a href="javascript:void(0)" class="nav-link search-box">
+                                    <i class='bx bx-search'></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <!-- End Navbar Area -->
+</header>
+<!-- End Heder Area -->
+
+<!-- Search Overlay -->
+<div class="search-overlay">
+    <div class="d-table">
+        <div class="d-table-cell">
+            <div class="search-overlay-layer"></div>
+            <div class="search-overlay-layer"></div>
+            <div class="search-overlay-layer"></div>
+
+            <div class="search-overlay-close">
+                <span class="search-overlay-close-line"></span>
+                <span class="search-overlay-close-line"></span>
+            </div>
+
+            <div class="search-overlay-form">
+                <form>
+                    <input type="text" class="input-search" placeholder="Search here...">
+                    <button type="submit"><i class='bx bx-search' ></i></button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Search Overlay -->
+
+<!-- Hero Slider -->
+<div class="hero-slider owl-carousel owl-theme">
+    <div class="hero-slider-item item-bg1">
+        <div class="d-table">
+            <div class="d-table-cell">
+                <div class="container">
+                    <div class="banner-content">
+                        <span>Since 1992</span>
+                        <h1>Transport & Logistic Services</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <a href="contact.html" class="default-btn-one me-3">Contact Us</a>
+                        <a href="#" class="default-btn-two">Get A Quote</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="hero-slider-item item-bg2">
+        <div class="d-table">
+            <div class="d-table-cell">
+                <div class="container">
+                    <div class="banner-content">
+                        <span>Since 1992</span>
+                        <h1>Transport & Logistic<br> Services</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <a href="contact.html" class="default-btn-one me-3">Contact Us</a>
+                        <a href="#" class="default-btn-two">Get A Quote</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="hero-slider-item item-bg3">
+        <div class="d-table">
+            <div class="d-table-cell">
+                <div class="container">
+                    <div class="banner-content">
+                        <span>Since 1992</span>
+                        <h1>Transport & Logistic<br> Services</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <a href="contact.html" class="default-btn-one me-3">Contact Us</a>
+                        <a href="#" class="default-btn-two">Get A Quote</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Hero Slider -->
+
+<!-- Contact Area -->
+<div class="container">
+    <div class="contact-area mb-85">
+        <div class="contact-content">
+            <div class="row">
+                <div class="col-lg-3 col-sm-6">
+                    <div class="contact-card">
+                        <i class='bx bxs-phone'></i>
+                        <h4>Contact Number</h4>
+                        <p>
+                            <a href="tel:+4560123987">+4560 123 987</a>
+                        </p>
+                        <p>
+                            <a href="tel:+0123456789">+0123 456 789</a>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-sm-6">
+                    <div class="contact-card">
+                        <i class='bx bxs-location-plus'></i>
+                        <h4>Our Location</h4>
+                        <p>Str, First avenue 1</p>
+                        <p>Silvy Road, Barbosa </p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-sm-6">
+                    <div class="contact-card">
+                        <i class='bx bx-show'></i>
+                        <h4>Opening Hours</h4>
+                        <p>9:00 AM - 6:00 PM</p>
+                        <p>Saturday - Thursday</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-sm-6">
+                    <div class="contact-card">
+                        <i class='bx bxs-envelope'></i>
+                        <h4>Our Email</h4>
+                        <p>
+                            <a href="mailto:hello@ferry.com">hello@ferry.com</a>
+                        </p>
+                        <p>
+                            <a href="mailto:info@gmail.com">info@gmail.com</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Contact Area -->
+
+<!-- About Area -->
+<div class="about-area pb-100">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="about-contant">
+                    <div class="section-title">
+                        <span>About Us</span>
+                        <h2>Safe and Faster Logistic Service Neer You</h2>
+                    </div>
+
+                    <div class="about-text">
+                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta.</p>
+
+                        <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati.</p>
+
+                        <a href="about.html" class="default-btn-one btn-bs">Learn More</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-5">
+                <div class="about-image">
+                    <img src="assets/img/about/about1.jpg" alt="about-image">
+                </div>
+            </div>
+
+            <div class="col-lg-3">
+                <div class="about-tabs">
+                    <div class="tab-contant">
+                        <h2 class="title">Our Core Value</h2>
+                        <nav>
+                            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                                <a class="nav-link active" id="nav-vision-tab" data-bs-toggle="tab" href="#nav-vision" role="tab" aria-controls="nav-vision" aria-selected="true">Vision</a>
+
+                                <a class="nav-link nav-link-two" id="nav-mission-tab" data-bs-toggle="tab" href="#nav-mission" role="tab" aria-controls="nav-mission" aria-selected="false">Mission</a>
+
+                                <a class="nav-link nav-link-two" id="nav-value-tab" data-bs-toggle="tab" href="#nav-value" role="tab" aria-controls="nav-value" aria-selected="false">Value</a>
+                            </div>
+                        </nav>
+
+                        <div class="tab-content" id="nav-tabContent">
+                            <div class="tab-pane fade show active" id="nav-vision" role="tabpanel" aria-labelledby="nav-vision-tab">
+                                <div class="vision">
+                                    <ul>
+                                        <li>
+                                            <i class='bx bx-check'></i>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                        </li>
+                                        <li>
+                                            <i class='bx bx-check'></i>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                        </li>
+                                        <li>
+                                            <i class='bx bx-check'></i>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                        </li>
+                                        <li>
+                                            <i class='bx bx-check'></i>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="tab-pane fade" id="nav-mission" role="tabpanel"  aria-labelledby="nav-mission-tab">
+                                <div class="vision">
+                                    <ul>
+                                        <li>
+                                            <i class='bx bx-check'></i>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                        </li>
+                                        <li>
+                                            <i class='bx bx-check'></i>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                        </li>
+                                        <li>
+                                            <i class='bx bx-check'></i>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                        </li>
+                                        <li>
+                                            <i class='bx bx-check'></i>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="tab-pane fade" id="nav-value" role="tabpanel" aria-labelledby="nav-value-tab">
+                                <div class="vision">
+                                    <ul>
+                                        <li>
+                                            <i class='bx bx-check'></i>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                        </li>
+                                        <li>
+                                            <i class='bx bx-check'></i>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                        </li>
+                                        <li>
+                                            <i class='bx bx-check'></i>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                        </li>
+                                        <li>
+                                            <i class='bx bx-check'></i>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End About Area -->
+
+<!-- Services Area -->
+<div class="services-area ptb-100">
+    <div class="container">
+        <div class="section-title">
+            <span>Our Services</span>
+            <h2>Safe and Faster Logistic Services</h2>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-3 col-sm-6">
+                <div class="service-card">
+                    <i class='bx bxs-ship'></i>
+                    <h3>Ocean Cargo</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+                    <a href="service-details.html" class="default-btn-two">Read More</a>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-sm-6">
+                <div class="service-card">
+                    <i class='bx bx-store'></i>
+                    <h3>Cargo Storage</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+                    <a href="service-details.html" class="default-btn-two">Read More</a>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-sm-6">
+                <div class="service-card">
+                    <i class='bx bxs-truck'></i>
+                    <h3>Courier Delivery</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+                    <a href="service-details.html" class="default-btn-two">Read More</a>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-sm-6">
+                <div class="service-card">
+                    <i class='bx bx-transfer'></i>
+                    <h3>B2B Exchange</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+                    <a href="service-details.html" class="default-btn-two">Read More</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="view-btn">
+            <a href="services.html" class="default-btn">View All</a>
+        </div>
+    </div>
+
+    <div class="services-shape">
+
+    </div>
+</div>
+<!-- End Services Area -->
+
+<!-- Choose Area -->
+<div class="choose-area ptb-100">
+    <div class="shape-one">
+        <img src="assets/img/shape/shape5.png" alt="Shape">
+    </div>
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 col-md-6">
+                <div class="choose-contant">
+                    <div class="choose-card">
+                        <i class='bx bx-world'></i>
+                        <h3>Worldwide Service</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt  magna aliqu.</p>
+                    </div>
+                </div>
+
+                <div class="choose-contant">
+                    <div class="choose-card">
+                        <i class='bx bxs-paper-plane'></i>
+                        <h3>Tracking Service</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt  magna aliqu.</p>
+                    </div>
+                </div>
+
+                <div class="choose-contant">
+                    <div class="choose-card">
+                        <i class='bx bxs-truck'></i>
+                        <h3>Fast and Reliable</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt  magna aliqu.</p>
+                    </div>
+                </div>
+
+                <div class="choose-contant">
+                    <div class="choose-card">
+                        <i class='bx bx-support'></i>
+                        <h3>24/7 Support</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt  magna aliqu.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6 col-md-6">
+                <div class="choose-text">
+                    <div class="section-title">
+                        <span>Why Choose Us</span>
+                        <h2>Safe and Faster Logistic Service Neer You</h2>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris</p>
+
+                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+
+                    <a href="#" class="default-btn-one">Contact Us</a>
+                    <div class="shape-image">
+                        <img src="assets/img/shape/shape2.png" alt="icon">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Choose Area -->
+
+<!-- Speciality Slider Area -->
+<div class="speciality-area ptb-100">
+    <div class="container">
+        <div class="section-title">
+            <span>Our Speciality</span>
+            <h2>Safe and Faster Logistic Services</h2>
+        </div>
+
+        <div class="speciality-slider owl-carousel owl-theme">
+            <div class="speciality-card">
+                <a href="service-details.html">
+                    <img src="assets/img/speciality/speciality1.jpg" alt="image">
+                </a>
+                <div class="speciality-text">
+                    <h3>
+                        <a href="service-details.html">
+                            Office Relocation
+                        </a>
+                    </h3>
+                    <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete.</p>
+                </div>
+            </div>
+
+            <div class="speciality-card">
+                <a href="service-details.html">
+                    <img src="assets/img/speciality/speciality2.jpg" alt="image">
+                </a>
+                <div class="speciality-text">
+                    <h3>
+                        <a href="service-details.html">
+                            House Moving
+                        </a>
+                    </h3>
+                    <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete.</p>
+                </div>
+            </div>
+
+            <div class="speciality-card">
+                <a href="#">
+                    <img src="assets/img/speciality/speciality3.jpg" alt="image">
+                </a>
+                <div class="speciality-text">
+                    <h3>
+                        <a href="service-details.html">
+                            Curier Worldwide
+                        </a>
+                    </h3>
+                    <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete.</p>
+                </div>
+            </div>
+
+            <div class="speciality-card">
+                <a href="service-details.html">
+                    <img src="assets/img/speciality/speciality1.jpg" alt="image">
+                </a>
+                <div class="speciality-text">
+                    <h3>
+                        <a href="service-details.html">
+                            Office Relocation
+                        </a>
+                    </h3>
+                    <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete.</p>
+                </div>
+            </div>
+
+            <div class="speciality-card">
+                <a href="service-details.html">
+                    <img src="assets/img/speciality/speciality2.jpg" alt="image">
+                </a>
+                <div class="speciality-text">
+                    <h3>
+                        <a href="service-details.html">
+                            House Moving
+                        </a>
+                    </h3>
+                    <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete.</p>
+                </div>
+            </div>
+
+            <div class="speciality-card">
+                <a href="service-details.html">
+                    <img src="assets/img/speciality/speciality3.jpg" alt="image">
+                </a>
+                <div class="speciality-text">
+                    <h3>
+                        <a href="service-details.html">
+                            Curier Worldwide
+                        </a>
+                    </h3>
+                    <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Speciality Slider Area -->
+
+<!-- Testimonials Slider Area -->
+<div class="testimonials-area ptb-100">
+    <div class="container">
+        <div class="shape-two">
+            <img src="assets/img/shape/shape6.png" class="shape-1" alt="shape">
+            <img src="assets/img/shape/shape3.png" alt="shape">
+        </div>
+        <div class="section-title">
+            <span>Feedback</span>
+            <h2>Whats Our Clients Said About Us</h2>
+        </div>
+
+        <div class="testimonials-slider owl-carousel owl-theme">
+            <div class="testimonials-card">
+                <div class="client-img">
+                    <img src="assets/img/clients/client6.jpg" alt="image">
+                    <h3>Jhon Smith</h3>
+                    <span>CEO of LTD company</span>
+                </div>
+
+                <div class="rating">
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                </div>
+
+                <div class="feedback-text">
+                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+                </div>
+            </div>
+
+            <div class="testimonials-card">
+                <div class="client-img">
+                    <img src="assets/img/clients/client5.jpg" alt="image">
+                    <h3>William leo</h3>
+                    <span>CEO of LTD company</span>
+                </div>
+
+                <div class="rating">
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                </div>
+
+                <div class="feedback-text">
+                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+                </div>
+            </div>
+
+            <div class="testimonials-card">
+                <div class="client-img">
+                    <img src="assets/img/clients/client4.jpg" alt="image">
+                    <h3>Benjamin Liam</h3>
+                    <span>CEO of LTD company</span>
+                </div>
+
+                <div class="rating">
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                </div>
+
+                <div class="feedback-text">
+                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Testimonials Slider Area -->
+
+<!-- partner Slider Area -->
+<div class="partner-area pb-100">
+    <div class="container">
+        <div class="section-title">
+            <span>Partner</span>
+            <h2>20+ Companies Trusted us and Getting Result</h2>
+        </div>
+
+        <div class="partner-slider owl-carousel owl-theme">
+            <div class="partner-slider-item">
+                <a href="#">
+                    <img src="assets/img/partner/partner1.png" alt="logo">
+                </a>
+            </div>
+
+            <div class="partner-slider-item">
+                <a href="#">
+                    <img src="assets/img/partner/partner2.png" alt="logo">
+                </a>
+            </div>
+
+            <div class="partner-slider-item">
+                <a href="#">
+                    <img src="assets/img/partner/partner3.png" alt="logo">
+                </a>
+            </div>
+
+            <div class="partner-slider-item">
+                <a href="#">
+                    <img src="assets/img/partner/partner4.png" alt="logo">
+                </a>
+            </div>
+
+            <div class="partner-slider-item">
+                <a href="#">
+                    <img src="assets/img/partner/partner5.png" alt="logo">
+                </a>
+            </div>
+
+            <div class="partner-slider-item">
+                <a href="#">
+                    <img src="assets/img/partner/partner6.png" alt="logo">
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End partner Slider Area -->
+
+<!-- Transportation Area -->
+<div class="transportation-area">
+    <div class="container-fluid p-0">
+        <div class="row no-gutters">
+            <div class="col-lg-6">
+                <div class="transportation-form ptb-100">
+                    <div class="section-title">
+                        <span>Transportation</span>
+                        <h2>Take Your Goods Anywhere</h2>
+                    </div>
+
+                    <div class="transportation-shape">
+                        <img src="assets/img/shape/shape3.png" alt="icon">
+                    </div>
+
+                    <form>
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Height (CM):">
+                        </div>
+
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Weight (KG):">
+                        </div>
+
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Width (CM):">
+                        </div>
+
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Type of commodity:">
+                        </div>
+
+                        <div class="form-group mb-30">
+                            <input type="text" class="form-control" placeholder="Distance (KM):">
+                        </div>
+
+                        <div class="form-btn">
+                            <button type="submit" class="default-btn-one me-4">Cost Calculate</button>
+                            <button type="submit" class="default-btn-two">Get A Full Quote</button>
+                        </div>
+                        <h3>Get a brochure / 10% Discount on first order</h3>
+                    </form>
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="popup-video video-bg">
+                    <div class="d-table">
+                        <div class="d-table-cell">
+                            <div class="video-btn">
+                                <a href="https://www.youtube.com/watch?v=bk7McNUjWgw" class="popup-youtube">
+                                    <i class="bx bx-play whiteText"></i>
+                                    <span class="ripple pinkBg"></span>
+                                    <span class="ripple pinkBg"></span>
+                                    <span class="ripple pinkBg"></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Transportation Area -->
+
+<!-- Footer Area-->
+<footer class="footer-area pt-100 pb-70">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-sm-6">
+                <div class="footer-widget">
+                    <div class="logo">
+                        <img src="assets/img/logo.png" alt="logo">
+                    </div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+                    <ul class="footer-socials">
+                        <li>
+                            <a href="#" target="_blank">
+                                <i class='bx bxl-facebook'></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank">
+                                <i class='bx bxl-twitter' ></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank">
+                                <i class='bx bxl-linkedin'></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank">
+                                <i class='bx bxl-instagram'></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-sm-6">
+                <div class="footer-widget pl-80">
+                    <h3>Company</h3>
+
+                    <ul class="footer-text">
+                        <li>
+                            <a href="about.html">About Us</a>
+                        </li>
+                        <li>
+                            <a href="services.html">Services</a>
+                        </li>
+                        <li>
+                            <a href="#">Features</a>
+                        </li>
+                        <li>
+                            <a href="#">Cost calculator</a>
+                        </li>
+                        <li>
+                            <a href="#">Latest News</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-sm-6">
+                <div class="footer-widget pl-50">
+                    <h3>Support</h3>
+
+                    <ul class="footer-text">
+                        <li>
+                            <a href="faq.html">FAQ’s</a>
+                        </li>
+                        <li>
+                            <a href="privacy-policy.html">Privacy Policy</a>
+                        </li>
+                        <li>
+                            <a href="terms-condition.html">Terms & Conditions</a>
+                        </li>
+                        <li>
+                            <a href="#">Community</a>
+                        </li>
+                        <li>
+                            <a href="contact.html">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-sm-6">
+                <div class="footer-widget">
+                    <h3>Contact Info</h3>
+                    <ul class="info-list">
+                        <li>
+                            <i class='bx bxs-location-plus'></i>
+                            6th Floor, Barbosa, Sidney
+                        </li>
+                        <li>
+                            <i class='bx bxs-envelope'></i>
+                            <a href="mailto:hello@ferry.com">hello@ferry.com</a>
+                        </li>
+                        <li>
+                            <i class='bx bxs-envelope'></i>
+                            <a href="mailto:contact@ferry.com">contact@ferry.com</a>
+                        </li>
+                        <li>
+                            <i class='bx bxs-phone'></i>
+                            <a href="tel:+0123456789">+0123 456 789</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- End Footer Area -->
+
+<!-- Footer bottom Area -->
+<div class="footer-bottom">
+    <div class="container">
+        <p>Copyright @2021 Ferry. All Rights Reserved <a href="https://hibootstrap.com/" target="_blank">HiBootstrap</a></p>
+    </div>
+</div>
+<!-- End Footer bottom Area -->
+
+<!-- Go Top -->
+<div class="go-top">
+    <i class='bx bx-chevrons-up'></i>
+</div>
+<!-- End Go Top -->
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="js/jquery.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<!-- Meanmenu JS -->
+<script src="js/meanmenu.min.js"></script>
+<!-- Owl carousel JS -->
+<script src="js/owl.carousel.min.js"></script>
+<!-- Magnific JS -->
+<script src="js/jquery.magnific-popup.min.js"></script>
+<!-- Odometer JS -->
+<script src="js/odometer.min.js"></script>
+<script src="js/jquery.appear.js"></script>
+<!-- Form Validator JS -->
+<script src="js/form-validator.min.js"></script>
+<!-- Contact JS -->
+<script src="js/contact-form-script.js"></script>
+<!-- Ajaxchimp JS -->
+<script src="js/jquery.ajaxchimp.min.js"></script>
+<!--Animate JS -->
+<script src="js/wow.min.js"></script>
+<!-- Custom JS -->
+<script src="js/custom.js"></script>
 </body>
 
 </html>
