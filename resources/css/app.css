@@ -9,5 +9,5 @@
 @import 'odometer.css';
 @import 'owl.carousel.min.css';
 @import 'owl.theme.default.min.css';
-@import 'responsive.scss';
-@import 'style.scss';
+@import 'resources/sass/responsive.scss';
+@import 'resources/sass/style.scss';

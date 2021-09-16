@@ -12,12 +12,10 @@
     <!-- ===============================================-->
     <!--    Favicons-->
     <!-- ===============================================-->
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicons/favicon-16x16.png">
-    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicons/favicon.ico">
-    <link rel="manifest" href="assets/img/favicons/manifest.json">
-    <meta name="msapplication-TileImage" content="assets/img/favicons/mstile-150x150.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
     <meta name="theme-color" content="#ffffff">
 
     <!-- ===============================================-->
@@ -46,6 +44,8 @@
     <link rel="stylesheet" href="{{asset('css/style.css')}}">
     <!-- Stylesheet Responsive CSS -->
     <link rel="stylesheet" href="{{asset('css/responsive.css')}}">
+{{--    <script defer type="text/javascript" src="https://wl.redbus.com/javascripts/widget.min.js"></script>--}}
+{{--    <script src="https://wl.redbus.com/externaljavascript/loadwidget.js"></script>--}}
 </head>
 
 
@@ -70,15 +70,15 @@
                 <div class="col-lg-6 col-sm-6">
                     <ul class="left-info">
                         <li>
-                            <a href="mailto:hello@ferry.com">
+                            <a href="mailto:info@torcoromaweb">
                                 <i class='bx bxs-envelope'></i>
-                                hello@ferry.com
+                                info@torcoromaweb.com
                             </a>
                         </li>
                         <li>
                             <a href="tel:+823-456-879">
                                 <i class='bx bxs-phone-call'></i>
-                                +0123 456 789
+                                +57 300 555 5555
                             </a>
                         </li>
                     </ul>
@@ -86,15 +86,7 @@
 
                 <div class="col-lg-6 col-sm-6">
                     <ul class="right-info">
-                        <li class="mr-20">
-                            <a href="#">Contact</a>
-                        </li>
-                        <li  class="mr-20">
-                            <a href="#">Career</a>
-                        </li>
-                        <li  class="mr-20">
-                            <a href="#">News & Media</a>
-                        </li>
+
                         <li>
                             <a href="#" target="_blank">
                                 <i class='bx bxl-facebook'></i>
@@ -128,7 +120,7 @@
                 <div class="ferry-responsive-menu">
                     <div class="logo">
                         <a href="index.html">
-                            <img src="assets/img/logo.png" alt="logo">
+                            <img src="img/logo.png" alt="logo">
                         </a>
                     </div>
                 </div>
@@ -138,104 +130,52 @@
         <div class="ferry-nav">
             <div class="container">
                 <nav class="navbar navbar-expand-md navbar-light">
-                    <a class="navbar-brand" href="index.html">
-                        <img src="assets/img/logo.png" alt="logo">
+                    <a class="navbar-brand" href="/">
+                        <img src="{{ asset('images/logo.png') }}" width="150" alt="logo torcoroma">
                     </a>
 
                     <div class="collapse navbar-collapse mean-menu">
                         <ul class="navbar-nav ms-auto">
                             <li class="nav-item">
-                                <a href="#" class="nav-link active">
-                                    Home <i class='bx bx-chevron-down'></i>
+                                <a href="#" class="nav-link active">Inicio</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                    Torcoroma <i class='bx bx-chevron-down'></i>
                                 </a>
                                 <ul class="dropdown-menu">
                                     <li class="nav-item">
-                                        <a href="index.html" class="nav-link active">Home Demo - 1</a>
+                                        <a href="about.html" class="nav-link">Acerca de</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="team.html" class="nav-link">Equipo</a>
                                     </li>
 
                                     <li class="nav-item">
-                                        <a href="index-2.html" class="nav-link">Home Demo - 2</a>
+                                        <a href="faq.html" class="nav-link">Preguntas Frecuentes</a>
                                     </li>
 
                                     <li class="nav-item">
-                                        <a href="index-3.html" class="nav-link">Home Demo - 3</a>
+                                        <a href="privacy-policy.html" class="nav-link">Políticas de seguridad</a>
+                                    </li>
+
+                                    <li class="nav-item">
+                                        <a href="terms-condition.html" class="nav-link">Terminos y condiciones</a>
                                     </li>
                                 </ul>
                             </li>
 
                             <li class="nav-item">
                                 <a href="#" class="nav-link">
-                                    Pages <i class='bx bx-chevron-down'></i>
+                                    Servicios <i class='bx bx-chevron-down'></i>
                                 </a>
                                 <ul class="dropdown-menu">
                                     <li class="nav-item">
-                                        <a href="about.html" class="nav-link">About</a>
+                                        <a href="services.html" class="nav-link">Servicios</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="team.html" class="nav-link">Team</a>
-                                    </li>
-
-                                    <li class="nav-item">
-                                        <a href="testimonials.html" class="nav-link">Testimonials</a>
-                                    </li>
-
-                                    <li class="nav-item">
-                                        <a href="gallery.html" class="nav-link">Gallery</a>
-                                    </li>
-
-                                    <li class="nav-item">
-                                        <a href="faq.html" class="nav-link">FAQ</a>
-                                    </li>
-
-                                    <li class="nav-item">
-                                        <a href="#" class="nav-link">
-                                            User <i class='bx bx-chevron-right'></i>
-                                        </a>
-                                        <ul class="dropdown-menu">
-                                            <li class="nav-item">
-                                                <a href="sign-in.html" class="nav-link">Sign In</a>
-                                            </li>
-
-                                            <li class="nav-item">
-                                                <a href="sign-up.html" class="nav-link">Sign Up</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-
-                                    <li class="nav-item">
-                                        <a href="privacy-policy.html" class="nav-link">Privacy Policy</a>
-                                    </li>
-
-                                    <li class="nav-item">
-                                        <a href="terms-condition.html" class="nav-link">Terms & Condition</a>
-                                    </li>
-
-                                    <li class="nav-item">
-                                        <a href="coming-soon.html" class="nav-link">Coming Soon</a>
-                                    </li>
-
-                                    <li class="nav-item">
-                                        <a href="error-404.html" class="nav-link">404 Error Page</a>
-                                    </li>
-                                </ul>
-                            </li>
-
-                            <li class="nav-item">
-                                <a href="about.html" class="nav-link">
-                                    About Us
-                                </a>
-                            </li>
-
-                            <li class="nav-item">
-                                <a href="#" class="nav-link">
-                                    Services <i class='bx bx-chevron-down'></i>
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li class="nav-item">
-                                        <a href="services.html" class="nav-link">Services</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="service-details.html" class="nav-link">Single Services</a>
+                                        <a href="service-details.html" class="nav-link">VIP</a>
                                     </li>
                                 </ul>
                             </li>
@@ -246,17 +186,13 @@
                                 </a>
                                 <ul class="dropdown-menu">
                                     <li class="nav-item">
-                                        <a href="blog.html" class="nav-link">Blog</a>
-                                    </li>
-
-                                    <li class="nav-item">
-                                        <a href="blog-details.html" class="nav-link">Single Blog</a>
+                                        <a href="blog.html" class="nav-link">Noticias & Novedades</a>
                                     </li>
                                 </ul>
                             </li>
 
                             <li class="nav-item">
-                                <a href="contact.html" class="nav-link">Contact</a>
+                                <a href="contact.html" class="nav-link">Contacto</a>
                             </li>
 
                             <li class="nav-item">
@@ -289,7 +225,7 @@
 
             <div class="search-overlay-form">
                 <form>
-                    <input type="text" class="input-search" placeholder="Search here...">
+                    <input type="text" class="input-search" placeholder="Busca aquí...">
                     <button type="submit"><i class='bx bx-search' ></i></button>
                 </form>
             </div>
@@ -305,11 +241,11 @@
             <div class="d-table-cell">
                 <div class="container">
                     <div class="banner-content">
-                        <span>Since 1992</span>
-                        <h1>Transport & Logistic Services</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                        <a href="contact.html" class="default-btn-one me-3">Contact Us</a>
-                        <a href="#" class="default-btn-two">Get A Quote</a>
+                        <span>Desde 1992</span>
+                        <h1>Servicio de Transporte & Logística</h1>
+                        <p>Contamos con el personal logístico e idoneo para las tareas de transporte en toda la región caribe.</p>
+                        <a href="contact.html" class="default-btn-one me-3">Contactanos</a>
+                        <a href="#" class="default-btn-two">Obtener pasajes</a>
                     </div>
                 </div>
             </div>
@@ -321,11 +257,11 @@
             <div class="d-table-cell">
                 <div class="container">
                     <div class="banner-content">
-                        <span>Since 1992</span>
-                        <h1>Transport & Logistic<br> Services</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                        <a href="contact.html" class="default-btn-one me-3">Contact Us</a>
-                        <a href="#" class="default-btn-two">Get A Quote</a>
+                        <span>Desde 1992</span>
+                        <h1>Transporte por toda<br> la región caribe.</h1>
+                        <p>Contamos con recurso humano dispuesto a entregar el mejor servicio posible y manejar las espectativas de nuestros clientes.</p>
+                        <a href="contact.html" class="default-btn-one me-3">Contactanos</a>
+                        <a href="#" class="default-btn-two">Obtener una cotización</a>
                     </div>
                 </div>
             </div>
@@ -337,11 +273,11 @@
             <div class="d-table-cell">
                 <div class="container">
                     <div class="banner-content">
-                        <span>Since 1992</span>
-                        <h1>Transport & Logistic<br> Services</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                        <a href="contact.html" class="default-btn-one me-3">Contact Us</a>
-                        <a href="#" class="default-btn-two">Get A Quote</a>
+                        <span>Desde 1992</span>
+                        <h1>Nuestro<br> Equipo de Trabajo</h1>
+                        <p>Contando con el personal idoneo para entregale el mejor de los servicios.</p>
+                        <a href="contact.html" class="default-btn-one me-3">Contactanos</a>
+                        <a href="#" class="default-btn-two">Obtener una cotización</a>
                     </div>
                 </div>
             </div>
@@ -358,12 +294,12 @@
                 <div class="col-lg-3 col-sm-6">
                     <div class="contact-card">
                         <i class='bx bxs-phone'></i>
-                        <h4>Contact Number</h4>
+                        <h4>Numeros de Contacto</h4>
                         <p>
-                            <a href="tel:+4560123987">+4560 123 987</a>
+                            <a href="tel:+4560123987">+57 300 555 5555</a>
                         </p>
                         <p>
-                            <a href="tel:+0123456789">+0123 456 789</a>
+                            <a href="tel:+0123456789">  01 8000 365365</a>
                         </p>
                     </div>
                 </div>
@@ -371,27 +307,27 @@
                 <div class="col-lg-3 col-sm-6">
                     <div class="contact-card">
                         <i class='bx bxs-location-plus'></i>
-                        <h4>Our Location</h4>
-                        <p>Str, First avenue 1</p>
-                        <p>Silvy Road, Barbosa </p>
+                        <h4>Oficinas Principales</h4>
+                        <p>Troncal</p>
+                        <p>Sincelejo, Sucre</p>
                     </div>
                 </div>
 
                 <div class="col-lg-3 col-sm-6">
                     <div class="contact-card">
                         <i class='bx bx-show'></i>
-                        <h4>Opening Hours</h4>
-                        <p>9:00 AM - 6:00 PM</p>
-                        <p>Saturday - Thursday</p>
+                        <h4>Abiertos desde</h4>
+                        <p>6:00 AM - 10:00 PM</p>
+                        <p>Lunes - Domingo</p>
                     </div>
                 </div>
 
                 <div class="col-lg-3 col-sm-6">
                     <div class="contact-card">
                         <i class='bx bxs-envelope'></i>
-                        <h4>Our Email</h4>
+                        <h4>Nuestro Email</h4>
                         <p>
-                            <a href="mailto:hello@ferry.com">hello@ferry.com</a>
+                            <a href="mailto:info@torcoromaweb.com">info@torcoromaweb.com</a>
                         </p>
                         <p>
                             <a href="mailto:info@gmail.com">info@gmail.com</a>
@@ -411,37 +347,35 @@
             <div class="col-lg-4">
                 <div class="about-contant">
                     <div class="section-title">
-                        <span>About Us</span>
-                        <h2>Safe and Faster Logistic Service Neer You</h2>
+                        <span>Acerca de Nosotros</span>
+                        <h2>Un servicio de transporte seguro y rápido para usted</h2>
                     </div>
 
                     <div class="about-text">
-                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta.</p>
+                        <p>Somos una empresa dedicada al transporte terrestre de pasajeros, con servicios especializados y en distintas modalidades.</p>
 
-                        <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati.</p>
+                        <p>Como empresa socialmente responsable, promueve entre sus grupos de interés el respeto y fomento de los Derechos Humanos. Es así como se difunde información a través de medios internos y externos..</p>
 
-                        <a href="about.html" class="default-btn-one btn-bs">Learn More</a>
+                        <a href="about.html" class="default-btn-one btn-bs">Aprende más</a>
                     </div>
                 </div>
             </div>
 
             <div class="col-lg-5">
                 <div class="about-image">
-                    <img src="assets/img/about/about1.jpg" alt="about-image">
+                    <img src="{{ asset('images/about-page.jpg') }}" alt="about-image">
                 </div>
             </div>
 
             <div class="col-lg-3">
                 <div class="about-tabs">
                     <div class="tab-contant">
-                        <h2 class="title">Our Core Value</h2>
+                        <h2 class="title">¡Torcoroma somos todos!</h2>
                         <nav>
                             <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                                <a class="nav-link active" id="nav-vision-tab" data-bs-toggle="tab" href="#nav-vision" role="tab" aria-controls="nav-vision" aria-selected="true">Vision</a>
-
-                                <a class="nav-link nav-link-two" id="nav-mission-tab" data-bs-toggle="tab" href="#nav-mission" role="tab" aria-controls="nav-mission" aria-selected="false">Mission</a>
-
-                                <a class="nav-link nav-link-two" id="nav-value-tab" data-bs-toggle="tab" href="#nav-value" role="tab" aria-controls="nav-value" aria-selected="false">Value</a>
+                                <a class="nav-link active" id="nav-vision-tab" data-bs-toggle="tab" href="#nav-vision" role="tab" aria-controls="nav-vision" aria-selected="true">Visión</a>
+                                <a class="nav-link nav-link-two" id="nav-mission-tab" data-bs-toggle="tab" href="#nav-mission" role="tab" aria-controls="nav-mission" aria-selected="false">Misión</a>
+                                <a class="nav-link nav-link-two" id="nav-value-tab" data-bs-toggle="tab" href="#nav-value" role="tab" aria-controls="nav-value" aria-selected="false">Valores</a>
                             </div>
                         </nav>
 
@@ -451,19 +385,19 @@
                                     <ul>
                                         <li>
                                             <i class='bx bx-check'></i>
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                            Garantizar un optimo servicio de transporte terrestre de pasajeros en la modalidad basica ccoriente y especial.
                                         </li>
                                         <li>
                                             <i class='bx bx-check'></i>
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                            Enfocado a la satisfacción de las necesidades y expectativas de sus asociados, clientes y usuarios.
                                         </li>
                                         <li>
                                             <i class='bx bx-check'></i>
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                            Contribuir de manera activa al desarrollo sostenible de nuestra región con un servicio de maxima calidad.
                                         </li>
                                         <li>
                                             <i class='bx bx-check'></i>
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                            Entregar todo a nuestro alcance para que nuestros usuarios y clientes se sientan satisfechos.
                                         </li>
                                     </ul>
                                 </div>
@@ -474,19 +408,15 @@
                                     <ul>
                                         <li>
                                             <i class='bx bx-check'></i>
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                            Para 2022 ser una empresa que brinde a sus clientes y usuarios la mejor opción de tansporte terrestre.
                                         </li>
                                         <li>
                                             <i class='bx bx-check'></i>
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                            Ademas, ser la mejor opción en modalidad de pasajeros basica, corriente y especial.
                                         </li>
                                         <li>
                                             <i class='bx bx-check'></i>
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                                        </li>
-                                        <li>
-                                            <i class='bx bx-check'></i>
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                            enfocados en la aplicación de estandares de calidad y seguridad que garantize oportunidad y confort.
                                         </li>
                                     </ul>
                                 </div>
@@ -527,35 +457,35 @@
 <div class="services-area ptb-100">
     <div class="container">
         <div class="section-title">
-            <span>Our Services</span>
-            <h2>Safe and Faster Logistic Services</h2>
+            <span>Nuestros Servicios</span>
+            <h2>Servicios logísticos seguros y rápidos</h2>
         </div>
-
+{{--        <div class="widget" data-widgetid="TORCOROMA" style="position: relative;width: 80%;margin:auto;"></div>--}}
         <div class="row">
             <div class="col-lg-3 col-sm-6">
                 <div class="service-card">
                     <i class='bx bxs-ship'></i>
-                    <h3>Ocean Cargo</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
-                    <a href="service-details.html" class="default-btn-two">Read More</a>
+                    <h3>Costa caribe</h3>
+                    <p>Transporte y conexión por toda la costa caribe y municipios circundantes. Rapidos y seguros.</p>
+{{--                    <a href="service-details.html" class="default-btn-two">Read More</a>--}}
                 </div>
             </div>
 
             <div class="col-lg-3 col-sm-6">
                 <div class="service-card">
                     <i class='bx bx-store'></i>
-                    <h3>Cargo Storage</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
-                    <a href="service-details.html" class="default-btn-two">Read More</a>
+                    <h3>Carga suficiente</h3>
+                    <p>Contamos con compartimentos especiales para que tus pertenencias y tu vayan comodos.</p>
+{{--                    <a href="service-details.html" class="default-btn-two">Read More</a>--}}
                 </div>
             </div>
 
             <div class="col-lg-3 col-sm-6">
                 <div class="service-card">
                     <i class='bx bxs-truck'></i>
-                    <h3>Courier Delivery</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
-                    <a href="service-details.html" class="default-btn-two">Read More</a>
+                    <h3>Mensajería interdepartamental</h3>
+                    <p>Entregamos tus paquetes en los diferentes municipios principales de nuestro departamento.</p>
+{{--                    <a href="service-details.html" class="default-btn-two">Read More</a>--}}
                 </div>
             </div>
 
@@ -564,13 +494,13 @@
                     <i class='bx bx-transfer'></i>
                     <h3>B2B Exchange</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
-                    <a href="service-details.html" class="default-btn-two">Read More</a>
+{{--                    <a href="service-details.html" class="default-btn-two">Read More</a>--}}
                 </div>
             </div>
         </div>
 
         <div class="view-btn">
-            <a href="services.html" class="default-btn">View All</a>
+            <a href="{{ url('/') }}" class="default-btn">Verlos completo</a>
         </div>
     </div>
 
@@ -583,7 +513,7 @@
 <!-- Choose Area -->
 <div class="choose-area ptb-100">
     <div class="shape-one">
-        <img src="assets/img/shape/shape5.png" alt="Shape">
+        <img src="img/shape/shape5.png" alt="Shape">
     </div>
     <div class="container">
         <div class="row align-items-center">
@@ -591,32 +521,32 @@
                 <div class="choose-contant">
                     <div class="choose-card">
                         <i class='bx bx-world'></i>
-                        <h3>Worldwide Service</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt  magna aliqu.</p>
+                        <h3>Servicio al instante</h3>
+                        <p>Toda una región cubierta y brindando garantías de un servicio impecable.</p>
                     </div>
                 </div>
 
                 <div class="choose-contant">
                     <div class="choose-card">
                         <i class='bx bxs-paper-plane'></i>
-                        <h3>Tracking Service</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt  magna aliqu.</p>
+                        <h3>Servicio de rastreo</h3>
+                        <p>Podemos rastrear en tiempo real donde se encuentra su mercancía.</p>
                     </div>
                 </div>
 
                 <div class="choose-contant">
                     <div class="choose-card">
                         <i class='bx bxs-truck'></i>
-                        <h3>Fast and Reliable</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt  magna aliqu.</p>
+                        <h3>Rapido y totalmente seguro</h3>
+                        <p>No tenemos demoras prestando nuestros servicios de transporte.</p>
                     </div>
                 </div>
 
                 <div class="choose-contant">
                     <div class="choose-card">
                         <i class='bx bx-support'></i>
-                        <h3>24/7 Support</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt  magna aliqu.</p>
+                        <h3>Soporte 24/7</h3>
+                        <p>Por medio de nuestra web podemos brindarle servicio 24/7.</p>
                     </div>
                 </div>
             </div>
@@ -624,16 +554,16 @@
             <div class="col-lg-6 col-md-6">
                 <div class="choose-text">
                     <div class="section-title">
-                        <span>Why Choose Us</span>
-                        <h2>Safe and Faster Logistic Service Neer You</h2>
+                        <span>¿Por qué escogernos?</span>
+                        <h2>Un servicio logístico seguro y rápido para usted</h2>
                     </div>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris</p>
 
                     <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
 
-                    <a href="#" class="default-btn-one">Contact Us</a>
+                    <a href="#" class="default-btn-one">Contactanos</a>
                     <div class="shape-image">
-                        <img src="assets/img/shape/shape2.png" alt="icon">
+                        <img src="{{ asset('images/logo-iso.png') }}" alt="icon">
                     </div>
                 </div>
             </div>
@@ -646,14 +576,14 @@
 <div class="speciality-area ptb-100">
     <div class="container">
         <div class="section-title">
-            <span>Our Speciality</span>
-            <h2>Safe and Faster Logistic Services</h2>
+            <span>Nuestros servicios especiales</span>
+            <h2>Seguro y rapido, servicio especial</h2>
         </div>
 
         <div class="speciality-slider owl-carousel owl-theme">
             <div class="speciality-card">
                 <a href="service-details.html">
-                    <img src="assets/img/speciality/speciality1.jpg" alt="image">
+                    <img src="img/speciality/speciality1.jpg" alt="image">
                 </a>
                 <div class="speciality-text">
                     <h3>
@@ -667,7 +597,7 @@
 
             <div class="speciality-card">
                 <a href="service-details.html">
-                    <img src="assets/img/speciality/speciality2.jpg" alt="image">
+                    <img src="img/speciality/speciality2.jpg" alt="image">
                 </a>
                 <div class="speciality-text">
                     <h3>
@@ -681,7 +611,7 @@
 
             <div class="speciality-card">
                 <a href="#">
-                    <img src="assets/img/speciality/speciality3.jpg" alt="image">
+                    <img src="img/speciality/speciality3.jpg" alt="image">
                 </a>
                 <div class="speciality-text">
                     <h3>
@@ -695,7 +625,7 @@
 
             <div class="speciality-card">
                 <a href="service-details.html">
-                    <img src="assets/img/speciality/speciality1.jpg" alt="image">
+                    <img src="img/speciality/speciality1.jpg" alt="image">
                 </a>
                 <div class="speciality-text">
                     <h3>
@@ -709,7 +639,7 @@
 
             <div class="speciality-card">
                 <a href="service-details.html">
-                    <img src="assets/img/speciality/speciality2.jpg" alt="image">
+                    <img src="img/speciality/speciality2.jpg" alt="image">
                 </a>
                 <div class="speciality-text">
                     <h3>
@@ -723,7 +653,7 @@
 
             <div class="speciality-card">
                 <a href="service-details.html">
-                    <img src="assets/img/speciality/speciality3.jpg" alt="image">
+                    <img src="img/speciality/speciality3.jpg" alt="image">
                 </a>
                 <div class="speciality-text">
                     <h3>
@@ -739,125 +669,125 @@
 </div>
 <!-- End Speciality Slider Area -->
 
-<!-- Testimonials Slider Area -->
-<div class="testimonials-area ptb-100">
-    <div class="container">
-        <div class="shape-two">
-            <img src="assets/img/shape/shape6.png" class="shape-1" alt="shape">
-            <img src="assets/img/shape/shape3.png" alt="shape">
-        </div>
-        <div class="section-title">
-            <span>Feedback</span>
-            <h2>Whats Our Clients Said About Us</h2>
-        </div>
+{{--<!-- Testimonials Slider Area -->--}}
+{{--<div class="testimonials-area ptb-100">--}}
+{{--    <div class="container">--}}
+{{--        <div class="shape-two">--}}
+{{--            <img src="img/shape/shape6.png" class="shape-1" alt="shape">--}}
+{{--            <img src="img/shape/shape3.png" alt="shape">--}}
+{{--        </div>--}}
+{{--        <div class="section-title">--}}
+{{--            <span>Feedback</span>--}}
+{{--            <h2>Whats Our Clients Said About Us</h2>--}}
+{{--        </div>--}}
 
-        <div class="testimonials-slider owl-carousel owl-theme">
-            <div class="testimonials-card">
-                <div class="client-img">
-                    <img src="assets/img/clients/client6.jpg" alt="image">
-                    <h3>Jhon Smith</h3>
-                    <span>CEO of LTD company</span>
-                </div>
+{{--        <div class="testimonials-slider owl-carousel owl-theme">--}}
+{{--            <div class="testimonials-card">--}}
+{{--                <div class="client-img">--}}
+{{--                    <img src="img/clients/client6.jpg" alt="image">--}}
+{{--                    <h3>Jhon Smith</h3>--}}
+{{--                    <span>CEO of LTD company</span>--}}
+{{--                </div>--}}
 
-                <div class="rating">
-                    <i class='bx bxs-star'></i>
-                    <i class='bx bxs-star'></i>
-                    <i class='bx bxs-star'></i>
-                    <i class='bx bxs-star'></i>
-                    <i class='bx bxs-star'></i>
-                </div>
+{{--                <div class="rating">--}}
+{{--                    <i class='bx bxs-star'></i>--}}
+{{--                    <i class='bx bxs-star'></i>--}}
+{{--                    <i class='bx bxs-star'></i>--}}
+{{--                    <i class='bx bxs-star'></i>--}}
+{{--                    <i class='bx bxs-star'></i>--}}
+{{--                </div>--}}
 
-                <div class="feedback-text">
-                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-                </div>
-            </div>
+{{--                <div class="feedback-text">--}}
+{{--                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>--}}
+{{--                </div>--}}
+{{--            </div>--}}
 
-            <div class="testimonials-card">
-                <div class="client-img">
-                    <img src="assets/img/clients/client5.jpg" alt="image">
-                    <h3>William leo</h3>
-                    <span>CEO of LTD company</span>
-                </div>
+{{--            <div class="testimonials-card">--}}
+{{--                <div class="client-img">--}}
+{{--                    <img src="img/clients/client5.jpg" alt="image">--}}
+{{--                    <h3>William leo</h3>--}}
+{{--                    <span>CEO of LTD company</span>--}}
+{{--                </div>--}}
 
-                <div class="rating">
-                    <i class='bx bxs-star'></i>
-                    <i class='bx bxs-star'></i>
-                    <i class='bx bxs-star'></i>
-                    <i class='bx bxs-star'></i>
-                    <i class='bx bxs-star'></i>
-                </div>
+{{--                <div class="rating">--}}
+{{--                    <i class='bx bxs-star'></i>--}}
+{{--                    <i class='bx bxs-star'></i>--}}
+{{--                    <i class='bx bxs-star'></i>--}}
+{{--                    <i class='bx bxs-star'></i>--}}
+{{--                    <i class='bx bxs-star'></i>--}}
+{{--                </div>--}}
 
-                <div class="feedback-text">
-                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-                </div>
-            </div>
+{{--                <div class="feedback-text">--}}
+{{--                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>--}}
+{{--                </div>--}}
+{{--            </div>--}}
 
-            <div class="testimonials-card">
-                <div class="client-img">
-                    <img src="assets/img/clients/client4.jpg" alt="image">
-                    <h3>Benjamin Liam</h3>
-                    <span>CEO of LTD company</span>
-                </div>
+{{--            <div class="testimonials-card">--}}
+{{--                <div class="client-img">--}}
+{{--                    <img src="img/clients/client4.jpg" alt="image">--}}
+{{--                    <h3>Benjamin Liam</h3>--}}
+{{--                    <span>CEO of LTD company</span>--}}
+{{--                </div>--}}
 
-                <div class="rating">
-                    <i class='bx bxs-star'></i>
-                    <i class='bx bxs-star'></i>
-                    <i class='bx bxs-star'></i>
-                    <i class='bx bxs-star'></i>
-                    <i class='bx bxs-star'></i>
-                </div>
+{{--                <div class="rating">--}}
+{{--                    <i class='bx bxs-star'></i>--}}
+{{--                    <i class='bx bxs-star'></i>--}}
+{{--                    <i class='bx bxs-star'></i>--}}
+{{--                    <i class='bx bxs-star'></i>--}}
+{{--                    <i class='bx bxs-star'></i>--}}
+{{--                </div>--}}
 
-                <div class="feedback-text">
-                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+{{--                <div class="feedback-text">--}}
+{{--                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+{{--        </div>--}}
+{{--    </div>--}}
+{{--</div>--}}
 <!-- End Testimonials Slider Area -->
 
 <!-- partner Slider Area -->
-<div class="partner-area pb-100">
+<div class="partner-area pb-100 mt-10">
     <div class="container">
         <div class="section-title">
-            <span>Partner</span>
-            <h2>20+ Companies Trusted us and Getting Result</h2>
+            <span>Socios comerciales</span>
+            <h2>Más de 20 empresas que confiaron en nosotros</h2>
         </div>
 
         <div class="partner-slider owl-carousel owl-theme">
             <div class="partner-slider-item">
                 <a href="#">
-                    <img src="assets/img/partner/partner1.png" alt="logo">
+                    <img src="img/partner/partner1.png" alt="logo">
                 </a>
             </div>
 
             <div class="partner-slider-item">
                 <a href="#">
-                    <img src="assets/img/partner/partner2.png" alt="logo">
+                    <img src="img/partner/partner2.png" alt="logo">
                 </a>
             </div>
 
             <div class="partner-slider-item">
                 <a href="#">
-                    <img src="assets/img/partner/partner3.png" alt="logo">
+                    <img src="img/partner/partner3.png" alt="logo">
                 </a>
             </div>
 
             <div class="partner-slider-item">
                 <a href="#">
-                    <img src="assets/img/partner/partner4.png" alt="logo">
+                    <img src="img/partner/partner4.png" alt="logo">
                 </a>
             </div>
 
             <div class="partner-slider-item">
                 <a href="#">
-                    <img src="assets/img/partner/partner5.png" alt="logo">
+                    <img src="img/partner/partner5.png" alt="logo">
                 </a>
             </div>
 
             <div class="partner-slider-item">
                 <a href="#">
-                    <img src="assets/img/partner/partner6.png" alt="logo">
+                    <img src="img/partner/partner6.png" alt="logo">
                 </a>
             </div>
         </div>
@@ -865,71 +795,7 @@
 </div>
 <!-- End partner Slider Area -->
 
-<!-- Transportation Area -->
-<div class="transportation-area">
-    <div class="container-fluid p-0">
-        <div class="row no-gutters">
-            <div class="col-lg-6">
-                <div class="transportation-form ptb-100">
-                    <div class="section-title">
-                        <span>Transportation</span>
-                        <h2>Take Your Goods Anywhere</h2>
-                    </div>
 
-                    <div class="transportation-shape">
-                        <img src="assets/img/shape/shape3.png" alt="icon">
-                    </div>
-
-                    <form>
-                        <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Height (CM):">
-                        </div>
-
-                        <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Weight (KG):">
-                        </div>
-
-                        <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Width (CM):">
-                        </div>
-
-                        <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Type of commodity:">
-                        </div>
-
-                        <div class="form-group mb-30">
-                            <input type="text" class="form-control" placeholder="Distance (KM):">
-                        </div>
-
-                        <div class="form-btn">
-                            <button type="submit" class="default-btn-one me-4">Cost Calculate</button>
-                            <button type="submit" class="default-btn-two">Get A Full Quote</button>
-                        </div>
-                        <h3>Get a brochure / 10% Discount on first order</h3>
-                    </form>
-                </div>
-            </div>
-
-            <div class="col-lg-6">
-                <div class="popup-video video-bg">
-                    <div class="d-table">
-                        <div class="d-table-cell">
-                            <div class="video-btn">
-                                <a href="https://www.youtube.com/watch?v=bk7McNUjWgw" class="popup-youtube">
-                                    <i class="bx bx-play whiteText"></i>
-                                    <span class="ripple pinkBg"></span>
-                                    <span class="ripple pinkBg"></span>
-                                    <span class="ripple pinkBg"></span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- End Transportation Area -->
 
 <!-- Footer Area-->
 <footer class="footer-area pt-100 pb-70">
@@ -938,9 +804,9 @@
             <div class="col-lg-3 col-sm-6">
                 <div class="footer-widget">
                     <div class="logo">
-                        <img src="assets/img/logo.png" alt="logo">
+                        <img src="{{ asset('images/logo.png') }}" width="220" alt="logo torcoroma">
                     </div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <p>Conoce todo de nosotros, aprende un poco de nuestra historia, nuestros clientes y nuestra forma de ver el futuro.</p>
 
                     <ul class="footer-socials">
                         <li>
@@ -969,23 +835,23 @@
 
             <div class="col-lg-3 col-sm-6">
                 <div class="footer-widget pl-80">
-                    <h3>Company</h3>
+                    <h3>Nosotros</h3>
 
                     <ul class="footer-text">
                         <li>
-                            <a href="about.html">About Us</a>
+                            <a href="about.html">Equipo</a>
                         </li>
                         <li>
-                            <a href="services.html">Services</a>
+                            <a href="services.html">Servicios</a>
                         </li>
                         <li>
-                            <a href="#">Features</a>
+                            <a href="#">Acerca de</a>
                         </li>
                         <li>
-                            <a href="#">Cost calculator</a>
+                            <a href="#">Cotización</a>
                         </li>
                         <li>
-                            <a href="#">Latest News</a>
+                            <a href="#">Últimas noticias</a>
                         </li>
                     </ul>
                 </div>
@@ -993,23 +859,23 @@
 
             <div class="col-lg-3 col-sm-6">
                 <div class="footer-widget pl-50">
-                    <h3>Support</h3>
+                    <h3>Soporte</h3>
 
                     <ul class="footer-text">
                         <li>
-                            <a href="faq.html">FAQ’s</a>
+                            <a href="faq.html">Preguntas frecuentes</a>
                         </li>
                         <li>
-                            <a href="privacy-policy.html">Privacy Policy</a>
+                            <a href="privacy-policy.html">Políticas de bioseguridad</a>
                         </li>
                         <li>
-                            <a href="terms-condition.html">Terms & Conditions</a>
+                            <a href="terms-condition.html">Terminos & condiciones</a>
                         </li>
                         <li>
-                            <a href="#">Community</a>
+                            <a href="#">Formatos para transporte especializado</a>
                         </li>
                         <li>
-                            <a href="contact.html">Contact Us</a>
+                            <a href="contact.html">Contactanos</a>
                         </li>
                     </ul>
                 </div>
@@ -1017,23 +883,23 @@
 
             <div class="col-lg-3 col-sm-6">
                 <div class="footer-widget">
-                    <h3>Contact Info</h3>
+                    <h3>Información de Contacto</h3>
                     <ul class="info-list">
                         <li>
                             <i class='bx bxs-location-plus'></i>
-                            6th Floor, Barbosa, Sidney
+                            Troncal, Sincelejo, Sucre
                         </li>
                         <li>
                             <i class='bx bxs-envelope'></i>
-                            <a href="mailto:hello@ferry.com">hello@ferry.com</a>
+                            <a href="mailto:hello@ferry.com">info@torcoromaweb.com</a>
                         </li>
                         <li>
                             <i class='bx bxs-envelope'></i>
-                            <a href="mailto:contact@ferry.com">contact@ferry.com</a>
+                            <a href="mailto:contact@ferry.com">contacto@torcoromaweb.com</a>
                         </li>
                         <li>
                             <i class='bx bxs-phone'></i>
-                            <a href="tel:+0123456789">+0123 456 789</a>
+                            <a href="tel:+0123456789">+57 301 0000 000</a>
                         </li>
                     </ul>
                 </div>
@@ -1046,7 +912,7 @@
 <!-- Footer bottom Area -->
 <div class="footer-bottom">
     <div class="container">
-        <p>Copyright @2021 Ferry. All Rights Reserved <a href="https://hibootstrap.com/" target="_blank">HiBootstrap</a></p>
+        <p>Copyright @ {{ date('Y') }} Torcoroma SA. All Rights Reserved. Powered By <a href="https://www.facebook.com/kronnosco.la/" target="_blank">Kronnos</a></p>
     </div>
 </div>
 <!-- End Footer bottom Area -->
@@ -1059,28 +925,30 @@
 
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="js/jquery.min.js"></script>
-<script src="js/popper.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
+<script src="{{ asset('js/jquery.min.js') }}"></script>
+<script src="{{asset('js/popper.min.js')}}"></script>
+<script src="{{ asset('js/bootstrap.min.js') }}"></script>
 <!-- Meanmenu JS -->
-<script src="js/meanmenu.min.js"></script>
+<script src="{{ asset('js/meanmenu.min.js') }}"></script>
 <!-- Owl carousel JS -->
-<script src="js/owl.carousel.min.js"></script>
+<script src="{{ asset('js/owl.carousel.min.js') }}"></script>
 <!-- Magnific JS -->
-<script src="js/jquery.magnific-popup.min.js"></script>
+<script src="{{ asset('js/jquery.magnific-popup.min.js') }}"></script>
 <!-- Odometer JS -->
-<script src="js/odometer.min.js"></script>
-<script src="js/jquery.appear.js"></script>
+<script src="{{ asset('js/odometer.min.js') }}"></script>
+<script src="{{ asset('js/jquery.appear.js') }}"></script>
 <!-- Form Validator JS -->
-<script src="js/form-validator.min.js"></script>
+<script src="{{ asset('js/form-validator.min.js') }}"></script>
 <!-- Contact JS -->
-<script src="js/contact-form-script.js"></script>
+<script src="{{ asset('js/contact-form-script.js') }}"></script>
 <!-- Ajaxchimp JS -->
-<script src="js/jquery.ajaxchimp.min.js"></script>
+<script src="{{ asset('js/jquery.ajaxchimp.min.js') }}"></script>
 <!--Animate JS -->
-<script src="js/wow.min.js"></script>
+<script src="{{ asset('js/wow.min.js') }}"></script>
 <!-- Custom JS -->
-<script src="js/custom.js"></script>
+<script src="{{ asset('js/custom.js') }}"></script>
+
+
 </body>
 
 </html>
