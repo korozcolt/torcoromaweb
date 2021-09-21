@@ -1995,6 +1995,34 @@ Preloader Area
 /*================================================
 Preloader Area
 =================================================*/
+.chat-bar {
+  position: fixed;
+  bottom: 120px;
+  right: 30px;
+  cursor: pointer;
+  z-index: 9999;
+  transform: scale(0);
+}
+.chat-bar.active {
+  transform: scale(2);
+}
+.chat-bar i {
+  background: #020036;
+  color: #f9cf0e;
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  line-height: 45px;
+  text-align: center;
+  font-size: 25px;
+  border-radius: 80px;
+  transition: all 0.7s;
+}
+.chat-bar i:hover {
+  background: #f9cf0e;
+  color: #020036;
+}
+
 .go-top {
   position: fixed;
   bottom: 15px;

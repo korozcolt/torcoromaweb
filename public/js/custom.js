@@ -2,20 +2,20 @@
     'use strict';
 
     // Mean Menu JS
-	jQuery('.mean-menu').meanmenu({ 
+	jQuery('.mean-menu').meanmenu({
 		meanScreenWidth: "991"
 	});
 
 	// Header Sticky
 	$(window).on('scroll',function() {
-		if ($(this).scrollTop() > 120){  
+		if ($(this).scrollTop() > 120){
 			$('.navbar-area').addClass("is-sticky");
 		}
 		else{
 			$('.navbar-area').removeClass("is-sticky");
 		}
 	});
-	
+
 	// Search Menu JS
 	$(".search-box i").on("click", function(){
 		$(".search-overlay").toggleClass("search-overlay-active");
@@ -23,7 +23,7 @@
 	$(".search-overlay-close").on("click", function(){
 		$(".search-overlay").removeClass("search-overlay-active");
 	});
-    
+
     // Hero slider
 	$('.hero-slider').owlCarousel({
 		items: 1,
@@ -184,7 +184,7 @@
 			"<i class='bx bx-chevron-right'></i>"
 		]
 	})
-	
+
 	//  Services Slider Two
 	$('.services-slider-two').owlCarousel({
 		loop: true,
@@ -245,16 +245,16 @@
 	$('#accordion h3').on('click', function() {
         // capture all icons
         var iconChevron = $('.bx-chevron-right'),
- 
+
 		// capture current icon
 		currentIcon = $(this).children('.bx-chevron-right');
-         
+
         // Rotate none clicked icons back to original position
         $(iconChevron).not(currentIcon).removeClass('is-rotate');
- 
-        // Need rotate chevron on click 
+
+        // Need rotate chevron on click
         $(this).children('.bx-chevron-right').toggleClass('is-rotate');
-     
+
         // Toggle is-hidden class on clicked and add it to previously clicked
         $(this).next()
 		.toggleClass('is-hidden')
@@ -319,12 +319,12 @@
 
 	// Count Time JS
 	function makeTimer() {
-		var endTime = new Date("november  30, 2022 17:00:00 PDT");			
+		var endTime = new Date("november  30, 2022 17:00:00 PDT");
 		var endTime = (Date.parse(endTime)) / 1000;
 		var now = new Date();
 		var now = (Date.parse(now) / 1000);
 		var timeLeft = endTime - now;
-		var days = Math.floor(timeLeft / 86400); 
+		var days = Math.floor(timeLeft / 86400);
 		var hours = Math.floor((timeLeft - (days * 86400)) / 3600);
 		var minutes = Math.floor((timeLeft - (days * 86400) - (hours * 3600 )) / 60);
 		var seconds = Math.floor((timeLeft - (days * 86400) - (hours * 3600) - (minutes * 60)));
@@ -406,7 +406,7 @@
 		}
 		$("#validator-newsletter").removeClass().addClass(msgClasses).text(msg);
 	}
-	
+
 	// AJAX MailChimp JS
 	$(".newsletter-form").ajaxChimp({
 		url: "https://EnvyTheme.us20.list-manage.com/subscribe/post?u=60e1ffe2e8a68ce1204cd39a5&amp;id=42d6d188d9", // Your url MailChimp
@@ -420,14 +420,15 @@
         } else {
             $('.go-top').removeClass('active');
         }
-	});	
+	});
+
     $(function(){
         $(window).on('scroll', function(){
             var scrolled = $(window).scrollTop();
             if (scrolled > 600) $('.go-top').addClass('active');
             if (scrolled < 600) $('.go-top').removeClass('active');
-        });  
-        
+        });
+
         $('.go-top').on('click', function() {
             $("html, body").animate({ scrollTop: "0" },  500);
         });
