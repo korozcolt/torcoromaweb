@@ -2238,6 +2238,37 @@ Preloader Area
     }
 }
 
+.chat-services{
+    transition: .5s;
+    max-height: 0;
+}
+.chat-services.expand{
+    max-height: 350px;
+}
+.message {
+    max-width: 250px;
+}
+
+.chat-modal{
+    transition: .5s;
+    opacity: 0;
+    transform: translateX(500px);
+}
+
+.chat-modal.show{
+    opacity: 1;
+    transform: translateX(0);
+}
+
+@keyframes animateModal {
+    from{
+        transform: translateX(200px) opacity(0);
+    }
+    to{
+        transform: translateX(0) opacity(1);
+    }
+}
+
 .go-top {
     position: fixed;
     bottom: 15px;
@@ -3360,13 +3391,13 @@ Page banner Area
     height: 450px;
     text-align: center;
     &.bg-1 {
-        background-image: url('../img/page-banner/banner1.jpg');
+        background-image: url('../images/banner-01.jpg');
     }
     &.bg-2 {
-        background-image: url('../img/page-banner/banner2.jpg');
+        background-image: url('../images/banner-02.jpg');
     }
     &.bg-3 {
-        background-image: url('../img/page-banner/banner3.jpg');
+        background-image: url('../images/banner-03.jpg');
     }
     .page-content {
         margin-top: 115px;

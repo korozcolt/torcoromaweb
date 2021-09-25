@@ -26,7 +26,7 @@
                         <span>Desde 1992</span>
                         <h1>Transporte por toda<br> la región caribe.</h1>
                         <p>Contamos con recurso humano dispuesto a entregar el mejor servicio posible y manejar las espectativas de nuestros clientes.</p>
-                        <a href="contact.html" class="default-btn-one me-3">Contactanos</a>
+                        <a href="{{ route('contact.page') }}" class="default-btn-one me-3">Contactanos</a>
                         <a href="#" class="default-btn-two">Obtener una cotización</a>
                     </div>
                 </div>
@@ -42,7 +42,7 @@
                         <span>Desde 1992</span>
                         <h1>Nuestro<br> Equipo de Trabajo</h1>
                         <p>Contando con el personal idoneo para entregale el mejor de los servicios.</p>
-                        <a href="contact.html" class="default-btn-one me-3">Contactanos</a>
+                        <a href="{{ route('contact.page') }}" class="default-btn-one me-3">Contactanos</a>
                         <a href="#" class="default-btn-two">Obtener una cotización</a>
                     </div>
                 </div>
@@ -62,10 +62,10 @@
                         <i class='bx bxs-phone'></i>
                         <h4>Numeros de Contacto</h4>
                         <p>
-                            <a href="tel:+4560123987">+57 300 555 5555</a>
+                            <a href="tel:300 555 5555">+57 300 555 5555</a>
                         </p>
                         <p>
-                            <a href="tel:+0123456789">  01 8000 365365</a>
+                            <a href="tel:300 555 5555">  01 8000 365365</a>
                         </p>
                     </div>
                 </div>
@@ -122,7 +122,7 @@
 
                         <p>Como empresa socialmente responsable, promueve entre sus grupos de interés el respeto y fomento de los Derechos Humanos. Es así como se difunde información a través de medios internos y externos..</p>
 
-                        <a href="about.html" class="default-btn-one btn-bs">Aprende más</a>
+                        <a href="{{ route('about.page') }}" class="default-btn-one btn-bs">Aprende más</a>
                     </div>
                 </div>
             </div>
@@ -193,19 +193,23 @@
                                     <ul>
                                         <li>
                                             <i class='bx bx-check'></i>
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                            Somos personas honestas.
                                         </li>
                                         <li>
                                             <i class='bx bx-check'></i>
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                            Inspiramos confianza.
                                         </li>
                                         <li>
                                             <i class='bx bx-check'></i>
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                            Somos creativos.
                                         </li>
                                         <li>
                                             <i class='bx bx-check'></i>
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                                            Nos relacionamos con respeto.
+                                        </li>
+                                        <li>
+                                            <i class='bx bx-check'></i>
+                                            Estamos comprometidos con el servicio.
                                         </li>
                                     </ul>
                                 </div>

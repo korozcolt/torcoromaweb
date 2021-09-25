@@ -119,8 +119,8 @@
             <div class="container">
                 <div class="ferry-responsive-menu">
                     <div class="logo">
-                        <a href="index.html">
-                            <img src="img/logo.png" alt="logo">
+                        <a href="{{ url ('/')}}">
+                            <img src="{{ asset('images/logo.png') }}" alt="logo">
                         </a>
                     </div>
                 </div>
@@ -137,7 +137,7 @@
                     <div class="collapse navbar-collapse mean-menu">
                         <ul class="navbar-nav ms-auto">
                             <li class="nav-item">
-                                <a href="#" class="nav-link active">Inicio</a>
+                                <a href="{{ url ('/')}}" class="nav-link active">Inicio</a>
                             </li>
 
                             <li class="nav-item">
@@ -146,22 +146,22 @@
                                 </a>
                                 <ul class="dropdown-menu">
                                     <li class="nav-item">
-                                        <a href="about.html" class="nav-link">Acerca de</a>
+                                        <a href="{{ url ('/about')}}" class="nav-link">Acerca de</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="team.html" class="nav-link">Equipo</a>
-                                    </li>
-
-                                    <li class="nav-item">
-                                        <a href="faq.html" class="nav-link">Preguntas Frecuentes</a>
+                                        <a href="{{ url ('/team')}}" class="nav-link">Equipo</a>
                                     </li>
 
                                     <li class="nav-item">
-                                        <a href="privacy-policy.html" class="nav-link">Políticas de seguridad</a>
+                                        <a href="{{ url ('/faq')}}" class="nav-link">Preguntas Frecuentes</a>
                                     </li>
 
                                     <li class="nav-item">
-                                        <a href="terms-condition.html" class="nav-link">Terminos y condiciones</a>
+                                        <a href="{{ url ('/')}}" class="nav-link">Políticas de seguridad</a>
+                                    </li>
+
+                                    <li class="nav-item">
+                                        <a href="{{ url ('/')}}" class="nav-link">Terminos y condiciones</a>
                                     </li>
                                 </ul>
                             </li>
@@ -172,10 +172,10 @@
                                 </a>
                                 <ul class="dropdown-menu">
                                     <li class="nav-item">
-                                        <a href="services.html" class="nav-link">Servicios</a>
+                                        <a href="{{ url ('/services')}}" class="nav-link">Servicios</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="service-details.html" class="nav-link">VIP</a>
+                                        <a href="{{ url ('/services')}}" class="nav-link">VIP</a>
                                     </li>
                                 </ul>
                             </li>
@@ -186,13 +186,13 @@
                                 </a>
                                 <ul class="dropdown-menu">
                                     <li class="nav-item">
-                                        <a href="blog.html" class="nav-link">Noticias & Novedades</a>
+                                        <a href="{{ url ('/blog')}}" class="nav-link">Noticias & Novedades</a>
                                     </li>
                                 </ul>
                             </li>
 
                             <li class="nav-item">
-                                <a href="contact.html" class="nav-link">Contacto</a>
+                                <a href="{{ url ('/contact')}}" class="nav-link">Contacto</a>
                             </li>
 
                             <li class="nav-item">
@@ -276,19 +276,19 @@
 
                     <ul class="footer-text">
                         <li>
-                            <a href="about.html">Equipo</a>
+                            <a href="{{ url ('/team')}}">Equipo</a>
                         </li>
                         <li>
-                            <a href="services.html">Servicios</a>
+                            <a href="{{ url ('/services')}}">Servicios</a>
                         </li>
                         <li>
-                            <a href="#">Acerca de</a>
+                            <a href="{{ url ('/about')}}">Acerca de</a>
                         </li>
                         <li>
-                            <a href="#">Cotización</a>
+                            <a href="{{ url ('/#quote')}}">Cotización</a>
                         </li>
                         <li>
-                            <a href="#">Últimas noticias</a>
+                            <a href="{{ url ('/blog')}}">Últimas noticias</a>
                         </li>
                     </ul>
                 </div>
@@ -300,19 +300,19 @@
 
                     <ul class="footer-text">
                         <li>
-                            <a href="faq.html">Preguntas frecuentes</a>
+                            <a href="{{ url ('/faq')}}">Preguntas frecuentes</a>
                         </li>
                         <li>
-                            <a href="privacy-policy.html">Políticas de bioseguridad</a>
+                            <a href="{{ url ('/policy-and-term')}}">Políticas de bioseguridad</a>
                         </li>
                         <li>
-                            <a href="terms-condition.html">Terminos & condiciones</a>
+                            <a href="{{ url ('/policy-and-term')}}">Terminos & condiciones</a>
                         </li>
                         <li>
-                            <a href="#">Formatos para transporte especializado</a>
+                            <a href="{{ url ('/faq')}}">Formatos para transporte especializado</a>
                         </li>
                         <li>
-                            <a href="contact.html">Contactanos</a>
+                            <a href="{{ url ('/contact')}}">Contactanos</a>
                         </li>
                     </ul>
                 </div>
@@ -328,15 +328,15 @@
                         </li>
                         <li>
                             <i class='bx bxs-envelope'></i>
-                            <a href="mailto:hello@ferry.com">info@torcoromaweb.com</a>
+                            <a href="mailto:info@torcoromaweb.com">info@torcoromaweb.com</a>
                         </li>
                         <li>
                             <i class='bx bxs-envelope'></i>
-                            <a href="mailto:contact@ferry.com">contacto@torcoromaweb.com</a>
+                            <a href="mailto:contacto@torcoromaweb.com">contacto@torcoromaweb.com</a>
                         </li>
                         <li>
                             <i class='bx bxs-phone'></i>
-                            <a href="tel:+0123456789">+57 301 0000 000</a>
+                            <a href="tel:+57 301 0000 000">+57 301 0000 000</a>
                         </li>
                     </ul>
                 </div>
@@ -359,11 +359,17 @@
     <i class='bx bx-chevrons-up'></i>
 </div>
 <!-- End Go Top -->
-<!-- chat bar -->
-<div class="chat-bar active">
-    <i class='bx bx-message-rounded'></i>
+<div class="fixed bottom-0 right-0 flex flex-col items-end ml-6 w-full mr-3 ">
+    <div class="chat-modal show mr-5 flex flex-col mb-5 shadow-lg sm:w-1/2 md:w-1/3 lg:w-1/4">
+        @livewire('chat-form')
+    </div>
+    <div class="show-chat hidden mx-10 mb-6 mt-4 text-blue-600 hover:text-blue-800 flex justify-center items-center cursor-pointer ">
+        <svg width="4em" height="4em" viewBox="0 0 16 16" class="bi bi-chat-text-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" d="M16 8c0 3.866-3.582 7-8 7a9.06 9.06 0 0 1-2.347-.306c-.584.296-1.925.864-4.181 1.234-.2.032-.352-.176-.273-.362.354-.836.674-1.95.77-2.966C.744 11.37 0 9.76 0 8c0-3.866 3.582-7 8-7s8 3.134 8 7zM4.5 5a.5.5 0 0 0 0 1h7a.5.5 0 0 0 0-1h-7zm0 2.5a.5.5 0 0 0 0 1h7a.5.5 0 0 0 0-1h-7zm0 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1h-4z"/>
+        </svg>
+    </div>
 </div>
-<!-- End chat bar -->
+
 
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -389,7 +395,30 @@
 <script src="{{ asset('js/wow.min.js') }}"></script>
 <!-- Custom JS -->
 <script src="{{ asset('js/custom.js') }}"></script>
+<script>
+    const chatModal = document.querySelector('.chat-modal');
+    const chatServices = document.querySelector('.chat-services');
 
+    const showChat = document.querySelector('.show-chat');
+    const closeChat = document.querySelector('.close-chat');
+
+    showChat.addEventListener('click', function (){
+        chatModal.classList.add('show')
+        showChat.classList.add('hidden')
+        setTimeout(() => {
+            chatServices.classList.add('expand')
+        }, 500);
+    });
+    closeChat.addEventListener('click',function () {
+        setTimeout(() => {
+            showChat.classList.remove('hidden')
+        }, 820);
+        chatServices.classList.remove('expand')
+        setTimeout(() => {
+            chatModal.classList.remove('show')
+        }, 500);
+    });
+</script>
 
 </body>
 

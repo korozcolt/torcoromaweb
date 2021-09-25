@@ -6,10 +6,10 @@
         <div class="d-table-cell">
             <div class="container">
                 <div class="page-content">
-                    <h2>About Us</h2>
+                    <h2>Acerca de</h2>
                     <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li>About Us</li>
+                        <li><a href="{{ url('/') }}">Inicio</a></li>
+                        <li>Torcoroma S.A.</li>
                     </ul>
                 </div>
             </div>
@@ -24,27 +24,27 @@
         <div class="row align-items-center">
             <div class="col-lg-6">
                 <div class="about-safe-text">
-                    <h2>Safe, Faster And Easy Solution For Shipping</h2>
-                    <p>Sed ut perspiciatis unde omnis iste natus error sit, totam rem aperiam, eaque ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia sunt explicabo. beatae ipsam voluptatem quia. </p>
+                    <h2>Solución segura, rápida y fácil para su transporte</h2>
+                    <p>Siempre estamos en la busqueda constante del equilibrio entre la eficiencia y el buen servicio, para llegar a contemplar y entregar lo mejor cada día. </p>
                 </div>
 
                 <div class="shipping-card">
                     <div class="shipping-contant">
                         <div class="shipping-sign">
-                            <img src="assets/img/sign.png" alt="image">
+                            <img src="{{ asset('img/sign.png') }}" alt="image">
                         </div>
                         <div class="shipping-image">
-                            <img src="assets/img/clients/client1.png" alt="image">
+                            <img src="{{ asset('img/clients/client1.png') }}" alt="image">
                         </div>
-                        <h3>John Doe</h3>
-                        <span>CEO, Ferry</span>
-                        <p>Nor again is there anyone who loves or pursues or desires to.</p>
+                        <h3>Luis Assia</h3>
+                        <span>CEO, Tocoroma S.A.</span>
+                        <p>Tampoco hay nadie que ame o persiga o desee.</p>
                     </div>
                 </div>
             </div>
             <div class="col-lg-6">
                 <div class="safe-image">
-                    <img src="assets/img/speciality/speciality2.jpg" alt="image">
+                    <img src="{{ asset('img/speciality/speciality2.jpg') }}" alt="image">
                 </div>
             </div>
         </div>
@@ -58,7 +58,7 @@
         <div class="row">
             <div class="col-lg-4 col-md-6">
                 <div class="about-info-card">
-                    <h3>Our Mission</h3>
+                    <h3>Nuestra Misión</h3>
                     <ul>
                         <li>
                             <i class='bx bx-check'></i>
@@ -90,7 +90,7 @@
 
             <div class="col-lg-4 col-md-6">
                 <div class="about-info-card">
-                    <h3>Our Promises</h3>
+                    <h3>Nuestros Principios</h3>
                     <ul>
                         <li>
                             <i class='bx bx-check'></i>
@@ -122,7 +122,7 @@
 
             <div class="col-lg-4 col-md-6 offset-md-3 offset-lg-0">
                 <div class="about-info-card">
-                    <h3>Our Vission</h3>
+                    <h3>Nuestra Visión</h3>
                     <ul>
                         <li>
                             <i class='bx bx-check'></i>
@@ -163,7 +163,7 @@
             <div class="row align-items-center">
                 <div class="col-lg-6">
                     <div class="digital-image">
-                        <img src="assets/img/blog/blog7.jpg" alt="image">
+                        <img src="{{ asset('img/blog/blog7.jpg') }}" alt="image">
                     </div>
                 </div>
 

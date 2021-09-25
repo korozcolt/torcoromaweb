@@ -6,10 +6,10 @@
             <div class="d-table-cell">
                 <div class="container">
                     <div class="page-content">
-                        <h2>FAQ</h2>
+                        <h2>PQR's</h2>
                         <ul>
-                            <li><a href="index.html">Home</a></li>
-                            <li>FAQ</li>
+                            <li><a href="{{ url('/')}}">Inicio</a></li>
+                            <li>PQR's</li>
                         </ul>
                     </div>
                 </div>
@@ -22,8 +22,8 @@
     <div class="faq-area ptb-100">
         <div class="container">
             <div class="section-title">
-                <span>FAQ</span>
-                <h2>Frequently Asked Questions</h2>
+                <span>PQR's</span>
+                <h2>Preguntas, Peticiones, Quejas y Recursos</h2>
             </div>
             <div class="faq-contant">
                 <div class="row align-items-center">
@@ -85,44 +85,44 @@
             <div class="faq-form">
                 <form>
                     <div class="section-title">
-                        <span>FAQ,s</span>
-                        <h2>Frequently Asked Questions</h2>
+                        <span>PQR's</span>
+                        <h2>Preguntas, Peticiones, Quejas y Recursos</h2>
                     </div>
                     <div class="row">
                         <div class="col-lg-6">
                             <div class="form-group">
+                                <label>Nombre</label>
+                                <input type="text" class="form-control" name="name" id="name" placeholder="Su nombre">
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="form-group">
                                 <label>Email</label>
-                                <input type="text" class="form-control" id="name" placeholder="Your Name">
+                                <input type="email" class="form-control" name="email" id="email" placeholder="Su email">
                             </div>
                         </div>
                         <div class="col-lg-6">
                             <div class="form-group">
-                                <label>Email address</label>
-                                <input type="email" class="form-control" id="email" placeholder="Your Email">
+                                <label>Teléfono</label>
+                                <input type="text" class="form-control" name="phone" id="phone" placeholder="Su teléfono">
                             </div>
                         </div>
                         <div class="col-lg-6">
                             <div class="form-group">
-                                <label>Phone</label>
-                                <input type="text" class="form-control" id="phone" placeholder="Your Phone">
-                            </div>
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="form-group">
-                                <label>Subject</label>
-                                <input type="text" class="form-control" id="subject" placeholder="Your Subject">
+                                <label>Asunto:</label>
+                                <input type="text" class="form-control" name="subject" id="subject" placeholder="Escriba un breve resumen">
                             </div>
                         </div>
                     </div>
 
                     <div class="form-group">
                         <label>Message</label>
-                        <textarea class="form-control" id="message" rows="3"
-                                  placeholder="Message"></textarea>
+                        <textarea class="form-control" id="message" name="message" rows="3"
+                                  placeholder="Mensaje completo"></textarea>
                     </div>
 
                     <div class="text-center">
-                        <button type="submit" class="faq-form-btn">Send Message</button>
+                        <button type="submit" class="faq-form-btn">Enviar mensaje</button>
                     </div>
                 </form>
             </div>
