@@ -2,6 +2,22 @@
 
 use Illuminate\Support\Facades\Route;
 
+Route::get('clear_cache', function () {
+
+    \Artisan::call('cache:clear');
+
+    dd("Cache is cleared");
+
+});
+
+Route::get('db_create', function () {
+
+    \Artisan::call('migrate');
+
+    dd("Migrate is done");
+
+});
+
 Route::get('/', function () {
     return view('welcome');
 })->name('home.page');
