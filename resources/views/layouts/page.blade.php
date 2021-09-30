@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,7 +7,7 @@
     <!-- ===============================================-->
     <!--    Document Title-->
     <!-- ===============================================-->
-    <title>TORCOROMA SA | Transporte</title>
+    <title>COOPERATIVA | TORCOROMA</title>
     <!-- ===============================================-->
     <!--    Favicons-->
     <!-- ===============================================-->
@@ -17,7 +16,6 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
     <meta name="theme-color" content="#ffffff">
-
     <!-- ===============================================-->
     <!--    Stylesheets-->
     <!-- ===============================================-->
@@ -44,13 +42,9 @@
     <link rel="stylesheet" href="{{asset('css/style.css')}}">
     <!-- Stylesheet Responsive CSS -->
     <link rel="stylesheet" href="{{asset('css/responsive.css')}}">
-    {{--    <script defer type="text/javascript" src="https://wl.redbus.com/javascripts/widget.min.js"></script>--}}
-    {{--    <script src="https://wl.redbus.com/externaljavascript/loadwidget.js"></script>--}}
+    {{--<script defer type="text/javascript" src="https://wl.redbus.com/javascripts/widget.min.js"></script>
+    <script src="https://wl.redbus.com/externaljavascript/loadwidget.js"></script>--}}
 </head>
-
-
-<body>
-
 <body>
 <!-- Preloder -->
 <div class="preloader">
@@ -61,7 +55,6 @@
     </div>
 </div>
 <!-- End Preloder -->
-
 <!-- Heder Area -->
 <header class="header-area">
     <div class="top-header">
@@ -369,7 +362,6 @@
         </svg>
     </div>
 </div>
-
 
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->

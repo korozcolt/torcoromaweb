@@ -345,13 +345,14 @@
 <!-- Speciality Slider Area -->
 <div class="speciality-area ptb-100">
     <div class="container">
+        <h1>AQUÍ WIDGET RED BUS</h1>
+        <div class="widget" data-widgetid="TORCOROMA" style="position: relative;width: 80%;margin:auto;"></div>
         <div class="section-title">
             <span>Nuestros servicios especiales</span>
             <h2>Seguro y rapido, servicio especial</h2>
         </div>
 
         <div class="speciality-slider owl-carousel owl-theme">
-            <h1>AQUÍ WIDGET RED BUS</h1>
 {{--            <div class="speciality-card">--}}
 {{--                <a href="service-details.html">--}}
 {{--                    <img src="img/speciality/speciality1.jpg" alt="image">--}}
