@@ -1,40 +1,34 @@
 <?php
 
+use App\Http\Livewire\ChatForm;
+use App\Http\Livewire\SupportForm;
 use Illuminate\Support\Facades\Route;
 
-Route::get('clear_cache', function () {
+//--------------------* PAGES ROUTES *-------------------------------//
+Route::prefix('/')->group(function () {
+    Route::get('/', function () {
+        return view('welcome');
+    })->name('home.page');
 
-    \Artisan::call('cache:clear');
+    Route::get('/contact', function () {
+        return view('contact');
+    })->name('contact.page');
 
-    dd("Cache is cleared");
+    Route::get('/faq', function () {
+        return view('faq');
+    })->name('faq.page');
 
+    Route::get('/about', function () {
+        return view('about');
+    })->name('about.page');
 });
 
-Route::get('db_create', function () {
+//--------------------* ADMIN ROUTES *-------------------------------//
+Route::middleware(['auth:sanctum', 'verified'])->group(function () {
+    Route::get('/dashboard', function () {
+        return view('dashboard');
+    })->name('dashboard');
 
-    \Artisan::call('migrate');
-
-    dd("Migrate is done");
-
+    Route::get('/support-form', SupportForm::class)->name('support.admin');
+    Route::get('/chat-form', ChatForm::class)->name('chat.admin');
 });
-
-Route::get('/', function () {
-    return view('welcome');
-})->name('home.page');
-
-Route::get('/contact', function () {
-    return view('contact');
-})->name('contact.page');
-
-Route::get('/faq', function () {
-    return view('faq');
-})->name('faq.page');
-
-Route::get('/about', function () {
-    return view('about');
-})->name('about.page');
-
-Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
-    return view('dashboard');
-})->name('dashboard');
-
