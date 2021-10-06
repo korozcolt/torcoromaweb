@@ -42,6 +42,9 @@
     <link rel="stylesheet" href="{{asset('css/style.css')}}">
     <!-- Stylesheet Responsive CSS -->
     <link rel="stylesheet" href="{{asset('css/responsive.css')}}">
+    <!-- Add Chat Responsive CSS -->
+    <link href="{{ asset('addchat/css/addchat.min.css') }}" rel="stylesheet">
+
     {{--<script defer type="text/javascript" src="https://wl.redbus.com/javascripts/widget.min.js"></script>
     <script src="https://wl.redbus.com/externaljavascript/loadwidget.js"></script>--}}
 </head>
@@ -352,17 +355,13 @@
     <i class='bx bx-chevrons-up'></i>
 </div>
 <!-- End Go Top -->
-<div class="fixed bottom-0 right-0 flex flex-col items-end ml-6 w-full mr-3 ">
-    <div class="chat-modal show mr-5 flex flex-col mb-5 shadow-lg sm:w-1/2 md:w-1/3 lg:w-1/4">
-        @livewire('chat-form')
-    </div>
-    <div class="show-chat hidden mx-10 mb-6 mt-4 text-blue-600 hover:text-blue-800 flex justify-center items-center cursor-pointer ">
-        <svg width="4em" height="4em" viewBox="0 0 16 16" class="bi bi-chat-text-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-            <path fill-rule="evenodd" d="M16 8c0 3.866-3.582 7-8 7a9.06 9.06 0 0 1-2.347-.306c-.584.296-1.925.864-4.181 1.234-.2.032-.352-.176-.273-.362.354-.836.674-1.95.77-2.966C.744 11.37 0 9.76 0 8c0-3.866 3.582-7 8-7s8 3.134 8 7zM4.5 5a.5.5 0 0 0 0 1h7a.5.5 0 0 0 0-1h-7zm0 2.5a.5.5 0 0 0 0 1h7a.5.5 0 0 0 0-1h-7zm0 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1h-4z"/>
-        </svg>
-    </div>
-</div>
-
+<!-- Chat Adding -->
+<div id="addchat_app"
+     data-baseurl="{{ url('') }}"
+     data-csrfname="'X-CSRF-Token'"
+     data-csrftoken="{{ csrf_token() }}"
+></div>
+<!-- End Chat Adding -->
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <script src="{{ asset('js/jquery.min.js') }}"></script>
@@ -385,32 +384,10 @@
 <script src="{{ asset('js/jquery.ajaxchimp.min.js') }}"></script>
 <!--Animate JS -->
 <script src="{{ asset('js/wow.min.js') }}"></script>
+<!-- App JS -->
+<script src="{{ asset('js/app.js')}}"></script>
 <!-- Custom JS -->
 <script src="{{ asset('js/custom.js') }}"></script>
-<script>
-    const chatModal = document.querySelector('.chat-modal');
-    const chatServices = document.querySelector('.chat-services');
-
-    const showChat = document.querySelector('.show-chat');
-    const closeChat = document.querySelector('.close-chat');
-
-    showChat.addEventListener('click', function (){
-        chatModal.classList.add('show')
-        showChat.classList.add('hidden')
-        setTimeout(() => {
-            chatServices.classList.add('expand')
-        }, 500);
-    });
-    closeChat.addEventListener('click',function () {
-        setTimeout(() => {
-            showChat.classList.remove('hidden')
-        }, 820);
-        chatServices.classList.remove('expand')
-        setTimeout(() => {
-            chatModal.classList.remove('show')
-        }, 500);
-    });
-</script>
 
 </body>
 

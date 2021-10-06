@@ -32,3 +32,6 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     Route::get('/support-form', SupportForm::class)->name('support.admin');
     Route::get('/chat-form', ChatForm::class)->name('chat.admin');
 });
+
+
+Addchat::routes();

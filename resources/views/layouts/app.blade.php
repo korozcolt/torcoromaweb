@@ -12,6 +12,7 @@
 
         <!-- Styles -->
         <link rel="stylesheet" href="{{ mix('css/app.css') }}">
+        <link href="{{ asset('addchat/css/addchat.min.css') }}" rel="stylesheet">
 
         @livewireStyles
 
@@ -38,9 +39,13 @@
                 {{ $slot }}
             </main>
         </div>
-
+        <div id="addchat_app"
+             data-baseurl="{{ url('') }}"
+             data-csrfname="'X-CSRF-Token'"
+             data-csrftoken="{{ csrf_token() }}"
+        ></div>
         @stack('modals')
-
         @livewireScripts
     </body>
+
 </html>
