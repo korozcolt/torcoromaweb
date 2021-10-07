@@ -62,7 +62,12 @@
             </div>
 
             <div class="contact-form">
-                <form id="contactForm">
+                @if(Session::has('success'))
+                    <div class="alert alert-success">
+                        {{ Session::get('success') }}
+                    </div>
+                @endif
+                <form id="contactForm" @method('post') action="{{ route('contactus.send') }}">
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
@@ -73,14 +78,14 @@
 
                         <div class="col-md-6">
                             <div class="form-group">
-                                <input type="email" name="email" class="form-control" id="email" required data-error="Please enter your email" placeholder="Your email address">
+                                <input type="email" name="email" class="form-control" id="email" required data-error="Por favor, ingrese su correo" placeholder="Su correo">
                                 <div class="help-block with-errors"></div>
                             </div>
                         </div>
 
                         <div class="col-md-6">
                             <div class="form-group">
-                                <input type="text" name="msg_subject" id="msg_subject" class="form-control" required data-error="Please enter your subject" placeholder="Your Subject">
+                                <input type="text" name="subject" id="msg_subject" class="form-control" required data-error="Por favor ingrese el Asunto" placeholder="Su asunto">
                                 <div class="help-block with-errors"></div>
                             </div>
                         </div>
@@ -100,7 +105,7 @@
                         </div>
 
                         <div class="col-lg-12 col-md-12 text-center">
-                            <button type="submit" class="default-btn-one">Send Message</button>
+                            <button type="submit" class="default-btn-one">Enviar Mensaje</button>
                             <div id="msgSubmit" class="h3 text-center hidden"></div>
                             <div class="clearfix"></div>
                         </div>
