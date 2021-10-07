@@ -67,7 +67,7 @@
                         {{ Session::get('success') }}
                     </div>
                 @endif
-                <form id="contactForm" @method('post') action="{{ route('contactus.send') }}">
+                <form id="contactForm" @method('post')">
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
