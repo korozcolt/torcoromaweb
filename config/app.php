@@ -166,6 +166,7 @@ return [
          * Package Service Providers...
          */
 
+        Classiebit\Addchat\AddchatServiceProvider::class,
         /*
          * Application Service Providers...
          */

@@ -1,13 +1,3 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import 'animate.min.css';
-@import 'bootstrap.min.css';
-@import 'boxicons.min.css';
-@import 'magnific-popup.css';
-@import 'meanmenu.min.css';
-@import 'odometer.css';
-@import 'owl.carousel.min.css';
-@import 'owl.theme.default.min.css';
-@import 'resources/sass/responsive.scss';
-@import 'resources/sass/style.scss';
