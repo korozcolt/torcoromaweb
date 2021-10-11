@@ -58,6 +58,13 @@
     </div>
 </div>
 <!-- End Preloder -->
+<!-- Chat Adding -->
+<div id="addchat_app"
+     data-baseurl="{{ url('') }}"
+     data-csrfname="'X-CSRF-Token'"
+     data-csrftoken="{{ csrf_token() }}"
+></div>
+<!-- End Chat Adding -->
 <!-- Heder Area -->
 <header class="header-area">
     <div class="top-header">
@@ -355,13 +362,7 @@
     <i class='bx bx-chevrons-up'></i>
 </div>
 <!-- End Go Top -->
-<!-- Chat Adding -->
-<div id="addchat_app"
-     data-baseurl="{{ url('') }}"
-     data-csrfname="'X-CSRF-Token'"
-     data-csrftoken="{{ csrf_token() }}"
-></div>
-<!-- End Chat Adding -->
+
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <script src="{{ asset('js/jquery.min.js') }}"></script>

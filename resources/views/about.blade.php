@@ -126,7 +126,7 @@
                     <ul>
                         <li>
                             <i class='bx bx-check'></i>
-                            We provide  best logistic service worldwide
+                            Garantizar un optimo servicio de transporte terrestre de pasajeros en la modalidad basica ccoriente y especial.
                         </li>
                         <li>
                             <i class='bx bx-check'></i>

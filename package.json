@@ -23,7 +23,8 @@
         "vue-loader": "^15.9.8",
         "sass-loader": "^8.0.2",
         "resolve-url-loader": "^3.1.0",
-        "sass": "^1.32.6"
+        "sass": "^1.32.6",
+        "addchat-vuejs-pro": "file:vendor/addchat-vuejs-pro"
     },
     "dependencies": {
         "laravel-echo": "^1.11.2",

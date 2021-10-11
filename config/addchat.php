@@ -123,9 +123,9 @@ return [
     'groups_col_id'     => 'id',
     'groups_col_name'   => 'name',
 
-    'ug_table'          => NULL,
-    'ug_col_user_id'    => NULL,
-    'ug_col_group_id'   => NULL,
+    'ug_table'          => 'users_groups',
+    'ug_col_user_id'    => 'users_id',
+    'ug_col_group_id'   => 'group_id',
 
 
      /**
@@ -147,7 +147,7 @@ return [
      *
     */
 
-    'guest_group_id'     => 8,
+    'guest_group_id'     => 3,
 
 
     /**
@@ -169,7 +169,7 @@ return [
 
     'hide_email'                => FALSE,
     'enter_send'                => TRUE,
-    'open_chat_on_notification' => TRUE,
+    'open_chat_on_notification' => FALSE,
 
 
     /**
@@ -215,7 +215,7 @@ return [
     */
 
     'include_url'   => [
-        '/','dashboard','profile'
+        
     ],
 
     /**
@@ -246,7 +246,7 @@ return [
      *
     */
 
-    'notification_type' => 'internal',
+    'notification_type' => 'pusher',
     'pusher_app_id'     => NULL,
     'pusher_key'        => NULL,
     'pusher_secret'     => NULL,

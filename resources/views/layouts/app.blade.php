@@ -14,12 +14,20 @@
         <link rel="stylesheet" href="{{ mix('css/app.css') }}">
         <link href="{{ asset('addchat/css/addchat.min.css') }}" rel="stylesheet">
 
+
         @livewireStyles
 
         <!-- Scripts -->
         <script src="{{ mix('js/app.js') }}" defer></script>
     </head>
     <body class="font-sans antialiased">
+        <!-- Chat Adding -->
+        <div id="addchat_app"
+        data-baseurl="{{ url('') }}"
+        data-csrfname="'X-CSRF-Token'"
+        data-csrftoken="{{ csrf_token() }}"
+        ></div>
+        <!-- End Chat Adding -->
         <x-jet-banner />
 
         <div class="min-h-screen bg-gray-100">
@@ -39,11 +47,6 @@
                 {{ $slot }}
             </main>
         </div>
-        <div id="addchat_app"
-             data-baseurl="{{ url('') }}"
-             data-csrfname="'X-CSRF-Token'"
-             data-csrftoken="{{ csrf_token() }}"
-        ></div>
         @stack('modals')
         @livewireScripts
     </body>
