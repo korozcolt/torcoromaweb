@@ -26,8 +26,8 @@
                     <div class="contact-info">
                         <i class='bx bxs-phone'></i>
                         <h4>Número de Contacto</h4>
-                        <p> <a href="tel:+0123654987">+57 300 555 5555</a></p>
-                        <p><a href="tel:+0123456789">+57 300 555 5555</a></p>
+                        <p> <a href="tel:{{$info->phone}}">{{$info->phone}}</a></p>
+                        <p><a href="tel:{{$info->phone2}}">{{$info->phone2}}</a></p>
                     </div>
                 </div>
 
@@ -35,8 +35,7 @@
                     <div class="contact-info">
                         <i class='bx bxs-location-plus'></i>
                         <h4>Nuestra Localización</h4>
-                        <p>6th floor, anthina</p>
-                        <p>Sincelejo, Sucre</p>
+                        <p>{{ $info->address }}</p>
                     </div>
                 </div>
 
@@ -44,8 +43,8 @@
                     <div class="contact-info">
                         <i class='bx bxs-envelope'></i>
                         <h4>Numero de Contacto</h4>
-                        <p><a href="mailto:info@torcoromaweb.com">info@torcoromaweb.com</a></p>
-                        <p><a href="mailto:soporte@torcoromaweb.com">soporte@torcoromaweb.com</a></p>
+                        <p><a href="mailto:{{ $info->email }}">{{ $info->email }}</a></p>
+                        <p><a href="mailto:{{ $info->email2 }}">{{ $info->email2 }}</a></p>
                     </div>
                 </div>
             </div>

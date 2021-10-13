@@ -24,8 +24,8 @@
                 </div>
 
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-jet-nav-link href="{{ route('chat.admin') }}" :active="request()->routeIs('chat.admin')">
-                        {{ __('Chats') }}
+                    <x-jet-nav-link href="{{ route('settings.admin') }}" :active="request()->routeIs('settings.admin')">
+                        {{ __('Settings') }}
                     </x-jet-nav-link>
                 </div>
             </div>
@@ -158,8 +158,8 @@
                 {{ __('Tickets') }}
             </x-jet-responsive-nav-link>
 
-            <x-jet-responsive-nav-link href="{{ route('chat.admin') }}" :active="request()->routeIs('chat.admin')">
-                {{ __('Chats') }}
+            <x-jet-responsive-nav-link href="{{ route('settings.admin') }}" :active="request()->routeIs('settings.admin')">
+                {{ __('Settings') }}
             </x-jet-responsive-nav-link>
         </div>
 

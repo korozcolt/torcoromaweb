@@ -62,10 +62,10 @@
                         <i class='bx bxs-phone'></i>
                         <h4>Numeros de Contacto</h4>
                         <p>
-                            <a href="tel:300 555 5555">+57 300 555 5555</a>
+                            <a href="tel:{{ $info->phone }}">{{ $info->phone }}</a>
                         </p>
                         <p>
-                            <a href="tel:300 555 5555">  01 8000 365365</a>
+                            <a href="tel:{{ $info->phone2 }}">  {{ $info->phone2 }}</a>
                         </p>
                     </div>
                 </div>
@@ -74,8 +74,7 @@
                     <div class="contact-card">
                         <i class='bx bxs-location-plus'></i>
                         <h4>Oficinas Principales</h4>
-                        <p>Troncal</p>
-                        <p>Sincelejo, Sucre</p>
+                        <p>{{ $info->address }}</p>
                     </div>
                 </div>
 
@@ -83,8 +82,7 @@
                     <div class="contact-card">
                         <i class='bx bx-show'></i>
                         <h4>Abiertos desde</h4>
-                        <p>6:00 AM - 10:00 PM</p>
-                        <p>Lunes - Domingo</p>
+                        <p>{{ $info->schedules }}</p>
                     </div>
                 </div>
 
@@ -93,10 +91,10 @@
                         <i class='bx bxs-envelope'></i>
                         <h4>Nuestro Email</h4>
                         <p>
-                            <a href="mailto:info@torcoromaweb.com">info@torcoromaweb.com</a>
+                            <a href="mailto:{{ $info->email }}">{{ $info->email }}</a>
                         </p>
                         <p>
-                            <a href="mailto:info@gmail.com">info@gmail.com</a>
+                            <a href="mailto:{{ $info->email }}">{{ $info->email2 }}</a>
                         </p>
                     </div>
                 </div>

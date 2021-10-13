@@ -6,6 +6,8 @@ use App\Models\Support;
 use Illuminate\Http\Request;
 use GuzzleHttp\Client;
 use SoapClient;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\SupportMail;
 
 class SupportController extends Controller
 {
@@ -64,6 +66,12 @@ class SupportController extends Controller
         ]);
 
         Support::create($request->all());
+        $details = [
+            'title' => $request->get('subject'),
+            'body'  => $request->get('message')
+        ];
+
+        Mail::to($request->get('email'))->send(new SupportMail($details));
 
         return redirect('/contact')->with('success', 'Gracias por contactarnos!');
     }

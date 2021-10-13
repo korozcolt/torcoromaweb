@@ -47,6 +47,8 @@
                 {{ $slot }}
             </main>
         </div>
+        <!-- AddChat JS -->
+        <script src="{{  asset('addchat/js/addchat.min.js') }}"></script>
         @stack('modals')
         @livewireScripts
     </body>

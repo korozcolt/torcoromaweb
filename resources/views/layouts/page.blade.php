@@ -7,7 +7,7 @@
     <!-- ===============================================-->
     <!--    Document Title-->
     <!-- ===============================================-->
-    <title>COOPERATIVA | TORCOROMA</title>
+    <title>{{ $info->title }}</title>
     <!-- ===============================================-->
     <!--    Favicons-->
     <!-- ===============================================-->
@@ -45,8 +45,8 @@
     <!-- Add Chat Responsive CSS -->
     <link href="{{ asset('addchat/css/addchat.min.css') }}" rel="stylesheet">
 
-    {{--<script defer type="text/javascript" src="https://wl.redbus.com/javascripts/widget.min.js"></script>
-    <script src="https://wl.redbus.com/externaljavascript/loadwidget.js"></script>--}}
+    <script defer type="text/javascript" src="https://wl.redbus.com/javascripts/widget.min.js"></script>
+    <script src="https://wl.redbus.com/externaljavascript/loadwidget.js"></script>
 </head>
 <body>
 <!-- Preloder -->
@@ -73,15 +73,15 @@
                 <div class="col-lg-6 col-sm-6">
                     <ul class="left-info">
                         <li>
-                            <a href="mailto:info@torcoromaweb">
+                            <a href="mailto:{{ $info->email }}">
                                 <i class='bx bxs-envelope'></i>
-                                info@torcoromaweb.com
+                                {{ $info->email }}
                             </a>
                         </li>
                         <li>
-                            <a href="tel:+823-456-879">
+                            <a href="tel:{{ $info->phone }}">
                                 <i class='bx bxs-phone-call'></i>
-                                +57 300 555 5555
+                                {{ $info->phone }}
                             </a>
                         </li>
                     </ul>
@@ -91,22 +91,22 @@
                     <ul class="right-info">
 
                         <li>
-                            <a href="#" target="_blank">
+                            <a href="{{ $info->facebook ? $info->facebook : '#'}}" target="_blank">
                                 <i class='bx bxl-facebook'></i>
                             </a>
                         </li>
                         <li>
-                            <a href="#" target="_blank">
+                            <a href="{{ $info->twitter ? $info->twitter : '#'}}" target="_blank">
                                 <i class='bx bxl-twitter'></i>
                             </a>
                         </li>
                         <li>
-                            <a href="#" target="_blank">
+                            <a href="{{ $info->linkedin ? $info->linkedin : '#'}}" target="_blank">
                                 <i class='bx bxl-linkedin'></i>
                             </a>
                         </li>
                         <li>
-                            <a href="#" target="_blank">
+                            <a href="{{ $info->instagram ? $info->instagram : '#'}}" target="_blank">
                                 <i class='bx bxl-instagram'></i>
                             </a>
                         </li>
@@ -123,7 +123,7 @@
                 <div class="ferry-responsive-menu">
                     <div class="logo">
                         <a href="{{ url ('/')}}">
-                            <img src="{{ asset('images/logo.png') }}" alt="logo">
+                            <img src="{{ asset('images/logo.png') }}" alt="TORCOROMA LOGO">
                         </a>
                     </div>
                 </div>
@@ -250,22 +250,22 @@
 
                     <ul class="footer-socials">
                         <li>
-                            <a href="#" target="_blank">
+                            <a href="{{ $info->facebook ? $info->facebook : '#'}}" target="_blank">
                                 <i class='bx bxl-facebook'></i>
                             </a>
                         </li>
                         <li>
-                            <a href="#" target="_blank">
+                            <a href="{{ $info->twitter ? $info->twitter : '#'}}" target="_blank">
                                 <i class='bx bxl-twitter' ></i>
                             </a>
                         </li>
                         <li>
-                            <a href="#" target="_blank">
+                            <a href="{{ $info->linkedin ? $info->linkedin : '#'}}" target="_blank">
                                 <i class='bx bxl-linkedin'></i>
                             </a>
                         </li>
                         <li>
-                            <a href="#" target="_blank">
+                            <a href="{{ $info->instagram ? $info->instagram : '#'}}" target="_blank">
                                 <i class='bx bxl-instagram'></i>
                             </a>
                         </li>
@@ -327,19 +327,21 @@
                     <ul class="info-list">
                         <li>
                             <i class='bx bxs-location-plus'></i>
-                            Troncal, Sincelejo, Sucre
+                            {{ $info->address }}
                         </li>
                         <li>
                             <i class='bx bxs-envelope'></i>
-                            <a href="mailto:info@torcoromaweb.com">info@torcoromaweb.com</a>
+                            <a href="mailto:{{ $info->email }}">{{ $info->email }}</a>
                         </li>
+                        @if($info->email2 != '')
                         <li>
                             <i class='bx bxs-envelope'></i>
-                            <a href="mailto:contacto@torcoromaweb.com">contacto@torcoromaweb.com</a>
+                            <a href="mailto:{{ $info->email2 }}">{{ $info->email2 }}</a>
                         </li>
+                        @endif
                         <li>
                             <i class='bx bxs-phone'></i>
-                            <a href="tel:+57 301 0000 000">+57 301 0000 000</a>
+                            <a href="tel:{{ $info->phone }}">{{ $info->phone }}</a>
                         </li>
                     </ul>
                 </div>
@@ -387,6 +389,8 @@
 <script src="{{ asset('js/wow.min.js') }}"></script>
 <!-- App JS -->
 <script src="{{ asset('js/app.js')}}"></script>
+<!-- AddChat JS -->
+<script src="{{  asset('addchat/js/addchat.min.js') }}"></script>
 <!-- Custom JS -->
 <script src="{{ asset('js/custom.js') }}"></script>
 
