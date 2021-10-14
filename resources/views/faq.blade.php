@@ -30,45 +30,47 @@
                     <div class="col-lg-6">
                         <ul class="accordion">
                             <li>
-                                <h3 class="title">Transport & Logistic Services</h3>
+                                <h3 class="title">¿Cómo saber si hay rutas disponibles?</h3>
                                 <div class="accordion-content">
-                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, </p>
+                                    <p>Puedes ingresar en la pagina principal y encontraras un formulario para poder buscar directamente la ruta que desees viajar con Torcoroma. Ahí podrás ver si está disponible o no.</p>
                                 </div>
                             </li>
                             <li>
-                                <h3 class="title">Safe and Faster Logistic Service Neer You</h3>
+                                <h3 class="title">¿Cómo saber los horarios de las diferentes rutas?</h3>
                                 <div class="accordion-content">
-                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, </p>
+                                    <p>Puedes ingresar en la pagina principal y encontraras un formulario para poder buscar directamente la ruta que desees viajar con Torcoroma. Ahí podrás ver los horarios y la disponibilidad de las mismas.</p>
                                 </div>
                             </li>
                             <li>
-                                <h3 class="title">Digital Shipping Solution</h3>
+                                <h3 class="title">¿Qué debo hacer si debo enviar un menor de edad sin acompañante?</h3>
                                 <div class="accordion-content">
-                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, </p>
+                                    <p>Para que un menor pueda viajar con nosotros sin un acompañante deberás descargar el formato F-GT-12
+                                        <a target="_blank" href="{{ asset('docs/F-GT-12_Autorizacion_Para_Transporte_Menores_de_Edad_Sin_Acompañante.pdf') }}">(Descargar Documento)</a>, luego imprimirlo y llenarlo con toda la información que allí es requerida.
+                                        ¡Recuerda! es indispensable que toda la información sea legible, sin tachones, ni borrones.</p>
                                 </div>
                             </li>
                             <li>
-                                <h3 class="title">We Provide Best Logistic Services </h3>
+                                <h3 class="title">¿Qué debo hacer para comprar un tiquete en linea?</h3>
                                 <div class="accordion-content">
-                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, </p>
+                                    <p>En la pagina tenemos la opción para que puedas reservar y comprar tus pasajes.</p>
                                 </div>
                             </li>
                             <li>
-                                <h3 class="title">Modern, Safe And Trusted Logistic Company</h3>
+                                <h3 class="title">Luego de comprar los tiquetes, ¿Qué debo hacer?</h3>
                                 <div class="accordion-content">
-                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, </p>
+                                    <p>Solo acercate a las instalaciones de TORCOROMA y lleva tu documento de identidad para proceder al proceso de CkeckIn.</p>
                                 </div>
                             </li>
                             <li>
-                                <h3 class="title">Our Clients Around </h3>
+                                <h3 class="title">¿Hay envío y recepción de paquetería? </h3>
                                 <div class="accordion-content">
-                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, </p>
+                                    <p>Estamos trabajando en ello, no desesperes, pronto estará disponible este servicio.</p>
                                 </div>
                             </li>
                             <li>
-                                <h3 class="title">The World Makes Us Special</h3>
+                                <h3 class="title">¿En que condiciones se encuentran los Buses de TORCOROMA?</h3>
                                 <div class="accordion-content">
-                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, </p>
+                                    <p>Contamos con una flota nueva, y lista para que nuestros clientes puedan disfrutar del mejor servicio posible.</p>
                                 </div>
                             </li>
                         </ul>
@@ -76,7 +78,7 @@
 
                     <div class="col-lg-6">
                         <div class="faq-image">
-                            <img src="assets/img/about/about1.jpg" alt="image">
+                            <img src="{{ asset('images/about-page.jpg') }}" alt="image">
                         </div>
                     </div>
                 </div>
@@ -130,28 +132,4 @@
     </div>
     <!-- End Faq Area -->
 
-    <!-- Newsletter Area -->
-    <div class="newsletter-area">
-        <div class="container">
-            <div class="newsletter-content">
-                <div class="row align-items-center">
-                    <div class="col-lg-5">
-                        <div class="newsletter-title">
-                            <h3>Subscribe to our newsletter:</h3>
-                            <p>Focused on the transport and logistic industry</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-7">
-                        <form class="newsletter-form" data-bs-toggle="validator">
-                            <input type="email" class="form-control" placeholder="Enter your email" name="EMAIL" required="" autocomplete="off">
-                            <button type="submit" class="btn btn-primary">Subscribe</button>
-
-                            <div id="validator-newsletter" class="form-result"></div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- End Newsletter Area -->
 @endsection

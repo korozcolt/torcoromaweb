@@ -6,12 +6,35 @@
         <div class="d-table">
             <div class="d-table-cell">
                 <div class="container">
-                    <div class="banner-content">
-                        <span>Desde 1992</span>
-                        <h1>Servicio de Transporte & Logística</h1>
-                        <p>Contamos con el personal logístico e idoneo para las tareas de transporte en toda la región caribe.</p>
-                        <a href="{{ route('contact.page') }}" class="default-btn-one me-3">Contactanos</a>
-                        <a href="#" class="default-btn-two">Obtener pasajes</a>
+                    <div class="row align-items-center">
+                        <div class="col-lg-6">
+                            <div class="banner-content">
+                                <span>Desde 1992</span>
+                                <h1>Servicio de Transporte & Logística</h1>
+                                <p>Contamos con el personal logístico e idoneo para las tareas de transporte en toda la región caribe.</p>
+                                <a href="{{ route('contact.page') }}" class="default-btn-one me-3">Contactanos</a>
+                                <a href="#" class="default-btn-two">Obtener pasajes</a>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="order-form">
+                                <h2>REVISA TU RUTA</h2>
+                                <form>
+                                    <div class="form-group">
+                                        <input type="email" class="form-control" placeholder="Origen">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <input type="email" class="form-control" placeholder="Destino">
+                                    </div>
+
+                                    <div class="text-center">
+                                        <button type="submit" class="default-btn-one">Revisar</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
@@ -344,7 +367,7 @@
 <div class="speciality-area ptb-100">
     <div class="container">
         <h1>AQUÍ WIDGET RED BUS</h1>
-        <div class="widget" data-widgetid="TORCOROMA" style="position: relative;width: 80%;margin:auto;"></div>
+{{--        <div class="widget" data-widgetid="TORCOROMA" style="position: relative;width: 80%;margin:auto;"></div>--}}
         <div class="section-title">
             <span>Nuestros servicios especiales</span>
             <h2>Seguro y rapido, servicio especial</h2>

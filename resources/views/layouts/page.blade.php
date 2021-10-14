@@ -21,32 +21,32 @@
     <!-- ===============================================-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="{{asset('css/app.css')}}">
-    <link rel="stylesheet" href="{{asset('css/admin.css')}}">
+    <link rel="stylesheet" href="{{ asset('css/app.css')}}">
+    <link rel="stylesheet" href="{{ asset('css/admin.css')}}">
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css')}}">
     <!-- Icofont CSS -->
-    <link rel="stylesheet" href="{{asset('css/boxicons.min.css')}}">
+    <link rel="stylesheet" href="{{ asset('css/boxicons.min.css')}}">
     <!-- Meanmenu CSS -->
-    <link rel="stylesheet" href="{{asset('css/meanmenu.min.css')}}">
+    <link rel="stylesheet" href="{{ asset('css/meanmenu.min.css')}}">
     <!-- Magnific CSS -->
-    <link rel="stylesheet" href="{{asset('css/magnific-popup.css')}}">
+    <link rel="stylesheet" href="{{ asset('css/magnific-popup.css')}}">
     <!-- Owl Carousel CSS -->
-    <link rel="stylesheet" href="{{asset('css/owl.carousel.min.css')}}">
-    <link rel="stylesheet" href="{{asset('css/owl.theme.default.min.css')}}">
+    <link rel="stylesheet" href="{{ asset('css/owl.carousel.min.css')}}">
+    <link rel="stylesheet" href="{{ asset('css/owl.theme.default.min.css')}}">
     <!-- Odometer CSS -->
-    <link rel="stylesheet" href="{{asset('css/odometer.css')}}">
+    <link rel="stylesheet" href="{{ asset('css/odometer.css')}}">
     <!-- Animate CSS -->
-    <link rel="stylesheet" href="{{asset('css/animate.min.css')}}">
+    <link rel="stylesheet" href="{{ asset('css/animate.min.css')}}">
     <!-- Stylesheet CSS -->
-    <link rel="stylesheet" href="{{asset('css/style.css')}}">
+    <link rel="stylesheet" href="{{ asset('css/style.css')}}">
     <!-- Stylesheet Responsive CSS -->
-    <link rel="stylesheet" href="{{asset('css/responsive.css')}}">
+    <link rel="stylesheet" href="{{ asset('css/responsive.css')}}">
     <!-- Add Chat Responsive CSS -->
     <link href="{{ asset('addchat/css/addchat.min.css') }}" rel="stylesheet">
 
-    <script defer type="text/javascript" src="https://wl.redbus.com/javascripts/widget.min.js"></script>
-    <script src="https://wl.redbus.com/externaljavascript/loadwidget.js"></script>
+{{--    <script defer type="text/javascript" src="https://wl.redbus.com/javascripts/widget.min.js"></script>--}}
+{{--    <script src="https://wl.redbus.com/externaljavascript/loadwidget.js"></script>--}}
 </head>
 <body>
 <!-- Preloder -->
@@ -153,6 +153,10 @@
                                     </li>
                                     <li class="nav-item">
                                         <a href="{{ url ('/team')}}" class="nav-link">Equipo</a>
+                                    </li>
+
+                                    <li class="nav-item">
+                                        <a href="{{ url ('/faq')}}" class="nav-link">Formatos para transporte especializado</a>
                                     </li>
 
                                     <li class="nav-item">

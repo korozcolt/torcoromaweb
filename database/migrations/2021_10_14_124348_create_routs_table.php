@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateBusRoutesTable extends Migration
+class CreateRoutsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,9 @@ class CreateBusRoutesTable extends Migration
      */
     public function up()
     {
-        Schema::create('bus_routes', function (Blueprint $table) {
+        Schema::create('routs', function (Blueprint $table) {
             $table->id();
+
             $table->timestamps();
         });
     }
@@ -26,6 +27,6 @@ class CreateBusRoutesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('bus_routes');
+        Schema::dropIfExists('routs');
     }
 }
