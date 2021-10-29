@@ -177,6 +177,9 @@
                                     <li class="nav-item">
                                         <a href="{{ url ('/services')}}" class="nav-link">VIP</a>
                                     </li>
+                                    <li class="nav-item">
+                                        <a href="{{ url ('/services')}}" class="nav-link">Rastrea tu ruta</a>
+                                    </li>
                                 </ul>
                             </li>
 
