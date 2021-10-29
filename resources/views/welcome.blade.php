@@ -42,16 +42,11 @@
     </div>
 
     <div class="hero-slider-item item-bg2">
+        
         <div class="d-table">
             <div class="d-table-cell">
                 <div class="container">
-                    <div class="banner-content">
-                        <span>Desde 1992</span>
-                        <h1>Transporte por toda<br> la región caribe.</h1>
-                        <p>Contamos con recurso humano dispuesto a entregar el mejor servicio posible y manejar las espectativas de nuestros clientes.</p>
-                        <a href="{{ route('contact.page') }}" class="default-btn-one me-3">Contactanos</a>
-                        <a href="#" class="default-btn-two">Obtener una cotización</a>
-                    </div>
+                        
                 </div>
             </div>
         </div>
@@ -300,7 +295,20 @@
     </div>
 </div>
 <!-- End Services Area -->
+<div class="blog-area pt-100 pb-70">
+    <div class="container">
+        <div class="section-title ">
+            <span>Registra tu destino</span>
+            <h2>Aquí puedes viajar con nosotros</h2>
+        </div>
 
+        <div class="row">
+            <div class="col-lg-12 col-md-12">
+                <div class="widget" data-widgetid="TORCOROMA" style="position: relative;width: 80%;margin:auto;"></div> 
+            </div>
+        </div>
+    </div>
+</div>
 <!-- Choose Area -->
 <div class="choose-area ptb-100">
     <div class="shape-one">
@@ -351,7 +359,7 @@
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris</p>
 
                     <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
-
+                    
                     <a href="#" class="default-btn-one">Contactanos</a>
                     <div class="shape-image">
                         <img src="{{ asset('images/logo-iso.png') }}" alt="icon">
@@ -362,182 +370,6 @@
     </div>
 </div>
 <!-- End Choose Area -->
-
-<!-- Speciality Slider Area -->
-<div class="speciality-area ptb-100">
-    <div class="container">
-        <h1>AQUÍ WIDGET RED BUS</h1>
-{{--        <div class="widget" data-widgetid="TORCOROMA" style="position: relative;width: 80%;margin:auto;"></div>--}}
-        <div class="section-title">
-            <span>Nuestros servicios especiales</span>
-            <h2>Seguro y rapido, servicio especial</h2>
-        </div>
-
-        <div class="speciality-slider owl-carousel owl-theme">
-{{--            <div class="speciality-card">--}}
-{{--                <a href="service-details.html">--}}
-{{--                    <img src="img/speciality/speciality1.jpg" alt="image">--}}
-{{--                </a>--}}
-{{--                <div class="speciality-text">--}}
-{{--                    <h3>--}}
-{{--                        <a href="service-details.html">--}}
-{{--                            Office Relocation--}}
-{{--                        </a>--}}
-{{--                    </h3>--}}
-{{--                    <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete.</p>--}}
-{{--                </div>--}}
-{{--            </div>--}}
-
-{{--            <div class="speciality-card">--}}
-{{--                <a href="service-details.html">--}}
-{{--                    <img src="img/speciality/speciality2.jpg" alt="image">--}}
-{{--                </a>--}}
-{{--                <div class="speciality-text">--}}
-{{--                    <h3>--}}
-{{--                        <a href="service-details.html">--}}
-{{--                            House Moving--}}
-{{--                        </a>--}}
-{{--                    </h3>--}}
-{{--                    <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete.</p>--}}
-{{--                </div>--}}
-{{--            </div>--}}
-
-{{--            <div class="speciality-card">--}}
-{{--                <a href="#">--}}
-{{--                    <img src="img/speciality/speciality3.jpg" alt="image">--}}
-{{--                </a>--}}
-{{--                <div class="speciality-text">--}}
-{{--                    <h3>--}}
-{{--                        <a href="service-details.html">--}}
-{{--                            Curier Worldwide--}}
-{{--                        </a>--}}
-{{--                    </h3>--}}
-{{--                    <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete.</p>--}}
-{{--                </div>--}}
-{{--            </div>--}}
-
-{{--            <div class="speciality-card">--}}
-{{--                <a href="service-details.html">--}}
-{{--                    <img src="img/speciality/speciality1.jpg" alt="image">--}}
-{{--                </a>--}}
-{{--                <div class="speciality-text">--}}
-{{--                    <h3>--}}
-{{--                        <a href="service-details.html">--}}
-{{--                            Office Relocation--}}
-{{--                        </a>--}}
-{{--                    </h3>--}}
-{{--                    <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete.</p>--}}
-{{--                </div>--}}
-{{--            </div>--}}
-
-{{--            <div class="speciality-card">--}}
-{{--                <a href="service-details.html">--}}
-{{--                    <img src="img/speciality/speciality2.jpg" alt="image">--}}
-{{--                </a>--}}
-{{--                <div class="speciality-text">--}}
-{{--                    <h3>--}}
-{{--                        <a href="service-details.html">--}}
-{{--                            House Moving--}}
-{{--                        </a>--}}
-{{--                    </h3>--}}
-{{--                    <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete.</p>--}}
-{{--                </div>--}}
-{{--            </div>--}}
-
-{{--            <div class="speciality-card">--}}
-{{--                <a href="service-details.html">--}}
-{{--                    <img src="img/speciality/speciality3.jpg" alt="image">--}}
-{{--                </a>--}}
-{{--                <div class="speciality-text">--}}
-{{--                    <h3>--}}
-{{--                        <a href="service-details.html">--}}
-{{--                            Curier Worldwide--}}
-{{--                        </a>--}}
-{{--                    </h3>--}}
-{{--                    <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete.</p>--}}
-{{--                </div>--}}
-{{--            </div>--}}
-        </div>
-    </div>
-</div>
-<!-- End Speciality Slider Area -->
-
-{{--<!-- Testimonials Slider Area -->--}}
-{{--<div class="testimonials-area ptb-100">--}}
-{{--    <div class="container">--}}
-{{--        <div class="shape-two">--}}
-{{--            <img src="img/shape/shape6.png" class="shape-1" alt="shape">--}}
-{{--            <img src="img/shape/shape3.png" alt="shape">--}}
-{{--        </div>--}}
-{{--        <div class="section-title">--}}
-{{--            <span>Feedback</span>--}}
-{{--            <h2>Whats Our Clients Said About Us</h2>--}}
-{{--        </div>--}}
-
-{{--        <div class="testimonials-slider owl-carousel owl-theme">--}}
-{{--            <div class="testimonials-card">--}}
-{{--                <div class="client-img">--}}
-{{--                    <img src="img/clients/client6.jpg" alt="image">--}}
-{{--                    <h3>Jhon Smith</h3>--}}
-{{--                    <span>CEO of LTD company</span>--}}
-{{--                </div>--}}
-
-{{--                <div class="rating">--}}
-{{--                    <i class='bx bxs-star'></i>--}}
-{{--                    <i class='bx bxs-star'></i>--}}
-{{--                    <i class='bx bxs-star'></i>--}}
-{{--                    <i class='bx bxs-star'></i>--}}
-{{--                    <i class='bx bxs-star'></i>--}}
-{{--                </div>--}}
-
-{{--                <div class="feedback-text">--}}
-{{--                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>--}}
-{{--                </div>--}}
-{{--            </div>--}}
-
-{{--            <div class="testimonials-card">--}}
-{{--                <div class="client-img">--}}
-{{--                    <img src="img/clients/client5.jpg" alt="image">--}}
-{{--                    <h3>William leo</h3>--}}
-{{--                    <span>CEO of LTD company</span>--}}
-{{--                </div>--}}
-
-{{--                <div class="rating">--}}
-{{--                    <i class='bx bxs-star'></i>--}}
-{{--                    <i class='bx bxs-star'></i>--}}
-{{--                    <i class='bx bxs-star'></i>--}}
-{{--                    <i class='bx bxs-star'></i>--}}
-{{--                    <i class='bx bxs-star'></i>--}}
-{{--                </div>--}}
-
-{{--                <div class="feedback-text">--}}
-{{--                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>--}}
-{{--                </div>--}}
-{{--            </div>--}}
-
-{{--            <div class="testimonials-card">--}}
-{{--                <div class="client-img">--}}
-{{--                    <img src="img/clients/client4.jpg" alt="image">--}}
-{{--                    <h3>Benjamin Liam</h3>--}}
-{{--                    <span>CEO of LTD company</span>--}}
-{{--                </div>--}}
-
-{{--                <div class="rating">--}}
-{{--                    <i class='bx bxs-star'></i>--}}
-{{--                    <i class='bx bxs-star'></i>--}}
-{{--                    <i class='bx bxs-star'></i>--}}
-{{--                    <i class='bx bxs-star'></i>--}}
-{{--                    <i class='bx bxs-star'></i>--}}
-{{--                </div>--}}
-
-{{--                <div class="feedback-text">--}}
-{{--                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>--}}
-{{--                </div>--}}
-{{--            </div>--}}
-{{--        </div>--}}
-{{--    </div>--}}
-{{--</div>--}}
-<!-- End Testimonials Slider Area -->
 
 <!-- partner Slider Area -->
 <div class="partner-area pb-100 mt-10">

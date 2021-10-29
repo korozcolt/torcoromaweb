@@ -14,6 +14,7 @@ Route::prefix('/')->group(function () {
     Route::get('/contact', [HomeController::class,'contact'])->name('contact.page');
     Route::get('/faq', [HomeController::class,'faq'])->name('faq.page');
     Route::get('/about', [HomeController::class,'about'])->name('about.page');
+    Route::get('/policy', [HomeController::class,'policy'])->name('policy.page');
 
     // ------------------------------* SEND MAIL TICKETS *---------------------------- //
     Route::post('/contact/send-message',[SupportController::class,'sendMail'])->name('contactus.send');

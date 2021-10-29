@@ -20,7 +20,7 @@
     <!--    Stylesheets-->
     <!-- ===============================================-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!-- Bootstrap CSS -->
+    <!-- Admin and Custom CSS -->
     <link rel="stylesheet" href="{{ asset('css/app.css')}}">
     <link rel="stylesheet" href="{{ asset('css/admin.css')}}">
     <!-- Bootstrap CSS -->
@@ -42,11 +42,12 @@
     <link rel="stylesheet" href="{{ asset('css/style.css')}}">
     <!-- Stylesheet Responsive CSS -->
     <link rel="stylesheet" href="{{ asset('css/responsive.css')}}">
+
     <!-- Add Chat Responsive CSS -->
     <link href="{{ asset('addchat/css/addchat.min.css') }}" rel="stylesheet">
 
-{{--    <script defer type="text/javascript" src="https://wl.redbus.com/javascripts/widget.min.js"></script>--}}
-{{--    <script src="https://wl.redbus.com/externaljavascript/loadwidget.js"></script>--}}
+    <script defer type="text/javascript" src="https://wl.redbus.com/javascripts/widget.min.js"></script>
+    <script src="https://wl.redbus.com/externaljavascript/loadwidget.js"></script>
 </head>
 <body>
 <!-- Preloder -->
@@ -162,14 +163,6 @@
                                     <li class="nav-item">
                                         <a href="{{ url ('/faq')}}" class="nav-link">Preguntas Frecuentes</a>
                                     </li>
-
-                                    <li class="nav-item">
-                                        <a href="{{ url ('/')}}" class="nav-link">Políticas de seguridad</a>
-                                    </li>
-
-                                    <li class="nav-item">
-                                        <a href="{{ url ('/')}}" class="nav-link">Terminos y condiciones</a>
-                                    </li>
                                 </ul>
                             </li>
 
@@ -189,11 +182,17 @@
 
                             <li class="nav-item">
                                 <a href="#" class="nav-link">
-                                    Blog <i class='bx bx-chevron-down'></i>
+                                    Transparencia <i class='bx bx-chevron-down'></i>
                                 </a>
                                 <ul class="dropdown-menu">
                                     <li class="nav-item">
-                                        <a href="{{ url ('/blog')}}" class="nav-link">Noticias & Novedades</a>
+                                        <a href="{{ url ('/policy')}}#rights" class="nav-link">Derechos y Deberes De Los Pasajeros</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="{{ url ('/policy')}}#security" class="nav-link">Políticas de seguridad</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="{{ url ('/policy')}}#terms" class="nav-link">Terminos y condiciones</a>
                                     </li>
                                 </ul>
                             </li>

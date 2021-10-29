@@ -24,6 +24,10 @@ class HomeController extends Controller
         return view('about', ['info' => $this->pageInfo()]);
     }
 
+    public function policy(){
+        return view('policy', ['info' => $this->pageInfo()]);
+    }
+
     public function pageInfo(){
         return Page::first();
     }
