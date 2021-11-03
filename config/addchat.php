@@ -247,10 +247,10 @@ return [
     */
 
     'notification_type' => 'pusher',
-    'pusher_app_id'     => NULL,
-    'pusher_key'        => NULL,
-    'pusher_secret'     => NULL,
-    'pusher_cluster'    => NULL,
+    'pusher_app_id'     => env('PUSHER_APP_ID'),
+    'pusher_key'        => env('PUSHER_APP_KEY'),
+    'pusher_secret'     => env('PUSHER_APP_SECRET'),
+    'pusher_cluster'    => env('PUSHER_APP_CLUSTER'),
 
 
 
