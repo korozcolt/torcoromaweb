@@ -7,25 +7,26 @@
             <div class="d-table-cell">
                 <div class="container">
                     <div class="row align-items-center">
-                        <div class="col-lg-6">
-                            <div class="banner-content">
-                                <span>Desde 1992</span>
-                                <h1>Servicio de Transporte & Logística</h1>
-                                <p>Contamos con el personal logístico e idoneo para las tareas de transporte en toda la región caribe.</p>
-                                <a href="{{ route('contact.page') }}" class="default-btn-one me-3">Contactanos</a>
-                                <a href="#" class="default-btn-two">Obtener pasajes</a>
+                        <div class="">
+                            <div class="container">
+                                <div class="banner-content">
+                                    <h1>Registra tu destino</h1>
+                                    <!--<h2>Aquí puedes viajar con nosotros</h2>-->
+                                        
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-lg-6">
+                       </div>
+                       <div class="widget" data-widgetid="TORCOROMA"></div> 
+                        <!--<div class="col-lg-6">
                             <div class="order-form">
                                 <h2>REVISA TU RUTA</h2>
                                 <form>
                                     <div class="form-group">
-                                        <input type="email" class="form-control" placeholder="Origen">
+                                        <input type="text" class="form-control" placeholder="Origen">
                                     </div>
 
                                     <div class="form-group">
-                                        <input type="email" class="form-control" placeholder="Destino">
+                                        <input type="text" class="form-control" placeholder="Destino">
                                     </div>
 
                                     <div class="text-center">
@@ -33,8 +34,8 @@
                                     </div>
                                 </form>
                             </div>
-                        </div>
-
+                        </div>-->
+                        
                     </div>
                 </div>
             </div>
@@ -45,8 +46,21 @@
         
         <div class="d-table">
             <div class="d-table-cell">
-                <div class="container">
-                        
+                <div class="d-table">
+                    <div class="d-table-cell">
+                        <div class="container">
+                            <div class="row align-items-center">
+                                <div class="col-lg-12">
+                                    <div class="banner-content">
+                                        <span>Desde 1953</span>
+                                        <h1> Servicio de Transporte </h1>
+                                        <p>Contamos con el personal logístico e idoneo para las tareas de transporte en toda la región caribe.</p>
+                                        <a href="{{ route('contact.page') }}" class="default-btn-one me-3">Contactanos</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -57,11 +71,10 @@
             <div class="d-table-cell">
                 <div class="container">
                     <div class="banner-content">
-                        <span>Desde 1992</span>
-                        <h1>Nuestro<br> Equipo de Trabajo</h1>
+                        <span>Desde 1953</span>
+                        <h1>Nuestro<br> Equipo de Trabajo</h1->
                         <p>Contando con el personal idoneo para entregale el mejor de los servicios.</p>
-                        <a href="{{ route('contact.page') }}" class="default-btn-one me-3">Contactanos</a>
-                        <a href="#" class="default-btn-two">Obtener una cotización</a>
+                        
                     </div>
                 </div>
             </div>
@@ -198,7 +211,7 @@
                                         </li>
                                         <li>
                                             <i class='bx bx-check'></i>
-                                            enfocados en la aplicación de estandares de calidad y seguridad que garantize oportunidad y confort.
+                                            Enfocados en la aplicación de estandares de calidad y seguridad que garantize oportunidad y confort.
                                         </li>
                                     </ul>
                                 </div>
@@ -252,7 +265,7 @@
                 <div class="service-card">
                     <i class='bx bxs-ship'></i>
                     <h3>Costa caribe</h3>
-                    <p>Transporte y conexión por toda la costa caribe y municipios circundantes. Rapidos y seguros.</p>
+                    <p>Transporte y conexión por toda la costa caribe y municipios circundantes. Rapidos y seguros. Con protocolos de Bioseguridad.</p>
 {{--                    <a href="service-details.html" class="default-btn-two">Read More</a>--}}
                 </div>
             </div>
@@ -278,8 +291,8 @@
             <div class="col-lg-3 col-sm-6">
                 <div class="service-card">
                     <i class='bx bx-transfer'></i>
-                    <h3>B2B Exchange</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+                    <h3>Rastrea tu ticket</h3>
+                    <p>Dentro de los muchos servicios que estamos por implementar, podrá encontrar el rastreo de su tiquete en tiempo real.</p>
 {{--                    <a href="service-details.html" class="default-btn-two">Read More</a>--}}
                 </div>
             </div>
@@ -295,7 +308,7 @@
     </div>
 </div>
 <!-- End Services Area -->
-<div class="blog-area pt-100 pb-70">
+{{-- <div class="blog-area pt-100 pb-70">
     <div class="container">
         <div class="section-title ">
             <span>Registra tu destino</span>
@@ -308,7 +321,7 @@
             </div>
         </div>
     </div>
-</div>
+</div> --}}
 <!-- Choose Area -->
 <div class="choose-area ptb-100">
     <div class="shape-one">
@@ -372,7 +385,7 @@
 <!-- End Choose Area -->
 
 <!-- partner Slider Area -->
-<div class="partner-area pb-100 mt-10">
+{{-- <div class="partner-area pb-100 mt-10">
     <div class="container">
         <div class="section-title">
             <span>Socios comerciales</span>
@@ -417,6 +430,6 @@
             </div>
         </div>
     </div>
-</div>
+</div> --}}
 <!-- End partner Slider Area -->
 @endsection

@@ -27,6 +27,9 @@ class HomeController extends Controller
     public function policy(){
         return view('policy', ['info' => $this->pageInfo()]);
     }
+    public function service(){
+        return view('service', ['info' => $this->pageInfo()]);
+    }
 
     public function pageInfo(){
         return Page::first();

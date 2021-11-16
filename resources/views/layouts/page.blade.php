@@ -152,9 +152,9 @@
                                     <li class="nav-item">
                                         <a href="{{ url ('/about')}}" class="nav-link">Acerca de</a>
                                     </li>
-                                    <li class="nav-item">
+                                    {{-- <li class="nav-item">
                                         <a href="{{ url ('/team')}}" class="nav-link">Equipo</a>
-                                    </li>
+                                    </li> --}}
 
                                     <li class="nav-item">
                                         <a href="{{ url ('/faq')}}" class="nav-link">Formatos para transporte especializado</a>
@@ -172,13 +172,13 @@
                                 </a>
                                 <ul class="dropdown-menu">
                                     <li class="nav-item">
-                                        <a href="{{ url ('/services')}}" class="nav-link">Servicios</a>
+                                        <a href="{{ url ('/service#services')}}" class="nav-link">Servicios</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="{{ url ('/services')}}" class="nav-link">VIP</a>
+                                        <a href="{{ url ('/service#buy-ticket')}}" class="nav-link">Compra tu tiquete</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="{{ url ('/services')}}" class="nav-link">Rastrea tu ruta</a>
+                                        <a href="{{ url ('/service#tracking')}}" class="nav-link">Rastrea tu ruta</a>
                                     </li>
                                 </ul>
                             </li>
@@ -396,7 +396,7 @@
 <!-- App JS -->
 <script src="{{ asset('js/app.js')}}"></script>
 <!-- AddChat JS -->
-<script src="{{  asset('addchat/js/addchat.min.js') }}"></script>
+{{-- <script src="{{  asset('addchat/js/addchat.min.js') }}"></script> --}}
 <!-- Custom JS -->
 <script src="{{ asset('js/custom.js') }}"></script>
 

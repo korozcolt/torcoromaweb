@@ -37,14 +37,14 @@
                             <img src="{{ asset('img/clients/client1.png') }}" alt="image">
                         </div>
                         <h3>Luis Assia</h3>
-                        <span>CEO, Tocoroma S.A.</span>
+                        <span>SEO, Tocoroma S.A.</span>
                         <p>Tampoco hay nadie que ame o persiga o desee.</p>
                     </div>
                 </div>
             </div>
             <div class="col-lg-6">
                 <div class="safe-image">
-                    <img src="{{ asset('img/speciality/speciality2.jpg') }}" alt="image">
+                    <img src="{{ asset('images/about-page-main.jpg') }}" alt="image">
                 </div>
             </div>
         </div>
@@ -62,27 +62,19 @@
                     <ul>
                         <li>
                             <i class='bx bx-check'></i>
-                            We provide  best logistic service worldwide
+                            Garantizar un optimo servicio de transporte terrestre de pasajeros en la modalidad basica ccoriente y especial.
                         </li>
                         <li>
                             <i class='bx bx-check'></i>
-                            All payment methods we accept
+                            Enfocado a la satisfacción de las necesidades y expectativas de sus asociados, clientes y usuarios.
                         </li>
                         <li>
                             <i class='bx bx-check'></i>
-                            We provide proper safety and security.
+                            Contribuir de manera activa al desarrollo sostenible de nuestra región con un servicio de maxima calidad.
                         </li>
                         <li>
                             <i class='bx bx-check'></i>
-                            We provide  best logistic service worldwide
-                        </li>
-                        <li>
-                            <i class='bx bx-check'></i>
-                            All payment methods we accept.
-                        </li>
-                        <li>
-                            <i class='bx bx-check'></i>
-                            We provide proper safety and security.
+                            Entregar todo a nuestro alcance para que nuestros usuarios y clientes se sientan satisfechos.
                         </li>
                     </ul>
                 </div>
@@ -90,31 +82,19 @@
 
             <div class="col-lg-4 col-md-6">
                 <div class="about-info-card">
-                    <h3>Nuestros Principios</h3>
+                    <h3>Nuestra Visión</h3>
                     <ul>
                         <li>
                             <i class='bx bx-check'></i>
-                            We provide  best logistic service worldwide
+                            Para 2022 ser una empresa que brinde a sus clientes y usuarios la mejor opción de tansporte terrestre.
                         </li>
                         <li>
                             <i class='bx bx-check'></i>
-                            All payment methods we accept
+                            Ademas, ser la mejor opción en modalidad de pasajeros basica, corriente y especial.
                         </li>
                         <li>
                             <i class='bx bx-check'></i>
-                            We provide proper safety and security.
-                        </li>
-                        <li>
-                            <i class='bx bx-check'></i>
-                            We provide  best logistic service worldwide
-                        </li>
-                        <li>
-                            <i class='bx bx-check'></i>
-                            All payment methods we accept.
-                        </li>
-                        <li>
-                            <i class='bx bx-check'></i>
-                            We provide proper safety and security.
+                            Enfocados en la aplicación de estandares de calidad y seguridad que garantize oportunidad y confort.
                         </li>
                     </ul>
                 </div>
@@ -122,31 +102,27 @@
 
             <div class="col-lg-4 col-md-6 offset-md-3 offset-lg-0">
                 <div class="about-info-card">
-                    <h3>Nuestra Visión</h3>
+                    <h3>Nuestros Principios</h3>
                     <ul>
                         <li>
                             <i class='bx bx-check'></i>
-                            Garantizar un optimo servicio de transporte terrestre de pasajeros en la modalidad basica ccoriente y especial.
+                            Somos personas honestas.
                         </li>
                         <li>
                             <i class='bx bx-check'></i>
-                            All payment methods we accept
+                            Inspiramos confianza.
                         </li>
                         <li>
                             <i class='bx bx-check'></i>
-                            We provide proper safety and security.
+                            Somos creativos.
                         </li>
                         <li>
                             <i class='bx bx-check'></i>
-                            We provide  best logistic service worldwide
+                            Nos relacionamos con respeto.
                         </li>
                         <li>
                             <i class='bx bx-check'></i>
-                            All payment methods we accept.
-                        </li>
-                        <li>
-                            <i class='bx bx-check'></i>
-                            We provide proper safety and security.
+                            Estamos comprometidos con el servicio.
                         </li>
                     </ul>
                 </div>
@@ -224,7 +200,7 @@
 <!-- End Digital Area -->
 
 <!-- partner Slider Area -->
-<div class="partner-area ptb-100">
+{{-- <div class="partner-area ptb-100">
     <div class="container">
         <div class="section-title">
             <span>Partner</span>
@@ -269,11 +245,11 @@
             </div>
         </div>
     </div>
-</div>
+</div> --}}
 <!-- End partner Slider Area -->
 
 <!-- Newsletter Area -->
-<div class="newsletter-area">
+{{-- <div class="newsletter-area">
     <div class="container">
         <div class="newsletter-content">
             <div class="row align-items-center">
@@ -296,6 +272,6 @@
             </div>
         </div>
     </div>
-</div>
+</div> --}}
 <!-- End Newsletter Area -->
 @endsection
