@@ -5,7 +5,9 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\SettingPageController;
 use App\Http\Livewire\ChatForm;
 use App\Http\Livewire\SupportForm;
+use App\Http\Controllers\BotManController;
 use Illuminate\Support\Facades\Route;
+
 
 //--------------------* PAGES ROUTES *-------------------------------//
 Route::prefix('/')->group(function () {
@@ -15,7 +17,7 @@ Route::prefix('/')->group(function () {
     Route::get('/faq', [HomeController::class,'faq'])->name('faq.page');
     Route::get('/about', [HomeController::class,'about'])->name('about.page');
     Route::get('/policy', [HomeController::class,'policy'])->name('policy.page');
-    Route::get('/service', [HomeController::class,'service'])->name('service.page');
+    Route::get('/service', [HomeController::class,'about'])->name('service.page');
 
     // ------------------------------* SEND MAIL TICKETS *---------------------------- //
     Route::post('/contact/send-message',[SupportController::class,'sendMail'])->name('contactus.send');
@@ -29,8 +31,9 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     })->name('dashboard');
     Route::get('/page-settings',[SettingPageController::class,'index'])->name('settings.admin');
     Route::put('/page-update/{id}',[SettingPageController::class,'update'])->name('settings.update');
+    Route::post('/page-create',[SettingPageController::class,'store'])->name('settings.store');
     Route::get('/support-form', SupportForm::class)->name('support.admin');
     Route::get('/chat-form', ChatForm::class)->name('chat.admin');
 });
 
-Addchat::routes();
+Route::match(['get', 'post'], 'botman', [BotManController::class, 'handle']);
