@@ -4,7 +4,7 @@
          <div class="container">
              <div class="ferry-responsive-menu">
                  <div class="logo">
-                     <a href="{{ url('/') }}">
+                     <a href="{{ route('page.home') }}">
                          <img src="{{ asset('images/logo.png') }}" alt="TORCOROMA LOGO">
                      </a>
                  </div>
@@ -22,7 +22,8 @@
                  <div class="collapse navbar-collapse mean-menu">
                      <ul class="navbar-nav ms-auto">
                          <li class="nav-item">
-                             <a href="{{ url('/home') }}" class="nav-link active">Inicio</a>
+                             <a href="{{ route('page', 'home') }}"
+                                 class="nav-link {{ Request::path() == 'home' ? 'active' : '' }}">Inicio</a>
                          </li>
 
                          <li class="nav-item">
@@ -31,19 +32,21 @@
                              </a>
                              <ul class="dropdown-menu">
                                  <li class="nav-item">
-                                     <a href="{{ url('/about') }}" class="nav-link">Acerca de</a>
+                                     <a href="{{ route('page', 'about') }}"
+                                         class="nav-link {{ Request::path() == 'about' ? 'active' : '' }}">Acerca
+                                         de</a>
                                  </li>
-                                 {{-- <li class="nav-item">
-                                <a href="{{ url ('/team')}}" class="nav-link">Equipo</a>
-                            </li> --}}
-
                                  <li class="nav-item">
-                                     <a href="{{ url('/faq') }}" class="nav-link">Formatos para transporte
+                                     <a href="{{ route('page', 'faq') }}"
+                                         class="nav-link {{ Request::path() == 'faq' ? 'active' : '' }}">Formatos
+                                         para transporte
                                          especializado</a>
                                  </li>
 
                                  <li class="nav-item">
-                                     <a href="{{ url('/faq') }}" class="nav-link">Preguntas Frecuentes</a>
+                                     <a href="{{ route('page', 'faq') }}"
+                                         class="nav-link {{ Request::path() == 'faq' ? 'active' : '' }}">Preguntas
+                                         Frecuentes</a>
                                  </li>
                              </ul>
                          </li>
@@ -53,15 +56,20 @@
                                  Servicios <i class='bx bx-chevron-down'></i>
                              </a>
                              <ul class="dropdown-menu">
-                                 <li class="nav-item">
-                                     <a href="{{ url('/service#services') }}" class="nav-link">Servicios</a>
+                                 <li class="nav-item {{ Request::path() == 'sevice' ? 'active' : '' }}">
+                                     <a href="{{ route('page', 'service') . '#services' }}"
+                                         class="nav-link">Servicios</a>
                                  </li>
                                  <li class="nav-item">
-                                     <a href="{{ url('/service#buy-ticket') }}" class="nav-link">Compra tu
+                                     <a href="{{ route('page', 'service') . '#buy-ticket' }}"
+                                         class="nav-link {{ Request::path() == 'sevice' ? 'active' : '' }}">Compra
+                                         tu
                                          tiquete</a>
                                  </li>
                                  <li class="nav-item">
-                                     <a href="{{ url('/service#tracking') }}" class="nav-link">Rastrea tu
+                                     <a href="{{ route('page', 'service') . '#tracking' }}"
+                                         class="nav-link {{ Request::path() == 'sevice' ? 'active' : '' }}">Rastrea
+                                         tu
                                          ruta</a>
                                  </li>
                              </ul>
@@ -73,22 +81,29 @@
                              </a>
                              <ul class="dropdown-menu">
                                  <li class="nav-item">
-                                     <a href="{{ url('/policy') }}#rights" class="nav-link">Derechos y
+                                     <a href="{{ route('page', 'policy') . '#rights' }}"
+                                         class="nav-link {{ Request::path() == 'policy' ? 'active' : '' }}">Derechos
+                                         y
                                          Deberes De Los Pasajeros</a>
                                  </li>
                                  <li class="nav-item">
-                                     <a href="{{ url('/policy') }}#security" class="nav-link">Políticas de
+                                     <a href="{{ route('page', 'policy') . '#security' }}"
+                                         class="nav-link {{ Request::path() == 'policy' ? 'active' : '' }}">Políticas
+                                         de
                                          seguridad</a>
                                  </li>
                                  <li class="nav-item">
-                                     <a href="{{ url('/policy') }}#terms" class="nav-link">Terminos y
+                                     <a href="{{ route('page', 'policy') . '#terms' }}"
+                                         class="nav-link {{ Request::path() == 'policy' ? 'active' : '' }}">Terminos
+                                         y
                                          condiciones</a>
                                  </li>
                              </ul>
                          </li>
 
                          <li class="nav-item">
-                             <a href="{{ url('/contact') }}" class="nav-link">Contacto</a>
+                             <a href="{{ route('page', 'contact') }}"
+                                 class="nav-link {{ Request::path() == 'contact' ? 'active' : '' }}">Contacto</a>
                          </li>
 
                          <li class="nav-item">

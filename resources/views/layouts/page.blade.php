@@ -21,7 +21,6 @@
     <!--    Stylesheets-->
     <!-- ===============================================-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
     <link rel="stylesheet" type="text/css" href="{{ asset('css/botman.css') }}">
     <!-- Admin and Custom CSS -->
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
@@ -45,11 +44,9 @@
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     <!-- Stylesheet Responsive CSS -->
     <link rel="stylesheet" href="{{ asset('css/responsive.css') }}">
-
     <script defer type="text/javascript" src="https://wl.redbus.com/javascripts/widget.min.js"></script>
     <script src="https://wl.redbus.com/externaljavascript/loadwidget.js"></script>
     @include('sweetalert::alert')
-
 </head>
 
 <body>
@@ -64,27 +61,7 @@
     <!-- End Heder Area -->
 
     <!-- Search Overlay -->
-    <div class="search-overlay">
-        <div class="d-table">
-            <div class="d-table-cell">
-                <div class="search-overlay-layer"></div>
-                <div class="search-overlay-layer"></div>
-                <div class="search-overlay-layer"></div>
-
-                <div class="search-overlay-close">
-                    <span class="search-overlay-close-line"></span>
-                    <span class="search-overlay-close-line"></span>
-                </div>
-
-                <div class="search-overlay-form">
-                    <form>
-                        <input type="text" class="input-search" placeholder="Busca aquí...">
-                        <button type="submit"><i class='bx bx-search'></i></button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
+    @include('layouts.search')
     <!-- End Search Overlay -->
     @yield('content-page')
     <!-- Footer Area-->
