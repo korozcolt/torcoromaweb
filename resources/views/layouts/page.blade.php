@@ -8,7 +8,7 @@
     <!-- ===============================================-->
     <!--    Document Title-->
     <!-- ===============================================-->
-    <title>{{ $info->title ?? '' }}</title>
+    <title>{{ $metaTitle . ' - ' . $info->title ?? config('app.name', 'COOPERATIVA | TORCOROMA') }}</title>
     <!-- ===============================================-->
     <!--    Favicons-->
     <!-- ===============================================-->
@@ -48,180 +48,18 @@
 
     <script defer type="text/javascript" src="https://wl.redbus.com/javascripts/widget.min.js"></script>
     <script src="https://wl.redbus.com/externaljavascript/loadwidget.js"></script>
+    @include('sweetalert::alert')
 
 </head>
 
 <body>
     <!-- Preloder -->
-    <div class="preloader">
-        <div class="d-table">
-            <div class="d-table-cell">
-                <div class="lds-ring">
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                </div>
-            </div>
-        </div>
-    </div>
+    @include('layouts.preloader')
     <!-- End Preloder -->
     <!-- Heder Area -->
     <header class="header-area">
-        <div class="top-header">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-lg-6 col-sm-6">
-                        <ul class="left-info">
-                            <li>
-                                <a href="mailto:{{ $info->email ?? '' }}">
-                                    <i class='bx bxs-envelope'></i>
-                                    {{ $info->email ?? '' }}
-                                </a>
-                            </li>
-                            <li>
-                                <a href="tel:{{ $info->phone ?? '' }}">
-                                    <i class='bx bxs-phone-call'></i>
-                                    {{ $info->phone ?? '' }}
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div class="col-lg-6 col-sm-6">
-                        <ul class="right-info">
-
-                            <li>
-                                <a href="{{ $info->facebook ?? '#' }}" target="_blank">
-                                    <i class='bx bxl-facebook'></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="{{ $info->twitter ?? '#' }}" target="_blank">
-                                    <i class='bx bxl-twitter'></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="{{ $info->linkedin ?? '#' }}" target="_blank">
-                                    <i class='bx bxl-linkedin'></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="{{ $info->instagram ?? '#' }}" target="_blank">
-                                    <i class='bx bxl-instagram'></i>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Start Navbar Area -->
-        <div class="navbar-area">
-            <div class="ferry-responsive-nav">
-                <div class="container">
-                    <div class="ferry-responsive-menu">
-                        <div class="logo">
-                            <a href="{{ url('/') }}">
-                                <img src="{{ asset('images/logo.png') }}" alt="TORCOROMA LOGO">
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="ferry-nav">
-                <div class="container">
-                    <nav class="navbar navbar-expand-md navbar-light">
-                        <a class="navbar-brand" href="/">
-                            <img src="{{ asset('images/logo.png') }}" width="150" alt="logo torcoroma">
-                        </a>
-
-                        <div class="collapse navbar-collapse mean-menu">
-                            <ul class="navbar-nav ms-auto">
-                                <li class="nav-item">
-                                    <a href="{{ url('/') }}" class="nav-link active">Inicio</a>
-                                </li>
-
-                                <li class="nav-item">
-                                    <a href="#" class="nav-link">
-                                        Torcoroma <i class='bx bx-chevron-down'></i>
-                                    </a>
-                                    <ul class="dropdown-menu">
-                                        <li class="nav-item">
-                                            <a href="{{ url('/about') }}" class="nav-link">Acerca de</a>
-                                        </li>
-                                        {{-- <li class="nav-item">
-                                        <a href="{{ url ('/team')}}" class="nav-link">Equipo</a>
-                                    </li> --}}
-
-                                        <li class="nav-item">
-                                            <a href="{{ url('/faq') }}" class="nav-link">Formatos para transporte
-                                                especializado</a>
-                                        </li>
-
-                                        <li class="nav-item">
-                                            <a href="{{ url('/faq') }}" class="nav-link">Preguntas Frecuentes</a>
-                                        </li>
-                                    </ul>
-                                </li>
-
-                                <li class="nav-item">
-                                    <a href="#" class="nav-link">
-                                        Servicios <i class='bx bx-chevron-down'></i>
-                                    </a>
-                                    <ul class="dropdown-menu">
-                                        <li class="nav-item">
-                                            <a href="{{ url('/service#services') }}" class="nav-link">Servicios</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a href="{{ url('/service#buy-ticket') }}" class="nav-link">Compra tu
-                                                tiquete</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a href="{{ url('/service#tracking') }}" class="nav-link">Rastrea tu
-                                                ruta</a>
-                                        </li>
-                                    </ul>
-                                </li>
-
-                                <li class="nav-item">
-                                    <a href="#" class="nav-link">
-                                        Transparencia <i class='bx bx-chevron-down'></i>
-                                    </a>
-                                    <ul class="dropdown-menu">
-                                        <li class="nav-item">
-                                            <a href="{{ url('/policy') }}#rights" class="nav-link">Derechos y
-                                                Deberes De Los Pasajeros</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a href="{{ url('/policy') }}#security" class="nav-link">Políticas de
-                                                seguridad</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a href="{{ url('/policy') }}#terms" class="nav-link">Terminos y
-                                                condiciones</a>
-                                        </li>
-                                    </ul>
-                                </li>
-
-                                <li class="nav-item">
-                                    <a href="{{ url('/contact') }}" class="nav-link">Contacto</a>
-                                </li>
-
-                                <li class="nav-item">
-                                    <a href="javascript:void(0)" class="nav-link search-box">
-                                        <i class='bx bx-search'></i>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </nav>
-                </div>
-            </div>
-        </div>
-        <!-- End Navbar Area -->
+        @include('layouts.socialnetworks')
+        @include('layouts.navbar')
     </header>
     <!-- End Heder Area -->
 
@@ -250,113 +88,7 @@
     <!-- End Search Overlay -->
     @yield('content-page')
     <!-- Footer Area-->
-    <footer class="footer-area pt-100 pb-70">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-3 col-sm-6">
-                    <div class="footer-widget">
-                        <div class="logo">
-                            <img src="{{ asset('images/logo.png') }}" width="220" alt="logo torcoroma">
-                        </div>
-                        <p>Conoce todo de nosotros, aprende un poco de nuestra historia, nuestros clientes y nuestra
-                            forma de ver el futuro.</p>
-
-                        <ul class="footer-socials">
-                            <li>
-                                <a href="{{ $info->facebook ?? '#' }}" target="_blank">
-                                    <i class='bx bxl-facebook'></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="{{ $info->twitter ?? '#' }}" target="_blank">
-                                    <i class='bx bxl-twitter'></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="{{ $info->linkedin ?? '#' }}" target="_blank">
-                                    <i class='bx bxl-linkedin'></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="{{ $info->instagram ?? '#' }}" target="_blank">
-                                    <i class='bx bxl-instagram'></i>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-sm-6">
-                    <div class="footer-widget pl-80">
-                        <h3>Nosotros</h3>
-
-                        <ul class="footer-text">
-                            <li>
-                                <a href="{{ url('/team') }}">Equipo</a>
-                            </li>
-                            <li>
-                                <a href="{{ url('/services') }}">Servicios</a>
-                            </li>
-                            <li>
-                                <a href="{{ url('/about') }}">Acerca de</a>
-                            </li>
-                            <li>
-                                <a href="{{ url('/#quote') }}">Cotización</a>
-                            </li>
-                            <li>
-                                <a href="{{ url('/blog') }}">Últimas noticias</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-sm-6">
-                    <div class="footer-widget pl-50">
-                        <h3>Soporte</h3>
-
-                        <ul class="footer-text">
-                            <li>
-                                <a href="{{ url('/faq') }}">Preguntas frecuentes</a>
-                            </li>
-                            <li>
-                                <a href="{{ url('/policy-and-term') }}">Políticas de bioseguridad</a>
-                            </li>
-                            <li>
-                                <a href="{{ url('/policy-and-term') }}">Terminos & condiciones</a>
-                            </li>
-                            <li>
-                                <a href="{{ url('/faq') }}">Formatos para transporte especializado</a>
-                            </li>
-                            <li>
-                                <a href="{{ url('/contact') }}">Contactanos</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-sm-6">
-                    <div class="footer-widget">
-                        <h3>Información de Contacto</h3>
-                        <ul class="info-list">
-                            <li>
-                                <i class='bx bxs-location-plus'></i>
-                                {{ $info->address ?? '' }}
-                            </li>
-                            <li>
-                                <i class='bx bxs-envelope'></i>
-                                <a href="mailto:{{ $info->email ?? '' }}">{{ $info->email ?? '' }}</a>
-                            </li>
-
-                            <li>
-                                <i class='bx bxs-phone'></i>
-                                <a href="tel:{{ $info->phone ?? '' }}">{{ $info->phone ?? '' }}</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
+    @include('layouts.footer')
     <!-- End Footer Area -->
 
     <!-- Footer bottom Area -->

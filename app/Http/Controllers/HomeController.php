@@ -7,28 +7,19 @@ use App\Models\Page;
 
 class HomeController extends Controller
 {
-    
+
+    public function __invoke($page)
+    {
+        $metaTitle = __('Meta Title: ' . $page);
+        if($metaTitle == 'Meta Title: ' . $page){
+            $metaTitle = NULL;
+        }
+        
+        return view('pages.'.$page,['info' => $this->pageInfo(),'metaTitle' => $metaTitle]);
+    }
+
     public function index(){
-        return view('welcome', ['info' => $this->pageInfo()]);
-    }
-
-    public function contact(){
-        return view('contact', ['info' => $this->pageInfo()]);
-    }
-
-    public function faq(){
-        return view('faq', ['info' => $this->pageInfo()]);
-    }
-
-    public function about(){
-        return view('about', ['info' => $this->pageInfo()]);
-    }
-
-    public function policy(){
-        return view('policy', ['info' => $this->pageInfo()]);
-    }
-    public function service(){
-        return view('service', ['info' => $this->pageInfo()]);
+        return view('pages.home', ['info' => $this->pageInfo(),'metaTitle' => 'Meta Title: home']);
     }
 
     public function pageInfo(){

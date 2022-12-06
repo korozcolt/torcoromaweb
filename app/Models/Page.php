@@ -13,6 +13,6 @@ class Page extends Model
         'title', 'description', 'email', 'email2', 
         'phone', 'phone2', 'address', 'schedules',
         'facebook','instagram','twitter', 'youtube', 
-        'linkedin'
+        'linkeid'
     ];
 }

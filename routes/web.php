@@ -10,15 +10,14 @@ use Illuminate\Support\Facades\Route;
 
 
 //--------------------* PAGES ROUTES *-------------------------------//
-Route::prefix('/')->group(function () {
-    // ------------------------------* PAGE STATIC *---------------------------- //
-    Route::get('/',[HomeController::class,'index'] )->name('home.page');
-    Route::get('/contact', [HomeController::class,'contact'])->name('contact.page');
-    Route::get('/faq', [HomeController::class,'faq'])->name('faq.page');
-    Route::get('/about', [HomeController::class,'about'])->name('about.page');
-    Route::get('/policy', [HomeController::class,'policy'])->name('policy.page');
-    Route::get('/service', [HomeController::class,'about'])->name('service.page');
 
+Route::group(['middleware' => 'guest'], function () {
+    // ------------------------------* PAGE STATIC *---------------------------- //
+    Route::get('/',[HomeController::class,'index'])->name('page.home');
+    // ------------------------------* PAGE DYNAMIC *---------------------------- //
+    Route::get('/{page}', HomeController::class)
+    ->name('page')
+    ->where('page','about|faq|contact|home|service|api');
     // ------------------------------* SEND MAIL TICKETS *---------------------------- //
     Route::post('/contact/send-message',[SupportController::class,'sendMail'])->name('contactus.send');
     Route::get('/api/test', [SupportController::class,'index'])->name('api.page');
@@ -26,14 +25,11 @@ Route::prefix('/')->group(function () {
 
 //--------------------* ADMIN ROUTES *-------------------------------//
 Route::middleware(['auth:sanctum', 'verified'])->group(function () {
-    Route::get('/dashboard', function () {
-        return view('dashboard');
-    })->name('dashboard');
+    Route::get('/dashboard', [SettingPageController::class, 'dashboard'])->name('dashboard');
     Route::get('/page-settings',[SettingPageController::class,'index'])->name('settings.admin');
     Route::put('/page-update/{id}',[SettingPageController::class,'update'])->name('settings.update');
     Route::post('/page-create',[SettingPageController::class,'store'])->name('settings.store');
     Route::get('/support-form', SupportForm::class)->name('support.admin');
-    Route::get('/chat-form', ChatForm::class)->name('chat.admin');
 });
 
 Route::match(['get', 'post'], 'botman', [BotManController::class, 'handle']);
