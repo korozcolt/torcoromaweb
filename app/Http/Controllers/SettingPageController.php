@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\SettingRequest;
 use Illuminate\Http\Request;
 use App\Models\Page;
 use RealRashid\SweetAlert\Facades\Alert;
@@ -17,16 +18,9 @@ class SettingPageController extends Controller
         return view('admin.dashboard');
     }
 
-    public function store(Request $request){
-        $request->validate([
-            'title'=>'required',
-            'description' => 'required',
-            'email'=> 'required',
-            'phone' => 'required',
-            'address' => 'required',
-            'schedules' => 'required',
-        ]);
-        Page::create($request->post());
+    public function store(SettingRequest $request){
+
+        Page::create($request->validate());
 
         Alert::success('Success', 'Configuración guardada con éxito');
         
@@ -34,17 +28,10 @@ class SettingPageController extends Controller
         
     }
 
-    public function update(Request $request, $id){
-        $request->validate([
-            'title'=>'required',
-            'description' => 'required',
-            'email'=> 'required',
-            'phone' => 'required',
-            'address' => 'required',
-            'schedules' => 'required',
-        ]);
-        $info = Page::firstOrNew(['id' => $id]);
-        $info->fill($request->post());
+    public function update(SettingRequest $request, Page $page){
+
+        $info = Page::firstOrFail(['id' => $page->id]);
+        $info->fill($request->validated());
         $info->save();
         Alert::success('Success', 'Configuración actualizada');
         return redirect()->route('settings.admin');

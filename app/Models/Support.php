@@ -14,6 +14,8 @@ class Support extends Model
         'phone',
         'email',
         'subject',
-        'message'
+        'message',
+        'status',
+        'replay',
     ];
 }

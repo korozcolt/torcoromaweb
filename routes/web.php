@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Route;
 
 
 //--------------* PAGES ROUTES *-----------------//
-Route::group(['middleware' => 'guest'], function () {
+Route::prefix('/')->group(function () {
     // ---------* PAGE STATIC *----------------- //
     Route::get('/',[HomeController::class,'index'])->name('page.home');
     // ---------* PAGE DYNAMIC *---------------- //
@@ -25,7 +25,7 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     Route::get('/page-settings',[SettingPageController::class,'index'])->name('settings.admin');
     Route::put('/page-update/{id}',[SettingPageController::class,'update'])->name('settings.update');
     Route::post('/page-create',[SettingPageController::class,'store'])->name('settings.store');
-    Route::get('/support-form', SupportForm::class)->name('support.admin');
+    Route::resource('support', SupportController::class);
 });
 
 Route::match(['get', 'post'], 'botman', [BotManController::class, 'handle']);
