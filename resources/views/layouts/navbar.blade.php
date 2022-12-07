@@ -4,7 +4,7 @@
          <div class="container">
              <div class="ferry-responsive-menu">
                  <div class="logo">
-                     <a href="{{ route('page.home') }}">
+                     <a href="{{ route('page', 'home') }}">
                          <img src="{{ asset('images/logo.png') }}" alt="TORCOROMA LOGO">
                      </a>
                  </div>
