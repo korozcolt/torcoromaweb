@@ -3,7 +3,6 @@
 use App\Http\Controllers\SupportController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\SettingPageController;
-use App\Http\Livewire\SupportForm;
 use App\Http\Controllers\BotManController;
 use Illuminate\Support\Facades\Route;
 
