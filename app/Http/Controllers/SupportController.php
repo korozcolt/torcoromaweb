@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreSupportRequest;
 use App\Http\Requests\UpdateSupportRequest;
 use App\Models\Support;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class SupportController extends Controller
 {
@@ -14,11 +15,7 @@ class SupportController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
-        // $supports = cache()->remember('support-page',60*60, function() {
-        //     Support::orderBy('created_at', 'desc')->paginate(10);
-        // });
-        
+    {        
         return view('admin.support.index');
     }
 
@@ -40,7 +37,11 @@ class SupportController extends Controller
      */
     public function store(StoreSupportRequest $request)
     {
-        //
+        //save the request
+        Support::create($request->validated());
+        //redirect to the index page
+        Alert::success('PQRS Enviado','Mensaje enviado exitosamente');
+        return back();
     }
 
     /**
@@ -74,7 +75,11 @@ class SupportController extends Controller
      */
     public function update(UpdateSupportRequest $request, Support $support)
     {
-        //
+        //update support object
+        $support->update($request->validated());
+        //redirect to the index page
+        Alert::success('PQRS Actualizado','Mensaje actualizado exitosamente');
+        return back();
     }
 
     /**

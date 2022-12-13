@@ -2,7 +2,9 @@
 
 namespace App\Observers;
 
+use App\Mail\SupportMail;
 use App\Models\Support;
+use App\Notifications\SupportResponse;
 
 class SupportObserver
 {
@@ -14,7 +16,7 @@ class SupportObserver
      */
     public function created(Support $support)
     {
-        //
+        $this->sendMail($support, SupportMail::class);
     }
 
     /**
@@ -25,7 +27,7 @@ class SupportObserver
      */
     public function updated(Support $support)
     {
-        //
+        $this->sendMail($support, SupportMail::class);
     }
 
     /**
@@ -59,5 +61,12 @@ class SupportObserver
     public function forceDeleted(Support $support)
     {
         //
+    }
+
+    private function sendMail(Support $support, $mailable)
+    {
+        $user = Support::findOrFail($support->id)->first();
+        
+        \Mail::to($user->email)->send(new $mailable($support));
     }
 }

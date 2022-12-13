@@ -109,6 +109,8 @@
     <script src="{{ asset('js/app.js') }}"></script>
     <!-- Custom JS -->
     <script src="{{ asset('js/custom.js') }}"></script>
+    @include('sweetalert::alert')
+    @stack('modals')
     <script>
         var botmanWidget = {
             aboutText: 'Torcoroma WEB BOT',

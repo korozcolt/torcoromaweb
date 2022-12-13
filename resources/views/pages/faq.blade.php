@@ -8,7 +8,7 @@
                     <div class="page-content">
                         <h2>PQR's</h2>
                         <ul>
-                            <li><a href="{{ url('/')}}">Inicio</a></li>
+                            <li><a href="{{ url('/') }}">Inicio</a></li>
                             <li>PQR's</li>
                         </ul>
                     </div>
@@ -32,21 +32,31 @@
                             <li>
                                 <h3 class="title">¿Cómo saber si hay rutas disponibles?</h3>
                                 <div class="accordion-content">
-                                    <p>Puedes ingresar en la pagina principal y encontraras un formulario para poder buscar directamente la ruta que desees viajar con Torcoroma. Ahí podrás ver si está disponible o no.</p>
+                                    <p>Puedes ingresar en la pagina principal y encontraras un formulario para poder buscar
+                                        directamente la ruta que desees viajar con Torcoroma. Ahí podrás ver si está
+                                        disponible o no.</p>
                                 </div>
                             </li>
                             <li>
                                 <h3 class="title">¿Cómo saber los horarios de las diferentes rutas?</h3>
                                 <div class="accordion-content">
-                                    <p>Puedes ingresar en la pagina principal y encontraras un formulario para poder buscar directamente la ruta que desees viajar con Torcoroma. Ahí podrás ver los horarios y la disponibilidad de las mismas.</p>
+                                    <p>Puedes ingresar en la pagina principal y encontraras un formulario para poder buscar
+                                        directamente la ruta que desees viajar con Torcoroma. Ahí podrás ver los horarios y
+                                        la disponibilidad de las mismas.</p>
                                 </div>
                             </li>
                             <li>
                                 <h3 class="title">¿Qué debo hacer si debo enviar un menor de edad sin acompañante?</h3>
                                 <div class="accordion-content">
-                                    <p>Para que un menor pueda viajar con nosotros sin un acompañante deberás descargar el formato F-GT-12
-                                        <a target="_blank" href="{{ asset('docs/F-GT-12_Autorizacion_Para_Transporte_Menores_de_Edad_Sin_Acompañante.pdf') }}">(Descargar Documento)</a>, luego imprimirlo y llenarlo con toda la información que allí es requerida.
-                                        ¡Recuerda! es indispensable que toda la información sea legible, sin tachones, ni borrones.</p>
+                                    <p>Para que un menor pueda viajar con nosotros sin un acompañante deberás descargar el
+                                        formato F-GT-12
+                                        <a target="_blank"
+                                            href="{{ asset('docs/F-GT-12_Autorizacion_Para_Transporte_Menores_de_Edad_Sin_Acompañante.pdf') }}">(Descargar
+                                            Documento)</a>, luego imprimirlo y llenarlo con toda la información que allí es
+                                        requerida.
+                                        ¡Recuerda! es indispensable que toda la información sea legible, sin tachones, ni
+                                        borrones.
+                                    </p>
                                 </div>
                             </li>
                             <li>
@@ -58,19 +68,22 @@
                             <li>
                                 <h3 class="title">Luego de comprar los tiquetes, ¿Qué debo hacer?</h3>
                                 <div class="accordion-content">
-                                    <p>Solo acercate a las instalaciones de TORCOROMA y lleva tu documento de identidad para proceder al proceso de CkeckIn.</p>
+                                    <p>Solo acercate a las instalaciones de TORCOROMA y lleva tu documento de identidad para
+                                        proceder al proceso de CkeckIn.</p>
                                 </div>
                             </li>
                             <li>
                                 <h3 class="title">¿Hay envío y recepción de paquetería? </h3>
                                 <div class="accordion-content">
-                                    <p>Estamos trabajando en ello, no desesperes, pronto estará disponible este servicio.</p>
+                                    <p>Estamos trabajando en ello, no desesperes, pronto estará disponible este servicio.
+                                    </p>
                                 </div>
                             </li>
                             <li>
                                 <h3 class="title">¿En que condiciones se encuentran los Buses de TORCOROMA?</h3>
                                 <div class="accordion-content">
-                                    <p>Contamos con una flota nueva, y lista para que nuestros clientes puedan disfrutar del mejor servicio posible.</p>
+                                    <p>Contamos con una flota nueva, y lista para que nuestros clientes puedan disfrutar del
+                                        mejor servicio posible.</p>
                                 </div>
                             </li>
                         </ul>
@@ -84,52 +97,8 @@
                 </div>
             </div>
 
-            <div class="faq-form">
-                <form>
-                    <div class="section-title">
-                        <span>PQR's</span>
-                        <h2>Preguntas, Peticiones, Quejas y Recursos</h2>
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <div class="form-group">
-                                <label>Nombre</label>
-                                <input type="text" class="form-control" name="name" id="name" placeholder="Su nombre">
-                            </div>
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="form-group">
-                                <label>Email</label>
-                                <input type="email" class="form-control" name="email" id="email" placeholder="Su email">
-                            </div>
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="form-group">
-                                <label>Teléfono</label>
-                                <input type="text" class="form-control" name="phone" id="phone" placeholder="Su teléfono">
-                            </div>
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="form-group">
-                                <label>Asunto:</label>
-                                <input type="text" class="form-control" name="subject" id="subject" placeholder="Escriba un breve resumen">
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <label>Message</label>
-                        <textarea class="form-control" id="message" name="message" rows="3"
-                                  placeholder="Mensaje completo"></textarea>
-                    </div>
-
-                    <div class="text-center">
-                        <button type="submit" class="faq-form-btn">Enviar mensaje</button>
-                    </div>
-                </form>
-            </div>
+            @include('pages.layouts.form-pqrs')
         </div>
     </div>
     <!-- End Faq Area -->
-
 @endsection

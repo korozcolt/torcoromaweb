@@ -24,10 +24,22 @@ class StoreSupportRequest extends FormRequest
     public function rules()
     {
         return [
-            'name' => 'required|string',
-            'email' => 'required|email',
-            'subject' => 'required|string',
+            'name' => 'required|string|max:255',
+            'email' => 'required|string|email|max:255|unique:supports',
+            'phone' => 'required|string|max:255|unique:supports',
+            'subject' => 'required|string|max:255',
             'message' => 'required|string',
+        ];
+    }
+
+    public function messages()
+    {
+        return [
+                'phone.unique' => 'Este telefono ya se encuentra registrado',
+                'email.unique' => 'Este correo ya se encuentra registrado',
+                'subject.required' => 'El asunto es requerido',
+                'message.required' => 'El mensaje es requerido',
+                'name.required' => 'El nombre es requerido',
         ];
     }
 }
