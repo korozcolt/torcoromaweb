@@ -16,6 +16,6 @@ class Support extends Model
         'subject',
         'message',
         'status',
-        'replay',
+        'reply',
     ];
 }

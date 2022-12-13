@@ -15,6 +15,10 @@ class SupportController extends Controller
      */
     public function index()
     {
+        // $supports = cache()->remember('support-page',60*60, function() {
+        //     Support::orderBy('created_at', 'desc')->paginate(10);
+        // });
+        
         return view('admin.support.index');
     }
 
@@ -25,7 +29,7 @@ class SupportController extends Controller
      */
     public function create()
     {
-        //
+        
     }
 
     /**

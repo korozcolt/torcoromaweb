@@ -14,7 +14,8 @@ return new class extends Migration
     public function up()
     {
         Schema::table('supports', function (Blueprint $table) {
-            //
+            $table->enum('status', ['pending', 'in_progress', 'resolved', 'closed']);
+            $table->text('reply')->nullable(); //
         });
     }
 
@@ -26,8 +27,7 @@ return new class extends Migration
     public function down()
     {
         Schema::table('supports', function (Blueprint $table) {
-            $table->enum('status', ['pending', 'in_progress', 'resolved', 'closed']);
-            $table->text('replay')->nullable();
+            
         });
     }
 };

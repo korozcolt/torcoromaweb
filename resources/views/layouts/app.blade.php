@@ -15,7 +15,10 @@
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 
 
+    <!-- Styles -->
     @livewireStyles
+    @powerGridStyles
+
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -44,7 +47,10 @@
     </div>
     @include('sweetalert::alert')
     @stack('modals')
+    <!-- Scripts -->
     @livewireScripts
+    @powerGridScripts
+    @livewire('livewire-ui-modal')
 </body>
 
 </html>
