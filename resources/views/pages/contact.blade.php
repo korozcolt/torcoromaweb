@@ -26,8 +26,8 @@
                     <div class="contact-info">
                         <i class='bx bxs-phone'></i>
                         <h4>Número de Contacto</h4>
-                        <p> <a href="tel:{{$info->phone}}">{{$info->phone}}</a></p>
-                        <p><a href="tel:{{$info->phone2}}">{{$info->phone2}}</a></p>
+                        <p> <a href="tel:{{ $info->phone }}">{{ $info->phone }}</a></p>
+                        <p><a href="tel:{{ $info->phone2 }}">{{ $info->phone2 }}</a></p>
                     </div>
                 </div>
 
@@ -61,45 +61,62 @@
             </div>
 
             <div class="contact-form">
-                @if(Session::has('success'))
+                @if (Session::has('success'))
                     <div class="alert alert-success">
                         {{ Session::get('success') }}
                     </div>
                 @endif
-                <form method="POST" action="{{ route('contactus.send') }}" >
+                @if ($errors->any())
+                    <div class="alert alert-danger">
+                        <strong>Cuidado!</strong> Hay un error es una de las
+                        entradas.<br><br>
+                        <ul>
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif
+                <form method="POST" action="{{ route('support.store') }}">
                     @csrf
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
-                                <input type="text" name="name" class="form-control" id="name" required data-error="Por favor ingrese su Nombre completo" placeholder="Su nombre">
+                                <input type="text" name="name" class="form-control" id="name" required
+                                    data-error="Por favor ingrese su Nombre completo" placeholder="Su nombre">
                                 <div class="help-block with-errors"></div>
                             </div>
                         </div>
 
                         <div class="col-md-6">
                             <div class="form-group">
-                                <input type="email" name="email" class="form-control" id="email" required data-error="Por favor, ingrese su correo" placeholder="Su correo">
+                                <input type="email" name="email" class="form-control" id="email" required
+                                    data-error="Por favor, ingrese su correo" placeholder="Su correo">
                                 <div class="help-block with-errors"></div>
                             </div>
                         </div>
 
                         <div class="col-md-6">
                             <div class="form-group">
-                                <input type="text" name="subject" id="msg_subject" class="form-control" required data-error="Por favor ingrese el Asunto" placeholder="Su asunto">
+                                <input type="text" name="subject" id="msg_subject" class="form-control" required
+                                    data-error="Por favor ingrese el Asunto" placeholder="Su asunto">
                                 <div class="help-block with-errors"></div>
                             </div>
                         </div>
 
                         <div class="col-md-6">
                             <div class="form-group">
-                                <input type="text" name="phone" class="form-control" id="phone" required data-error="Por favor ingrese su numero de telefono" placeholder="Su numero de Telefono">
+                                <input type="text" name="phone" class="form-control" id="phone" required
+                                    data-error="Por favor ingrese su numero de telefono"
+                                    placeholder="Su numero de Telefono">
                                 <div class="help-block with-errors"></div>
                             </div>
                         </div>
 
                         <div class="col-lg-12 col-md-12">
                             <div class="form-group">
-                                <textarea name="message" id="message" class="form-control" cols="30" rows="6" required data-error="Por favor ingrese su mensaje" placeholder="Escriba su mensaje..."></textarea>
+                                <textarea name="message" id="message" class="form-control" cols="30" rows="6" required
+                                    data-error="Por favor ingrese su mensaje" placeholder="Escriba su mensaje..."></textarea>
                                 <div class="help-block with-errors"></div>
                             </div>
                         </div>

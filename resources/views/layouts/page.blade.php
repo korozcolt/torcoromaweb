@@ -46,7 +46,6 @@
     <link rel="stylesheet" href="{{ asset('css/responsive.css') }}">
     <script defer type="text/javascript" src="https://wl.redbus.com/javascripts/widget.min.js"></script>
     <script src="https://wl.redbus.com/externaljavascript/loadwidget.js"></script>
-    @include('sweetalert::alert')
 </head>
 
 <body>
