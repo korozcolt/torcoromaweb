@@ -87,8 +87,8 @@ final class ChatbotTable extends PowerGridComponent
         return PowerGrid::eloquent()
         ->addColumn('ask')
         ->addColumn('answer')
-        ->addColumn('isActive',function (Chatbot $model) {
-            return ($model->isActive ? 'Activo' : 'Inactivo');
+        ->addColumn('is_active',function (Chatbot $model) {
+            return ($model->is_active ? 'Activo' : 'Inactivo');
         });
     }
 
@@ -117,7 +117,7 @@ final class ChatbotTable extends PowerGridComponent
                 ->sortable()
                 ->searchable(),
                 
-            Column::make('Activo', 'isActive')
+            Column::make('Activo', 'is_active')
                 ->sortable()
                 ->searchable(),
         ]
@@ -142,9 +142,10 @@ final class ChatbotTable extends PowerGridComponent
     public function actions(): array
     {
         return [
-            // Button::make('edit', 'Edit')
-            //     ->class('bg-indigo-500 cursor-pointer text-white px-3 py-2.5 m-1 rounded text-sm')
-            //     ->route('chatbot.edit', ['chatbot' => 'id']),
+            Button::make('edit', 'Edit')
+                ->class('bg-indigo-500 cursor-pointer text-white px-3 py-2.5 m-1 rounded text-sm')
+                ->target('_self')
+                ->route('chatbot.edit', ['chatbot' => 'id']),
 
             Button::make('destroy', 'Delete')
                 ->class('bg-red-500 cursor-pointer text-white px-3 py-2 m-1 rounded text-sm')

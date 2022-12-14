@@ -13,6 +13,7 @@
 
     <!-- Styles -->
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+    <link rel="stylesheet" href="https://unpkg.com/@themesberg/flowbite@1.1.0/dist/flowbite.min.css" />
 
 
     <!-- Styles -->
@@ -52,6 +53,7 @@
     @include('sweetalert::alert')
     @stack('modals')
     @livewire('livewire-ui-modal')
+    <script src="https://unpkg.com/@themesberg/flowbite@1.1.0/dist/flowbite.bundle.js"></script>
 </body>
 
 </html>

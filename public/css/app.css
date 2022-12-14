@@ -1418,6 +1418,9 @@ select {
 .w-2 {
 	width: 0.5rem;
 }
+.w-11 {
+	width: 2.75rem;
+}
 .min-w-full {
 	min-width: 100%;
 }
@@ -2311,6 +2314,10 @@ select {
 }
 .ease-linear {
 	transition-timing-function: linear;
+}
+input:checked ~ .dot {
+    transform: translateX(100%);
+    background-color: #48bb78;
 }
 .hover\:border-gray-300:hover {
 	--tw-border-opacity: 1;

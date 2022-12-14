@@ -24,8 +24,8 @@ class UpdateChatbotRequest extends FormRequest
     public function rules()
     {
         return [
-            'ask' => 'required|string|regex:/^[\s\w-]*$/u|unique:chatbots',
-            'answer' => 'required|string|unique:chatbots',
+            'ask' => 'required|string|regex:/^[\s\w-]*$/u',
+            'answer' => 'required|string',
         ];
     }
 
