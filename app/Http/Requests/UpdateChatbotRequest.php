@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class StoreChatbotRequest extends FormRequest
+class UpdateChatbotRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -45,7 +45,7 @@ class StoreChatbotRequest extends FormRequest
         ];
     }
 
-    /**
+        /**
      * Get the attributes names.
      *
      * @return array<string, mixed>

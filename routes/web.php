@@ -26,7 +26,7 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     Route::put('/page-update/{id}',[SettingPageController::class,'update'])->name('settings.update');
     Route::post('/page-create',[SettingPageController::class,'store'])->name('settings.store');
     Route::resource('support', SupportController::class)->except(['create','show']);
-    Route::resource('chatbot', ChatbotController::class)->except(['create','show']);
+    Route::resource('chatbot', ChatbotController::class)->except(['show']);
 });
 
 Route::match(['get', 'post'], 'botman', [BotManController::class, 'handle']);

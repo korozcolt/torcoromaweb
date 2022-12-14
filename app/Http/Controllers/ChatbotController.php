@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\StoreChatbotRequest;
+use App\Http\Requests\UpdateChatbotRequest;
 use App\Models\Chatbot;
+use RealRashid\SweetAlert\Facades\Alert;
 use Illuminate\Http\Request;
 
 class ChatbotController extends Controller
@@ -24,7 +27,7 @@ class ChatbotController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.chat.create');
     }
 
     /**
@@ -33,20 +36,12 @@ class ChatbotController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StoreChatbotRequest $request)
     {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Chatbot  $chatbot
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Chatbot $chatbot)
-    {
-        //
+        Chatbot::create($request->validated());
+        
+        Alert::success('Chatbot','Pregunta y respuesta registrada exitosamente');
+        return redirect()->route('chatbot.index');
     }
 
     /**
@@ -67,9 +62,12 @@ class ChatbotController extends Controller
      * @param  \App\Models\Chatbot  $chatbot
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Chatbot $chatbot)
+    public function update(UpdateChatbotRequest $request, Chatbot $chatbot)
     {
-        //
+        $chatbot->fill($request->validated())->save();
+        Alert::success('PQRS Actualizado','Mensaje actualizado exitosamente');
+        
+        return redirect()->route('support.index');
     }
 
     /**
@@ -80,6 +78,9 @@ class ChatbotController extends Controller
      */
     public function destroy(Chatbot $chatbot)
     {
-        //
+        $chatbot->delete();
+        Alert::success('Chatbot','Pregunta y respuesta eliminada exitosamente');
+        
+        return redirect()->route('chatbot.index');
     }
 }

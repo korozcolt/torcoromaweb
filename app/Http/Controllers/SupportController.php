@@ -27,10 +27,9 @@ class SupportController extends Controller
      */
     public function store(StoreSupportRequest $request)
     {
-        //save the request
         Support::create($request->validated());
-        //redirect to the index page
         Alert::success('PQRS Enviado','Mensaje enviado exitosamente');
+        
         return back();
     }
 
@@ -54,11 +53,10 @@ class SupportController extends Controller
      */
     public function update(UpdateSupportRequest $request, Support $support)
     {
-        //update support object
         $support->fill($request->validated())->save();
-        //redirect to the index page
         Alert::success('PQRS Actualizado','Mensaje actualizado exitosamente');
-        return back();
+        
+        return redirect()->route('support.index');
     }
 
     /**
@@ -71,6 +69,7 @@ class SupportController extends Controller
     {
         $support->delete();
         Alert::success('PQRS Eliminado','Mensaje eliminado exitosamente');
-        return route('admin.support.index');
+        
+        return redirect()->route('support.index');
     }
 }

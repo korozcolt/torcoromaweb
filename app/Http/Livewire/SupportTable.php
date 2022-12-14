@@ -20,7 +20,7 @@ enum Status: string
         {
             return match ($this) {
                 self::pending         => "👍 Recibido",
-                self::in_progress       => "✍ En Progreso",
+                self::in_progress       => "⌛ En Progreso",
                 self::resolved      => "✅ Resuelto",
                 self::closed      => "❌ Cerrado",
             };

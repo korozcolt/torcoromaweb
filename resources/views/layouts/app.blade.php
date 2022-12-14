@@ -51,6 +51,7 @@
     @powerGridScripts
     @include('sweetalert::alert')
     @stack('modals')
+    @livewire('livewire-ui-modal')
 </body>
 
 </html>

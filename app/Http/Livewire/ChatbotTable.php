@@ -31,7 +31,7 @@ final class ChatbotTable extends PowerGridComponent
             Header::make()->showSearchInput(),
             Footer::make()
                 ->showPerPage()
-                ->showRecordCount(),
+                ->showRecordCount(mode: 'full'),
         ];
     }
 
@@ -50,7 +50,7 @@ final class ChatbotTable extends PowerGridComponent
     */
     public function datasource(): Builder
     {
-        return Chatbot::query();
+        return Chatbot::query()->orderBy('created_at', 'desc');
     }
 
     /*
@@ -84,7 +84,12 @@ final class ChatbotTable extends PowerGridComponent
     */
     public function addColumns(): PowerGridEloquent
     {
-        return PowerGrid::eloquent();
+        return PowerGrid::eloquent()
+        ->addColumn('ask')
+        ->addColumn('answer')
+        ->addColumn('isActive',function (Chatbot $model) {
+            return ($model->isActive ? 'Activo' : 'Inactivo');
+        });
     }
 
     /*
@@ -96,7 +101,7 @@ final class ChatbotTable extends PowerGridComponent
     |
     */
 
-     /**
+    /**
      * PowerGrid Columns.
      *
      * @return array<int, Column>
@@ -104,6 +109,17 @@ final class ChatbotTable extends PowerGridComponent
     public function columns(): array
     {
         return [
+            Column::make('Pregunta', 'ask')
+                ->sortable()
+                ->searchable(),
+
+            Column::make('Respuesta', 'answer')
+                ->sortable()
+                ->searchable(),
+                
+            Column::make('Activo', 'isActive')
+                ->sortable()
+                ->searchable(),
         ]
 ;
     }
@@ -116,27 +132,28 @@ final class ChatbotTable extends PowerGridComponent
     |
     */
 
-     /**
+    /**
      * PowerGrid Chatbot Action Buttons.
      *
      * @return array<int, Button>
      */
 
-    /*
+    
     public function actions(): array
     {
-       return [
-           Button::make('edit', 'Edit')
-               ->class('bg-indigo-500 cursor-pointer text-white px-3 py-2.5 m-1 rounded text-sm')
-               ->route('chatbot.edit', ['chatbot' => 'id']),
+        return [
+            // Button::make('edit', 'Edit')
+            //     ->class('bg-indigo-500 cursor-pointer text-white px-3 py-2.5 m-1 rounded text-sm')
+            //     ->route('chatbot.edit', ['chatbot' => 'id']),
 
-           Button::make('destroy', 'Delete')
-               ->class('bg-red-500 cursor-pointer text-white px-3 py-2 m-1 rounded text-sm')
-               ->route('chatbot.destroy', ['chatbot' => 'id'])
-               ->method('delete')
+            Button::make('destroy', 'Delete')
+                ->class('bg-red-500 cursor-pointer text-white px-3 py-2 m-1 rounded text-sm')
+                ->target('_self')
+                ->route('chatbot.destroy', ['chatbot' => 'id'])
+                ->method('delete')
         ];
     }
-    */
+    
 
     /*
     |--------------------------------------------------------------------------
@@ -146,7 +163,7 @@ final class ChatbotTable extends PowerGridComponent
     |
     */
 
-     /**
+    /**
      * PowerGrid Chatbot Action Rules.
      *
      * @return array<int, RuleActions>
@@ -155,7 +172,7 @@ final class ChatbotTable extends PowerGridComponent
     /*
     public function actionRules(): array
     {
-       return [
+        return [
 
            //Hide button edit for ID 1
             Rule::button('edit')

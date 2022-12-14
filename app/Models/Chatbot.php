@@ -17,17 +17,18 @@ class Chatbot extends Model
         'is_active',
     ];
 
+    protected $cast = [
+        'ask' => 'string',
+        'answer' => 'string',
+    ];
+
     protected function ask(): Attribute
     { 
-        return Attribute::make(
-            set: fn($value) => Str::lower($value),
+        return new Attribute(
+            get: fn($value) => 
+                Str::of($value)->replaceMatches('[^a-zA-Z0-9]','')->ascii()->lower()->squish(),
+            set: fn($value) => 
+                Str::of($value)->replaceMatches('[^a-zA-Z0-9]','')->ascii()->lower()->squish(),
         );
     }
-
-    protected function answer(): Attribute
-    { 
-        return Attribute::make(
-            set: fn($value) => Str::lower($value),
-        );
-    }
-}
+} 
