@@ -4,7 +4,6 @@ namespace App\Observers;
 
 use App\Mail\SupportMail;
 use App\Models\Support;
-use App\Notifications\SupportResponse;
 
 class SupportObserver
 {

@@ -20,16 +20,6 @@ class SupportController extends Controller
     }
 
     /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        
-    }
-
-    /**
      * Store a newly created resource in storage.
      *
      * @param  \App\Http\Requests\StoreSupportRequest  $request
@@ -45,17 +35,6 @@ class SupportController extends Controller
     }
 
     /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Support  $support
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Support $support)
-    {
-        //
-    }
-
-    /**
      * Show the form for editing the specified resource.
      *
      * @param  \App\Models\Support  $support
@@ -63,7 +42,7 @@ class SupportController extends Controller
      */
     public function edit(Support $support)
     {
-        //
+        return view('admin.support.edit', compact('support'));
     }
 
     /**
@@ -76,7 +55,7 @@ class SupportController extends Controller
     public function update(UpdateSupportRequest $request, Support $support)
     {
         //update support object
-        $support->update($request->validated());
+        $support->fill($request->validated())->save();
         //redirect to the index page
         Alert::success('PQRS Actualizado','Mensaje actualizado exitosamente');
         return back();
@@ -90,6 +69,8 @@ class SupportController extends Controller
      */
     public function destroy(Support $support)
     {
-        //
+        $support->delete();
+        Alert::success('PQRS Eliminado','Mensaje eliminado exitosamente');
+        return route('admin.support.index');
     }
 }

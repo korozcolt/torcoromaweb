@@ -2,31 +2,14 @@
 
 namespace App\Http\Livewire;
 
-use App\Models\Support;
+use App\Models\Chatbot;
 use Illuminate\Support\Carbon;
 use Illuminate\Database\Eloquent\Builder;
 use PowerComponents\LivewirePowerGrid\Rules\{Rule, RuleActions};
 use PowerComponents\LivewirePowerGrid\Traits\ActionButton;
 use PowerComponents\LivewirePowerGrid\{Button, Column, Exportable, Footer, Header, PowerGrid, PowerGridComponent, PowerGridEloquent};
 
-enum Status: string
-    {
-        case pending      = 'pending';
-        case in_progress = 'in_progress';
-        case resolved = 'resolved';
-        case closed = 'closed';
-
-        public function labels(): string
-        {
-            return match ($this) {
-                self::pending         => "👍 Recibido",
-                self::in_progress       => "✍ En Progreso",
-                self::resolved      => "✅ Resuelto",
-                self::closed      => "❌ Cerrado",
-            };
-        }
-    }
-final class SupportTable extends PowerGridComponent
+final class ChatbotTable extends PowerGridComponent
 {
     use ActionButton;
 
@@ -37,9 +20,6 @@ final class SupportTable extends PowerGridComponent
     | Setup Table's general features
     |
     */
-
-    
-    
     public function setUp(): array
     {
         $this->showCheckBox();
@@ -48,10 +28,10 @@ final class SupportTable extends PowerGridComponent
             Exportable::make('export')
                 ->striped()
                 ->type(Exportable::TYPE_XLS, Exportable::TYPE_CSV),
-            Header::make()->showSearchInput()->showToggleColumns(),
+            Header::make()->showSearchInput(),
             Footer::make()
                 ->showPerPage()
-                ->showRecordCount(mode: 'full'),
+                ->showRecordCount(),
         ];
     }
 
@@ -66,11 +46,11 @@ final class SupportTable extends PowerGridComponent
     /**
     * PowerGrid datasource.
     *
-    * @return Builder<\App\Models\Support>
+    * @return Builder<\App\Models\Chatbot>
     */
     public function datasource(): Builder
     {
-        return Support::query()->orderBy('created_at', 'desc');
+        return Chatbot::query();
     }
 
     /*
@@ -104,24 +84,7 @@ final class SupportTable extends PowerGridComponent
     */
     public function addColumns(): PowerGridEloquent
     {
-        return PowerGrid::eloquent()
-            ->addColumn('name')
-
-           /** Example of custom column using a closure **/
-            ->addColumn('name_lower', function (Support $model) {
-                return strtolower(e($model->name));
-            })
-
-            ->addColumn('phone')
-            ->addColumn('email')
-            ->addColumn('subject')
-            ->addColumn('message')
-            ->addColumn('status', function (Support $support) {
-                return Status::from($support->status)->labels();
-            })
-            ->addColumn('reply')
-            ->addColumn('created_at_formatted', fn (Support $model) => Carbon::parse($model->created_at)->format('d/m/Y H:i:s'))
-            ->addColumn('updated_at_formatted', fn (Support $model) => Carbon::parse($model->updated_at)->format('d/m/Y H:i:s'));
+        return PowerGrid::eloquent();
     }
 
     /*
@@ -141,44 +104,6 @@ final class SupportTable extends PowerGridComponent
     public function columns(): array
     {
         return [
-
-            Column::make('Nombre', 'name')
-                ->sortable()
-                ->searchable(),
-
-            Column::make('Telefono', 'phone')
-                ->sortable()
-                ->searchable(),
-
-            Column::make('Email', 'email')
-                ->sortable(),
-
-            Column::make('Asunto', 'subject')
-                ->sortable()
-                ->searchable(),
-
-            Column::make('Mensaje', 'message')
-                ->sortable()
-                ->searchable(),
-
-            Column::make('Estado', 'status')
-                ->sortable()
-                ->searchable(),
-
-            Column::make('Respuesta', 'reply')
-                ->sortable()
-                ->searchable(),
-
-            Column::make('Creado', 'created_at_formatted', 'created_at')
-                ->searchable()
-                ->sortable()
-                ->makeInputDatePicker(),
-
-            Column::make('Actualizado', 'updated_at_formatted', 'updated_at')
-                ->searchable()
-                ->sortable()
-                ->makeInputDatePicker(),
-
         ]
 ;
     }
@@ -192,27 +117,26 @@ final class SupportTable extends PowerGridComponent
     */
 
      /**
-     * PowerGrid Support Action Buttons.
+     * PowerGrid Chatbot Action Buttons.
      *
      * @return array<int, Button>
      */
 
-    
+    /*
     public function actions(): array
     {
        return [
-           Button::make('edit', 'Editar')
+           Button::make('edit', 'Edit')
                ->class('bg-indigo-500 cursor-pointer text-white px-3 py-2.5 m-1 rounded text-sm')
-               ->target('_self')
-               ->route('support.edit', ['support' => 'id']),
+               ->route('chatbot.edit', ['chatbot' => 'id']),
 
-        //    Button::make('destroy', 'Eliminar')
-        //        ->class('bg-red-500 cursor-pointer text-white px-3 py-2 m-1 rounded text-sm')
-        //        ->route('support.destroy', ['support' => 'id'])
-        //        ->method('delete')
+           Button::make('destroy', 'Delete')
+               ->class('bg-red-500 cursor-pointer text-white px-3 py-2 m-1 rounded text-sm')
+               ->route('chatbot.destroy', ['chatbot' => 'id'])
+               ->method('delete')
         ];
     }
-    
+    */
 
     /*
     |--------------------------------------------------------------------------
@@ -223,7 +147,7 @@ final class SupportTable extends PowerGridComponent
     */
 
      /**
-     * PowerGrid Support Action Rules.
+     * PowerGrid Chatbot Action Rules.
      *
      * @return array<int, RuleActions>
      */
@@ -235,7 +159,7 @@ final class SupportTable extends PowerGridComponent
 
            //Hide button edit for ID 1
             Rule::button('edit')
-                ->when(fn($support) => $support->id === 1)
+                ->when(fn($chatbot) => $chatbot->id === 1)
                 ->hide(),
         ];
     }

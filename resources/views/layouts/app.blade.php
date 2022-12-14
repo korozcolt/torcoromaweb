@@ -45,12 +45,12 @@
             {{ $slot }}
         </main>
     </div>
-    @include('sweetalert::alert')
-    @stack('modals')
+
     <!-- Scripts -->
     @livewireScripts
     @powerGridScripts
-    @livewire('livewire-ui-modal')
+    @include('sweetalert::alert')
+    @stack('modals')
 </body>
 
 </html>
