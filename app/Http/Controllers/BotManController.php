@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Chatbot;
 use BotMan\BotMan\BotMan;
 use Illuminate\Http\Request;
 use BotMan\BotMan\Messages\Incoming\Answer;
@@ -17,26 +18,29 @@ class BotManController extends Controller
 
         $botman->hears('{message}', function ($botman, $message) {
 
-            if ($message == 'hi') {
+            $save_message = Chatbot::whereLike('ask',"%{$message}%")->first();
+
+            if ($message == 'Hola' || $message == 'hola') {
                 $this->askName($botman);
-            } else {
-                $botman->reply("write 'hi' for testing...");
+            }
+            else if($save_message){
+                $botman->reply($save_message->answer);
+            }
+            else {
+                $botman->reply("Escriba 'Hola' para iniciar");
             }
         });
 
         $botman->listen();
     }
 
-    /**
-     * Place your BotMan logic here.
-     */
     public function askName($botman)
     {
-        $botman->ask('Hello! What is your Name?', function (Answer $answer) {
+        $botman->ask('Hola!, Quisieramos saber con quien estamos hablando?', function (Answer $answer) {
 
             $name = $answer->getText();
 
-            $this->say('Nice to meet you ' . $name);
+            $this->say('Mucho gusto, ' . $name .' en que podemos ayudarte?');
         });
     }
 }
