@@ -19,7 +19,7 @@ Route::prefix('/')->group(function () {
     Route::get('/api/test', [SupportController::class,'index'])->name('api.page');
 });
 
-//------------* ADMIN ROUTES *----------------//
+//--------------* ADMIN ROUTES *----------------//
 Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     Route::get('/dashboard', [SettingPageController::class, 'dashboard'])->name('dashboard');
     Route::get('/page-settings',[SettingPageController::class,'index'])->name('settings.admin');
