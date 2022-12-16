@@ -20,7 +20,7 @@
                                         </h6>
                                     </div>
                                 </div>
-                                @if (empty($info))
+                                @if (empty($page))
                                     <div class="flex-auto px-4 lg:px-10 py-10 pt-0">
                                         <form action="{{ route('settings.store') }}" method="post"
                                             enctype="multipart/form-data">
@@ -215,7 +215,7 @@
                                     </div>
                                 @else
                                     <div class="flex-auto px-4 lg:px-10 py-10 pt-0">
-                                        <form action="{{ route('settings.update', $info->id ?? '') }}" method="post">
+                                        <form action="{{ route('settings.update', $page) }}" method="post">
                                             @method('put')
                                             @csrf
                                             <h6 class="text-blueGray-400 text-sm mt-3 mb-6 font-bold uppercase">
@@ -242,7 +242,7 @@
                                                         </label>
                                                         <input type="text" name="title"
                                                             class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
-                                                            value="{{ $info->title ?? '' }}">
+                                                            value="{{ $page->title ?? '' }}">
                                                     </div>
                                                 </div>
                                                 <div class="w-full lg:w-6/12 px-4">
@@ -254,7 +254,7 @@
                                                         </label>
                                                         <input type="text" name="description"
                                                             class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
-                                                            value="{{ $info->description ?? '' }}">
+                                                            value="{{ $page->description ?? '' }}">
                                                     </div>
                                                 </div>
                                                 <div class="w-full lg:w-6/12 px-4">
@@ -266,7 +266,7 @@
                                                         </label>
                                                         <input type="email" name="email"
                                                             class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
-                                                            value="{{ $info->email ?? '' }}">
+                                                            value="{{ $page->email ?? '' }}">
                                                     </div>
                                                 </div>
                                                 <div class="w-full lg:w-6/12 px-4">
@@ -278,7 +278,7 @@
                                                         </label>
                                                         <input type="email" name="email2"
                                                             class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
-                                                            value="{{ $info->email2 ?? '' }}">
+                                                            value="{{ $page->email2 ?? '' }}">
                                                     </div>
                                                 </div>
                                             </div>
@@ -298,7 +298,7 @@
                                                         </label>
                                                         <input type="text" name="address"
                                                             class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
-                                                            value="{{ $info->address ?? '' }}">
+                                                            value="{{ $page->address ?? '' }}">
                                                     </div>
                                                 </div>
                                                 <div class="w-full lg:w-4/12 px-4">
@@ -310,7 +310,7 @@
                                                         </label>
                                                         <input type="text" name="phone"
                                                             class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
-                                                            value="{{ $info->phone ?? '' }}">
+                                                            value="{{ $page->phone ?? '' }}">
                                                     </div>
                                                 </div>
                                                 <div class="w-full lg:w-4/12 px-4">
@@ -322,7 +322,7 @@
                                                         </label>
                                                         <input type="text" name="phone2"
                                                             class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
-                                                            value="{{ $info->phone2 ?? '' }}">
+                                                            value="{{ $page->phone2 ?? '' }}">
                                                     </div>
                                                 </div>
                                                 <div class="w-full lg:w-4/12 px-4">
@@ -334,7 +334,7 @@
                                                         </label>
                                                         <input type="text" name="schedules"
                                                             class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
-                                                            value="{{ $info->schedules ?? '' }}">
+                                                            value="{{ $page->schedules ?? '' }}">
                                                     </div>
                                                 </div>
                                                 <div class="w-full lg:w-4/12 px-4">
@@ -346,7 +346,7 @@
                                                         </label>
                                                         <input type="text" name="facebook"
                                                             class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
-                                                            value="{{ $info->facebook ?? '' }}">
+                                                            value="{{ $page->facebook ?? '' }}">
                                                     </div>
                                                 </div>
                                                 <div class="w-full lg:w-4/12 px-4">
@@ -358,7 +358,7 @@
                                                         </label>
                                                         <input type="text" name="twitter"
                                                             class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
-                                                            value="{{ $info->twitter ?? '' }}">
+                                                            value="{{ $page->twitter ?? '' }}">
                                                     </div>
                                                 </div>
                                                 <div class="w-full lg:w-4/12 px-4">
@@ -370,7 +370,7 @@
                                                         </label>
                                                         <input type="text" name="instagram"
                                                             class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
-                                                            value="{{ $info->instagram ?? '' }}">
+                                                            value="{{ $page->instagram ?? '' }}">
                                                     </div>
                                                 </div>
                                                 <div class="w-full lg:w-4/12 px-4">
@@ -382,7 +382,7 @@
                                                         </label>
                                                         <input type="text" name="linkeid"
                                                             class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
-                                                            value="{{ $info->linkeid ?? '' }}">
+                                                            value="{{ $page->linkeid ?? '' }}">
                                                     </div>
                                                 </div>
                                                 <div class="w-full lg:w-4/12 px-4">
@@ -394,7 +394,7 @@
                                                         </label>
                                                         <input type="text" name="youtube"
                                                             class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
-                                                            value="{{ $info->youtube ?? '' }}">
+                                                            value="{{ $page->youtube ?? '' }}">
                                                     </div>
                                                 </div>
 

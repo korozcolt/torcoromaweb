@@ -3,15 +3,14 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\SettingRequest;
-use Illuminate\Http\Request;
 use App\Models\Page;
 use RealRashid\SweetAlert\Facades\Alert;
 
 class SettingPageController extends Controller
 {
     public function index(){
-        $info = Page::first();
-        return view('admin.settings',compact('info'));
+        $page = Page::first();
+        return view('admin.settings',compact('page'));
     }
 
     public function dashboard(){
@@ -20,19 +19,15 @@ class SettingPageController extends Controller
 
     public function store(SettingRequest $request){
 
-        Page::create($request->validate());
-
+        Page::create($request->validated());
         Alert::success('Success', 'Configuración guardada con éxito');
-        
         return redirect()->route('settings.admin');
         
     }
 
     public function update(SettingRequest $request, Page $page){
 
-        $info = Page::firstOrFail(['id' => $page->id]);
-        $info->fill($request->validated());
-        $info->save();
+        $page->fill($request->validated())->save();
         Alert::success('Success', 'Configuración actualizada');
         return redirect()->route('settings.admin');
     }

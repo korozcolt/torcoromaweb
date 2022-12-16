@@ -30,6 +30,11 @@ class SettingRequest extends FormRequest
             'phone' => 'required',
             'address' => 'required',
             'schedules' => 'required',
+            'facebook' => 'required',
+            'instagram' => 'required',
+            'twitter' => 'required',
+            'youtube' => 'required',
+            'linkeid' => 'required',
         ];
     }
 }
