@@ -24,7 +24,7 @@ Route::prefix('/')->group(function () {
 Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     Route::get('/dashboard', [SettingPageController::class, 'dashboard'])->name('dashboard');
     Route::get('/page-settings',[SettingPageController::class,'index'])->name('settings.admin');
-    Route::put('/page-update/{id}',[SettingPageController::class,'update'])->name('settings.update');
+    Route::put('/page-update/{page}',[SettingPageController::class,'update'])->name('settings.update');
     Route::post('/page-create',[SettingPageController::class,'store'])->name('settings.store');
     Route::resource('chatbot', ChatbotController::class)->except(['show']);
 });
