@@ -4,7 +4,7 @@
          <div class="container">
              <div class="ferry-responsive-menu">
                  <div class="logo">
-                     <a href="{{ route('page', 'home') }}">
+                     <a href="{{ route('page', '_home') }}">
                          <img src="{{ asset('images/logo.png') }}" alt="TORCOROMA LOGO">
                      </a>
                  </div>
@@ -22,7 +22,7 @@
                  <div class="collapse navbar-collapse mean-menu">
                      <ul class="navbar-nav ms-auto">
                          <li class="nav-item">
-                             <a href="{{ route('page', 'home') }}"
+                             <a href="{{ route('page', '_home') }}"
                                  class="nav-link {{ Request::path() == 'home' ? 'active' : '' }}">Inicio</a>
                          </li>
 
