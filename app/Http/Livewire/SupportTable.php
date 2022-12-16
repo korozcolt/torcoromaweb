@@ -70,7 +70,7 @@ final class SupportTable extends PowerGridComponent
     */
     public function datasource(): Builder
     {
-        return Support::query()->orderBy('created_at', 'desc');
+        return Support::query()->where('status','!=','closed')->orderBy('created_at', 'desc');
     }
 
     /*

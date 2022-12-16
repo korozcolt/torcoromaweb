@@ -17,6 +17,7 @@ Route::prefix('/')->group(function () {
     // ---------* SEND MAIL TICKETS *---------- //
     Route::post('/contact/send-message',[SupportController::class,'sendMail'])->name('contactus.send');
     Route::get('/api/test', [SupportController::class,'index'])->name('api.page');
+    Route::resource('support', SupportController::class)->except(['create','show']);
 });
 
 //--------------* ADMIN ROUTES *----------------//
@@ -25,7 +26,6 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     Route::get('/page-settings',[SettingPageController::class,'index'])->name('settings.admin');
     Route::put('/page-update/{id}',[SettingPageController::class,'update'])->name('settings.update');
     Route::post('/page-create',[SettingPageController::class,'store'])->name('settings.store');
-    Route::resource('support', SupportController::class)->except(['create','show']);
     Route::resource('chatbot', ChatbotController::class)->except(['show']);
 });
 
