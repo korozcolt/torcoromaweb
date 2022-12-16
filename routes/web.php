@@ -11,9 +11,9 @@ use Illuminate\Support\Facades\Route;
 //--------------* PAGES ROUTES *-----------------//
 Route::prefix('/')->group(function () {
     // ---------* PAGE STATIC *----------------- //
-    Route::get('/',[HomeController::class,'index'])->name('page.home');
+    Route::get('/',[HomeController::class,'index'])->name('page._home');
     // ---------* PAGE DYNAMIC *---------------- //
-    Route::get('/{page}', HomeController::class)->name('page')->where('page','about|faq|contact|home|service|api|policy');
+    Route::get('/{page}', HomeController::class)->name('page')->where('page','about|faq|contact|_home|service|api|policy');
     // ---------* SEND MAIL TICKETS *---------- //
     Route::post('/contact/send-message',[SupportController::class,'sendMail'])->name('contactus.send');
     Route::get('/api/test', [SupportController::class,'index'])->name('api.page');

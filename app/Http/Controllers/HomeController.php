@@ -6,7 +6,6 @@ use App\Models\Page;
 
 class HomeController extends Controller
 {
-
     public function __invoke($page)
     {
         $metaTitle = __('Meta Title: ' . $page);
@@ -18,11 +17,10 @@ class HomeController extends Controller
     }
 
     public function index(){
-        return redirect()->route('page',['page' => 'home']);
+        return redirect()->route('page',['page' => '_home']);
     }
 
     public function pageInfo(){
         return Page::first();
     }
-
 }
