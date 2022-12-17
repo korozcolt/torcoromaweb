@@ -4,6 +4,7 @@ namespace App\Observers;
 
 use App\Mail\SupportMail;
 use App\Models\Support;
+use Illuminate\Support\Facades\Mail;
 
 class SupportObserver
 {
@@ -66,6 +67,6 @@ class SupportObserver
     {
         $user = Support::findOrFail($support->id)->first();
         
-        \Mail::to($user->email)->send(new $mailable($support));
+        Mail::to($user->email)->send(new $mailable($support));
     }
 }
