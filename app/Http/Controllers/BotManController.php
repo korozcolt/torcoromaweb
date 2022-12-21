@@ -17,14 +17,8 @@ class BotManController extends Controller
         $botman = app('botman');
 
         $botman->hears('{message}', function ($botman, $message) {
-
-            $save_message = Chatbot::whereLike('ask',"%{$message}%")->first();
-
             if ($message == 'Hola' || $message == 'hola') {
                 $this->askName($botman);
-            }
-            else if($save_message){
-                $botman->reply($save_message->answer);
             }
             else {
                 $botman->reply("Escriba 'Hola' para iniciar");

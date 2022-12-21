@@ -119,6 +119,7 @@
             bubbleBackground: '#f9cf0e',
             mainColor: '#f9cf0e',
             desktopHeight: 450,
+            frameEndpoint: '/botman/chat',
         };
     </script>
     <script src='https://cdn.jsdelivr.net/npm/botman-web-widget@0/build/js/widget.js'></script>
