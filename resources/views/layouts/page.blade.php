@@ -8,7 +8,7 @@
     <!-- ===============================================-->
     <!--    Document Title-->
     <!-- ===============================================-->
-    <title>{{ $metaTitle . ' - ' . $info->title ?? config('app.name', 'COOPERATIVA | TORCOROMA') }}</title>
+    <title>{{ $metaTitle . ' - ' . ($info->title ?? '') ?? config('app.name', 'COOPERATIVA | TORCOROMA') }}</title>
     <!-- ===============================================-->
     <!--    Favicons-->
     <!-- ===============================================-->
@@ -46,6 +46,10 @@
     <link rel="stylesheet" href="{{ asset('css/responsive.css') }}">
     <script defer type="text/javascript" src="https://wl.redbus.com/javascripts/widget.min.js"></script>
     <script src="https://wl.redbus.com/externaljavascript/loadwidget.js"></script>
+    <script src="https://cdn.lr-in-prod.com/LogRocket.min.js" crossorigin="anonymous"></script>
+    <script>
+        window.LogRocket && window.LogRocket.init('f6nw7w/torocoromaweb');
+    </script>
 </head>
 
 <body>
@@ -113,7 +117,7 @@
     <script>
         var botmanWidget = {
             aboutText: 'Torcoroma WEB BOT',
-            introMessage: "✋ Hola!, Estamos para servirtelo, ¿En que te podemos ayudar?",
+            introMessage: "✋ Hola!, Estamos para servirte, ¿En que te podemos ayudar?",
             title: 'Torcoroma WEB BOT',
             placeholderText: 'Escribe tu mensaje aquí...',
             bubbleBackground: '#f9cf0e',
@@ -123,7 +127,7 @@
         };
     </script>
     <script src='https://cdn.jsdelivr.net/npm/botman-web-widget@0/build/js/widget.js'></script>
-
+    @include('partials.scripts')
 </body>
 
 </html>
