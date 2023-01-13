@@ -34,6 +34,38 @@
         </div>
     </div>
     <!-- End Best Logistic Area -->
+    <!-- Best Logistic Area -->
+    <div class="best-logistic-area ptb-100">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-12">
+                    <div class="logistic-text">
+                        <h2>AQUÍ <span>Puedes rastrear</span> un vehiculo</h2>
+                        <p>Escriba aqui el numero del vehiculo que aparece en su ticket y luego oprima el boton de busqueda.
+                        </p>
+                        <div class="form-group">
+                            <div class="input-group mb-2">
+                                <div class="col-md-10">
+                                    <input type="text" class="form-control" id="vehicle-plate"
+                                        placeholder="Escriba aqui el numero de su ticket"
+                                        aria-label="Escriba aqui el numero de su ticket"
+                                        aria-describedby="button-search-tracking">
+                                </div>
+                                <div class="input-group-append">
+                                    <button class="default-btn-one" type="button" onclick="searchTracking();"
+                                        id="button-search-tracking">Buscar</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="map-canvas" style="height: 425px; width: 100%; position: relative; overflow: hidden;">
+                        </div>
+                    </div>
+                    {{-- <a href="#" class="default-btn-one">Read More</a> --}}
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Best Logistic Area -->
 
     <!-- Our Services Area -->
     {{-- <div class="our-services-area ptb-100">
@@ -132,4 +164,46 @@
         </div>
     </div> --}}
     <!-- Our End Services Area -->
+@endsection
+
+@section('scripts')
+    <script>
+        var latitude = 0;
+        var longitude = 0;
+        var plate = 0;
+
+        function searchTracking() {
+            let plateInput = $('#vehicle-plate').val();
+            var places = @json($maps);
+
+            places.space.Response.Plate.forEach(element => {
+                if (plateInput == element["@id"]) {
+                    latitude = element.hst.Latitude;
+                    longitude = element.hst.Longitude;
+                    plate = element["@id"];
+                }
+            });
+            initMap();
+        }
+
+        function initMap() {
+            const myLatLng = {
+                lat: +latitude,
+                lng: +longitude
+            };
+            const map = new google.maps.Map(document.getElementById("map-canvas"), {
+                zoom: 17,
+                center: myLatLng,
+            });
+
+            new google.maps.Marker({
+                position: myLatLng,
+                map,
+                title: "Aqui esta tu vehiculo con placa: " + plate + "",
+            });
+        }
+        window.initMap = initMap;
+    </script>
+    <script type="text/javascript"
+        src="https://maps.google.com/maps/api/js?key={{ env('GOOGLE_MAP_KEY') }}&callback=initMap"></script>
 @endsection

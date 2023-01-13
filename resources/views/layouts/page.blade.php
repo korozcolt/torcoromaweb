@@ -44,12 +44,15 @@
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     <!-- Stylesheet Responsive CSS -->
     <link rel="stylesheet" href="{{ asset('css/responsive.css') }}">
-    <script defer type="text/javascript" src="https://wl.redbus.com/javascripts/widget.min.js"></script>
-    <script src="https://wl.redbus.com/externaljavascript/loadwidget.js"></script>
-    <script src="https://cdn.lr-in-prod.com/LogRocket.min.js" crossorigin="anonymous"></script>
-    <script>
-        window.LogRocket && window.LogRocket.init('f6nw7w/torocoromaweb');
-    </script>
+    <!-- Scripts without good developers -->
+    @if (env('APP_ENV') == 'production')
+        <script defer type="text/javascript" src="https://wl.redbus.com/javascripts/widget.min.js"></script>
+        <script src="https://wl.redbus.com/externaljavascript/loadwidget.js"></script>
+        <script src="https://cdn.lr-in-prod.com/LogRocket.min.js" crossorigin="anonymous"></script>
+        <script>
+            window.LogRocket && window.LogRocket.init('f6nw7w/torocoromaweb');
+        </script>
+    @endif
 </head>
 
 <body>
@@ -127,7 +130,7 @@
         };
     </script>
     <script src='https://cdn.jsdelivr.net/npm/botman-web-widget@0/build/js/widget.js'></script>
-    @include('partials.scripts')
+    @yield('scripts')
 </body>
 
 </html>

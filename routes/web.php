@@ -29,7 +29,7 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     Route::put('/page-update/{page}',[SettingPageController::class,'update'])->name('settings.update');
     Route::post('/page-create',[SettingPageController::class,'store'])->name('settings.store');
     Route::resource('chatbot', ChatbotController::class)->except(['show']);
-    Route::get('/tracking', [TrackingController::class, 'index'])->name('tracking');
+    
 });
-
+Route::get('/tracking', [TrackingController::class, 'index'])->name('tracking');
 Route::match(['get', 'post'], 'botman', [BotManController::class, 'handle']);

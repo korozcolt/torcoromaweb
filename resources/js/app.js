@@ -22,5 +22,3 @@ window.deleteConfirm = function (e) {
             }
         });
 }
-
-
