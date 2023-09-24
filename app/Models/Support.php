@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Exception;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -26,7 +27,7 @@ class Support extends Model
 
         static::creating(function ($model) {
             if (!$model->id_pqr) {
-                $model->generateUniqueRandomIdPqr();
+                $model->id_pqr = $model->generateUniqueRandomIdPqr();
             }
         });
     }
@@ -42,14 +43,14 @@ class Support extends Model
     }
 
     /**
-     * @throws \Exception
+     * @throws Exception
      */
-    public function generateUniqueRandomIdPqr()
+    public function generateUniqueRandomIdPqr(): int
     {
         do {
-            $randomIdPqr = random_int(100000, 900000);
-        } while ($this->exists && self::where('id_pqr', $randomIdPqr)->exists());
+            $randomIdPqr = random_int(100000, 999999); // Cambiar el rango a 999999
+        } while (self::where('id_pqr', $randomIdPqr)->exists());
 
-        $this->attributes['id_pqr'] = $randomIdPqr;
+        return $randomIdPqr;
     }
 }

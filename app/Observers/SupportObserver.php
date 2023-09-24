@@ -16,7 +16,7 @@ class SupportObserver
      */
     public function created(Support $support)
     {
-        $this->sendMail($support, SupportMail::class);
+        //$this->sendMail($support, SupportMail::class);
     }
 
     /**
@@ -66,7 +66,7 @@ class SupportObserver
     private function sendMail(Support $support, $mailable)
     {
         $user = Support::findOrFail($support->id)->first();
-        
+
         Mail::to($user->email)->send(new $mailable($support));
     }
 }

@@ -507,7 +507,7 @@
                                                                 <td align="center" style="padding:0;Margin:0">
                                                                     <h1
                                                                         style="Margin:0;line-height:36px;mso-line-height-rule:exactly;font-family:roboto, 'helvetica neue', helvetica, arial, sans-serif;font-size:30px;font-style:normal;font-weight:bold;color:#333333">
-                                                                        Su solicitud ha sido creada o actualizada satisfactoriamente con No. {{ $support->id }}.
+                                                                        Su solicitud ha sido creada o actualizada satisfactoriamente con No. {{ $support->id_pqr }}.<br/>
                                                                         {{ \Carbon\Carbon::parse($support->updated_at)->setTimezone('America/Bogota')->format('d-m-Y h:i a') }}.
                                                                     </h1>
                                                                 </td>
@@ -517,7 +517,19 @@
                                                                     style="padding:0;Margin:0;padding-top:5px;padding-bottom:5px">
                                                                     <p
                                                                         style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:lato, 'helvetica neue', helvetica, arial, sans-serif;line-height:21px;color:#666666;font-size:14px">
-                                                                        Aquí está la información necesaria para revisar
+                                                                        Acuse de recibo</p>
+
+                                                                    <p
+                                                                        style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:lato, 'helvetica neue', helvetica, arial, sans-serif;line-height:21px;color:#666666;font-size:14px">Asunto: Radicado N° <b>{{ $support->id_pqr }}</b></p>
+                                                                    <p
+                                                                        style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:lato, 'helvetica neue', helvetica, arial, sans-serif;line-height:21px;color:#666666;font-size:14px">Fecha de radicado: <b>{{ \Carbon\Carbon::parse($support->updated_at)->setTimezone('America/Bogota')->format('d-m-Y h:i a') }}</b></p>
+
+                                                                    <p
+                                                                        style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:lato, 'helvetica neue', helvetica, arial, sans-serif;line-height:21px;color:#666666;font-size:14px">En atención a su solicitud nos permitimos informar que este documento ha sido radicado el día de hoy bajo el N° <b>{{ $support->id_pqr }}</b> Y debidamente direccionado para su respectivo trámite.
+
+                                                                        Para hacerle seguimiento a su solicitud o saber el estado de esta, se puede comunicar al teléfono: 605 2828979 o a través de la página web https://www.torcoromaweb.com/faq.  Este correo ha sido generado por un canal exclusivo de radicación; por favor NO responda al mismo ya que no podrá ser gestionado.</p>
+                                                                    <p
+                                                                        style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:lato, 'helvetica neue', helvetica, arial, sans-serif;line-height:21px;color:#666666;font-size:14px">Aquí está la información necesaria para revisar
                                                                         antes:<br></p>
                                                                 </td>
                                                             </tr>

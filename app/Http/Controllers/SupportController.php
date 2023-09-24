@@ -32,8 +32,10 @@ class SupportController extends Controller
      */
     public function store(StoreSupportRequest $request): RedirectResponse
     {
-        Support::create($request->validated());
-        Alert::success('PQRS Enviado','Mensaje enviado exitosamente');
+        $support = Support::create($request->validated());
+        $support->id_pqr = $support->generateUniqueRandomIdPqr();
+        $support->save();
+        Alert::success('PQRS Enviado','Mensaje enviado exitosamente con el número de ticket: '.$support->id_pqr.'.');
 
         return back();
     }
