@@ -104,4 +104,46 @@
             </div>
         </div>
     </div>
+    <div class="partner-area pb-100">
+        <div class="container">
+            <div class="section-title">
+                <span>Entidades Reguladoras</span>
+                <h2>Regulado por:</h2>
+            </div>
+            <div class="partner-slider owl-carousel owl-theme owl-loaded owl-drag">
+                <div class="owl-stage-outer">
+                    <div class="owl-stage"
+                         style="width: 616px;">
+                        <div class="owl-item cloned" style="width: 205.2px; margin-right: 30px;">
+                            <div class="partner-slider-item">
+                                <a href="#">
+                                    <img src="{{ asset('images/supertransporte_logo.png') }}" alt="supertransporte_logo">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="owl-item cloned" style="width: 205.2px; margin-right: 30px;">
+                            <div class="partner-slider-item">
+                                <a href="#">
+                                    <img src="{{ asset('images/sipor_logo.png') }}" alt="sipor_logo">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="owl-item cloned" style="width: 205.2px; margin-right: 30px;">
+                            <div class="partner-slider-item">
+                                <a href="#">
+                                    <img src="{{ asset('images/logosupersolidaria.webp') }}" alt="supersolidaria_logo">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="owl-nav disabled">
+                    <button type="button" role="presentation" class="owl-prev"><span aria-label="Previous">‹</span>
+                    </button>
+                    <button type="button" role="presentation" class="owl-next"><span aria-label="Next">›</span></button>
+                </div>
+                <div class="owl-dots disabled"></div>
+            </div>
+        </div>
+    </div>
 </footer>

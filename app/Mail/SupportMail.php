@@ -28,6 +28,6 @@ class SupportMail extends Mailable
      */
     public function build()
     {
-        return $this->subject('Este correo viene via WEB de Torcoroma WEB APP')->view('emails.supportMail', ['support' => $this->details]);
+        return $this->subject($this->details->subject . ' - Ticket: '. $this->details->id_pqr . ' - Torcoroma WEB')->view('emails.supportMail', ['support' => $this->details]);
     }
 }

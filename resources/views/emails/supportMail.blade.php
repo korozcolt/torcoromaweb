@@ -23,7 +23,7 @@
     </o:OfficeDocumentSettings>
 </xml>
 <![endif]-->
-    <!--[if !mso]><!-- -->
+    <!--[if !mso]>-->
     <link href="https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700,700i" rel="stylesheet">
     <!--<![endif]-->
@@ -507,8 +507,8 @@
                                                                 <td align="center" style="padding:0;Margin:0">
                                                                     <h1
                                                                         style="Margin:0;line-height:36px;mso-line-height-rule:exactly;font-family:roboto, 'helvetica neue', helvetica, arial, sans-serif;font-size:30px;font-style:normal;font-weight:bold;color:#333333">
-                                                                        Su ticket ha sido creado o actualizado
-                                                                        {{ $support->updated_at->format('d-m-Y') }}.
+                                                                        Su solicitud ha sido creada o actualizada satisfactoriamente con No. {{ $support->id }}.
+                                                                        {{ \Carbon\Carbon::parse($support->updated_at)->setTimezone('America/Bogota')->format('d-m-Y h:i a') }}.
                                                                     </h1>
                                                                 </td>
                                                             </tr>

@@ -38,12 +38,10 @@ final class SupportTable extends PowerGridComponent
     |
     */
 
-    
-    
+
+
     public function setUp(): array
     {
-        $this->showCheckBox();
-
         return [
             Exportable::make('export')
                 ->striped()
@@ -66,7 +64,7 @@ final class SupportTable extends PowerGridComponent
     /**
     * PowerGrid datasource.
     *
-    * @return Builder<\App\Models\Support>
+    * @return Builder<Support>
     */
     public function datasource(): Builder
     {
@@ -114,14 +112,32 @@ final class SupportTable extends PowerGridComponent
 
             ->addColumn('phone')
             ->addColumn('email')
-            ->addColumn('subject')
-            ->addColumn('message')
+            ->addColumn('subject', function (Support $model) {
+                $subject = $model->subject;
+                if (strlen($subject) > 15) {
+                    $subject = substr($subject, 0, 15) . '...';
+                }
+                return $subject;
+            })
+            ->addColumn('message', function (Support $model) {
+                $message = $model->message;
+                if (strlen($message) > 15) {
+                    $message = substr($message, 0, 15) . '...';
+                }
+                return $message;
+            })
             ->addColumn('status', function (Support $support) {
                 return Status::from($support->status)->labels();
             })
-            ->addColumn('reply')
-            ->addColumn('created_at_formatted', fn (Support $model) => Carbon::parse($model->created_at)->format('d/m/Y H:i:s'))
-            ->addColumn('updated_at_formatted', fn (Support $model) => Carbon::parse($model->updated_at)->format('d/m/Y H:i:s'));
+            ->addColumn('reply', function (Support $model) {
+                $reply = $model->reply;
+                if (strlen($reply) > 15) {
+                    $reply = substr($reply, 0, 15) . '...';
+                }
+                return $reply;
+            })
+            ->addColumn('created_at_formatted', fn (Support $model) => Carbon::parse($model->created_at)->setTimezone('America/Bogota')->format('d-m-Y h:i a'))
+            ->addColumn('updated_at_formatted', fn (Support $model) => Carbon::parse($model->updated_at)->setTimezone('America/Bogota')->format('d-m-Y h:i a'));
     }
 
     /*
@@ -197,7 +213,7 @@ final class SupportTable extends PowerGridComponent
      * @return array<int, Button>
      */
 
-    
+
     public function actions(): array
     {
        return [
@@ -212,7 +228,7 @@ final class SupportTable extends PowerGridComponent
         //        ->method('delete')
         ];
     }
-    
+
 
     /*
     |--------------------------------------------------------------------------

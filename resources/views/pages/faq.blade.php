@@ -98,6 +98,8 @@
             </div>
 
             @include('pages.layouts.form-pqrs')
+            <hr />
+            @include('pages.layouts.search-pqrs')
         </div>
     </div>
     <!-- End Faq Area -->

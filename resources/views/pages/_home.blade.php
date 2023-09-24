@@ -283,46 +283,26 @@
             <div class="row">
                 <div class="col-lg-3 col-sm-6">
                     <div class="service-card">
-                        <i class='bx bxs-ship'></i>
-                        <h3>Costa caribe</h3>
-                        <p>Transporte y conexión por toda la costa caribe y municipios circundantes. Rapidos y seguros. Con
-                            protocolos de Bioseguridad.</p>
+                        <i class='bx bx-briefcase-alt'></i>
+                        <h3>Equipaje</h3>
+                        <p>Contamos con compartimentos especiales para que sus pertenencias viajen seguras y lleguen en perfectas condiciones a su lugar de destino.</p>
                         {{--                    <a href="service-details.html" class="default-btn-two">Read More</a> --}}
                     </div>
                 </div>
 
                 <div class="col-lg-3 col-sm-6">
                     <div class="service-card">
-                        <i class='bx bx-store'></i>
-                        <h3>Carga suficiente</h3>
-                        <p>Contamos con compartimentos especiales para que tus pertenencias y tu vayan comodos.</p>
-                        {{--                    <a href="service-details.html" class="default-btn-two">Read More</a> --}}
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-sm-6">
-                    <div class="service-card">
-                        <i class='bx bxs-truck'></i>
-                        <h3>Mensajería interdepartamental</h3>
-                        <p>Entregamos tus paquetes en los diferentes municipios principales de nuestro departamento.</p>
-                        {{--                    <a href="service-details.html" class="default-btn-two">Read More</a> --}}
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-sm-6">
-                    <div class="service-card">
-                        <i class='bx bx-transfer'></i>
-                        <h3>Rastrea tu ticket</h3>
-                        <p>Dentro de los muchos servicios que estamos por implementar, podrá encontrar el rastreo de su
-                            tiquete en tiempo real.</p>
+                        <i class='bx bx-shape-circle'></i>
+                        <h3>Cobertura</h3>
+                        <p>Operamos en la costa caribe Colombiana con más de 30 rutas cumpliendo los sueños e ilusiones de todos nuestros clientes.</p>
                         {{--                    <a href="service-details.html" class="default-btn-two">Read More</a> --}}
                     </div>
                 </div>
             </div>
 
-            <div class="view-btn">
-                <a href="{{ url('/') }}" class="default-btn">Verlos completo</a>
-            </div>
+{{--            <div class="view-btn">--}}
+{{--                <a href="{{ url('/') }}" class="default-btn">Verlos completo</a>--}}
+{{--            </div>--}}
         </div>
 
         <div class="services-shape">
@@ -339,7 +319,7 @@
 
         <div class="row">
             <div class="col-lg-12 col-md-12">
-                <div class="widget" data-widgetid="TORCOROMA" style="position: relative;width: 80%;margin:auto;"></div> 
+                <div class="widget" data-widgetid="TORCOROMA" style="position: relative;width: 80%;margin:auto;"></div>
             </div>
         </div>
     </div>
@@ -391,20 +371,55 @@
                             <span>¿Por qué escogernos?</span>
                             <h2>Un servicio logístico seguro y rápido para usted</h2>
                         </div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                            laboris</p>
+                        <p>En nuestra empresa de transporte terrestre, nos enorgullece ofrecer un servicio de entrega rápido y seguro para nuestros clientes en la costa caribe colombiana. Nuestro equipo altamente capacitado y nuestra flota de vehículos moderna nos permiten garantizar que tus productos lleguen a su destino de manera eficiente y sin contratiempos. Ya sea que necesites enviar mercancías a nivel local o nacional, puedes confiar en nosotros para brindarte un servicio logístico confiable y de calidad.</p>
 
-                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
-                            totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
-                            dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut
-                            fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+                        <p>Nuestro compromiso con la excelencia nos distingue de la competencia. Trabajamos arduamente para asegurarnos de que cada entrega se realice a tiempo y en perfectas condiciones. Nuestros conductores profesionales están capacitados para manejar cualquier desafío que se les presente en la carretera, lo que garantiza que tus productos estén en buenas manos durante todo el proceso de transporte.</p>
 
                         <a href="#" class="default-btn-one">Contactanos</a>
                         <div class="shape-image">
                             <img src="{{ asset('images/logo-iso.png') }}" alt="icon">
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="best-logistic-area ptb-100">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <div class="logistic-text">
+                            <h2>Conoce nuestra flota de buses</h2>
+                            <p>En nuestra empresa de transporte terrestre, nos enorgullece contar con una flota de buses moderna y segura que cumple con todas las medidas de seguridad. Nuestros buses están equipados con dispositivos tecnológicos avanzados que garantizan un viaje cómodo y seguro para nuestros pasajeros.</p>
+                        </div>
+{{--                        <a href="#" class="default-btn-one">Read More</a>--}}
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="logistic-image">
+                            <img src="{{ asset('images/buses_1.png') }}" alt="image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="best-logistic-area">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <div class="logistic-image">
+                            <img src="{{ asset('images/buses_2.png') }}" alt="image">
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="logistic-text">
+                            <p>Nuestros conductores altamente capacitados están comprometidos con la seguridad y el bienestar de nuestros pasajeros. Trabajamos arduamente para asegurarnos de que cada viaje sea una experiencia agradable y sin contratiempos.
+
+                                En nuestra flota, contamos con buses de diferentes tamaños y capacidades para satisfacer las necesidades específicas de nuestros clientes. Ya sea que necesites transportar a un grupo pequeño o grande, podemos ayudarte a encontrar la mejor opción para tus necesidades.</p>
+                        </div>
+                        {{--                        <a href="#" class="default-btn-one">Read More</a>--}}
+                    </div>
+
                 </div>
             </div>
         </div>

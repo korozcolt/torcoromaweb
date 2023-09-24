@@ -29,7 +29,10 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     Route::put('/page-update/{page}',[SettingPageController::class,'update'])->name('settings.update');
     Route::post('/page-create',[SettingPageController::class,'store'])->name('settings.store');
     Route::resource('chatbot', ChatbotController::class)->except(['show']);
-    
+
 });
 Route::get('/tracking', [TrackingController::class, 'index'])->name('tracking');
 Route::match(['get', 'post'], 'botman', [BotManController::class, 'handle']);
+
+//using SupportController the method verifyStatus to get the status of the ticket
+Route::get('/support/{id}/verify', [SupportController::class, 'verifyStatus'])->name('support.verify');
