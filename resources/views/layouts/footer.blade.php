@@ -116,21 +116,21 @@
                          style="width: 616px;">
                         <div class="owl-item cloned" style="width: 205.2px; margin-right: 30px;">
                             <div class="partner-slider-item">
-                                <a href="#">
+                                <a href="https://www.supertransporte.gov.co/" target="_blank">
                                     <img src="{{ asset('images/supertransporte_logo.png') }}" alt="supertransporte_logo">
                                 </a>
                             </div>
                         </div>
                         <div class="owl-item cloned" style="width: 205.2px; margin-right: 30px;">
                             <div class="partner-slider-item">
-                                <a href="#">
+                                <a href="https://www.mintransporte.gov.co/" target="_blank">
                                     <img src="{{ asset('images/sipor_logo.png') }}" alt="sipor_logo">
                                 </a>
                             </div>
                         </div>
                         <div class="owl-item cloned" style="width: 205.2px; margin-right: 30px;">
                             <div class="partner-slider-item">
-                                <a href="#">
+                                <a href="https://www.supersolidaria.gov.co/" target="_blank">
                                     <img src="{{ asset('images/logosupersolidaria.webp') }}" alt="supersolidaria_logo">
                                 </a>
                             </div>
