@@ -5,13 +5,14 @@ namespace App\Observers;
 use App\Mail\SupportMail;
 use App\Models\Support;
 use Illuminate\Support\Facades\Mail;
+use Resend\Laravel\Facades\Resend;
 
 class SupportObserver
 {
     /**
      * Handle the Support "created" event.
      *
-     * @param  \App\Models\Support  $support
+     * @param Support $support
      * @return void
      */
     public function created(Support $support)
@@ -22,7 +23,7 @@ class SupportObserver
     /**
      * Handle the Support "updated" event.
      *
-     * @param  \App\Models\Support  $support
+     * @param Support $support
      * @return void
      */
     public function updated(Support $support)
@@ -33,7 +34,7 @@ class SupportObserver
     /**
      * Handle the Support "deleted" event.
      *
-     * @param  \App\Models\Support  $support
+     * @param Support $support
      * @return void
      */
     public function deleted(Support $support)
@@ -44,7 +45,7 @@ class SupportObserver
     /**
      * Handle the Support "restored" event.
      *
-     * @param  \App\Models\Support  $support
+     * @param Support $support
      * @return void
      */
     public function restored(Support $support)
@@ -55,7 +56,7 @@ class SupportObserver
     /**
      * Handle the Support "force deleted" event.
      *
-     * @param  \App\Models\Support  $support
+     * @param Support $support
      * @return void
      */
     public function forceDeleted(Support $support)
@@ -65,8 +66,18 @@ class SupportObserver
 
     private function sendMail(Support $support, $mailable)
     {
-        $user = Support::findOrFail($support->id)->first();
+        Resend::emails()->send([
+            'from' => env('MAIL_FROM_ADDRESS'),
+            'to' => [$support->email],
+            'subject' => 'Su PQR ha sido radicada con No. ' . $support->id_pqr . ' - PQR TORCOROMA',
+            'html' => (new $mailable($support))->render(),
+        ]);
 
-        Mail::to($user->email)->send(new $mailable($support));
+        Resend::emails()->send([
+            'from' => env('MAIL_FROM_ADDRESS'),
+            'to' => [env('MAIL_USERNAME')],
+            'subject' => 'Su PQR ha sido radicada con No. ' . $support->id_pqr . ' - PQR TORCOROMA',
+            'html' => (new $mailable($support))->render(),
+        ]);
     }
 }

@@ -23,6 +23,7 @@
         "power-components/livewire-powergrid": "^3.5",
         "pusher/pusher-php-server": "^5.0",
         "realrashid/sweet-alert": "^5.1",
+        "resend/resend-laravel": "^0.7.0",
         "spatie/laravel-backup": "^8.0",
         "wire-elements/modal": "^1.0"
     },
