@@ -459,11 +459,11 @@
             style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;padding:0;Margin:0;width:100%;height:100%;background-repeat:repeat;background-position:center top;background-color:#FFFFFF">
             <tr>
                 <td valign="top" style="padding:0;Margin:0">
-                    <table cellpadding="0" cellspacing="0" class="es-header" align="center"
+                    <table cellpadding="0" cellspacing="0" class="es-header" align="left"
                         style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;table-layout:fixed !important;width:100%;background-color:transparent;background-repeat:repeat;background-position:center top">
                         <tr>
                             <td align="center" style="padding:0;Margin:0">
-                                <table bgcolor="#ffffff" class="es-header-body" align="center" cellpadding="0"
+                                <table bgcolor="#ffffff" class="es-header-body" align="left" cellpadding="0"
                                     cellspacing="0"
                                     style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;background-color:#FFFFFF;width:600px">
                                     <tr>
@@ -498,13 +498,13 @@
                                             <table cellpadding="0" cellspacing="0" width="100%"
                                                 style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px">
                                                 <tr>
-                                                    <td align="center" valign="top"
+                                                    <td align="left" valign="top"
                                                         style="padding:0;Margin:0;width:560px">
                                                         <table cellpadding="0" cellspacing="0" width="100%"
                                                             role="presentation"
                                                             style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px">
                                                             <tr>
-                                                                <td align="center" style="padding:0;Margin:0">
+                                                                <td align="left" style="padding:0;Margin:0">
                                                                     <h1
                                                                         style="Margin:0;line-height:36px;mso-line-height-rule:exactly;font-family:roboto, 'helvetica neue', helvetica, arial, sans-serif;font-size:30px;font-style:normal;font-weight:bold;color:#333333">
                                                                         Su solicitud ha sido creada o actualizada satisfactoriamente con No. {{ $support->id_pqr }}.<br/>
@@ -513,7 +513,7 @@
                                                                 </td>
                                                             </tr>
                                                             <tr>
-                                                                <td align="center"
+                                                                <td align="left"
                                                                     style="padding:0;Margin:0;padding-top:5px;padding-bottom:5px">
                                                                     <p
                                                                         style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:lato, 'helvetica neue', helvetica, arial, sans-serif;line-height:21px;color:#666666;font-size:14px">
@@ -534,7 +534,7 @@
                                                                 </td>
                                                             </tr>
                                                             <tr>
-                                                                <td align="center"
+                                                                <td align="left"
                                                                     style="padding:20px;Margin:0;font-size:0">
                                                                     <table border="0" width="100%" height="100%"
                                                                         cellpadding="0" cellspacing="0"
@@ -604,10 +604,10 @@
                             </td>
                         </tr>
                     </table>
-                    <table cellpadding="0" cellspacing="0" class="es-footer" align="center"
+                    <table cellpadding="0" cellspacing="0" class="es-footer" align="left"
                         style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;table-layout:fixed !important;width:100%;background-color:#E3CDC1;background-repeat:repeat;background-position:center top">
                         <tr>
-                            <td align="center" bgcolor="#ffffff" style="padding:0;Margin:0;background-color:#ffffff">
+                            <td align="left" bgcolor="#ffffff" style="padding:0;Margin:0;background-color:#ffffff">
                                 <table class="es-footer-body" align="center" cellpadding="0" cellspacing="0"
                                     style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;background-color:transparent;width:600px">
                                     <tr>
@@ -669,7 +669,7 @@
                                                             role="presentation"
                                                             style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px">
                                                             <tr>
-                                                                <td align="center"
+                                                                <td align="left"
                                                                     style="padding:0;Margin:0;position:relative"><img
                                                                         class="adapt-img"
                                                                         src="http://clipart-library.com/image_gallery2/Bus-PNG-Picture.png"
@@ -695,14 +695,14 @@
                                                             role="presentation"
                                                             style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px">
                                                             <tr>
-                                                                <td align="center"
+                                                                <td align="left"
                                                                     style="padding:0;Margin:0;padding-top:10px;padding-bottom:10px;font-size:0">
                                                                     <table cellpadding="0" cellspacing="0"
                                                                         class="es-table-not-adapt es-social"
                                                                         role="presentation"
                                                                         style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px">
                                                                         <tr>
-                                                                            <td align="center" valign="top"
+                                                                            <td align="left" valign="top"
                                                                                 style="padding:0;Margin:0"><a
                                                                                     target="_blank"
                                                                                     href="https://www.facebook.com/torcoromacol"
@@ -718,7 +718,7 @@
                                                                 </td>
                                                             </tr>
                                                             <tr>
-                                                                <td align="center"
+                                                                <td align="left"
                                                                     style="padding:0;Margin:0;padding-top:10px;padding-bottom:10px">
                                                                     <p
                                                                         style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:lato, 'helvetica neue', helvetica, arial, sans-serif;line-height:18px;color:#666666;font-size:12px">
