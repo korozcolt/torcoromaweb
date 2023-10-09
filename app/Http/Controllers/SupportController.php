@@ -111,7 +111,7 @@ class SupportController extends Controller
         $recaptcha_response = $request->input('g-recaptcha-response');
 
         if (is_null($recaptcha_response)) {
-            return redirect()->back()->with('status', 'Please Complete the Recaptcha to proceed');
+            return false;
         }
 
         $recaptcha_url = 'https://www.google.com/recaptcha/api/siteverify';
