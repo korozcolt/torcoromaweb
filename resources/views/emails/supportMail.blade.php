@@ -672,7 +672,7 @@
                                                                 <td align="left"
                                                                     style="padding:0;Margin:0;position:relative"><img
                                                                         class="adapt-img"
-                                                                        src="http://clipart-library.com/image_gallery2/Bus-PNG-Picture.png"
+                                                                        src="https://torcoromaweb.com/images/about-bottom.jpg"
                                                                         alt title width="270"
                                                                         style="display:block;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic"
                                                                         height="135"></td>
