@@ -53,6 +53,8 @@
             window.LogRocket && window.LogRocket.init('f6nw7w/torocoromaweb');
         </script>
     @endif
+
+    <script async src="https://www.google.com/recaptcha/api.js"></script>
 </head>
 
 <body>
