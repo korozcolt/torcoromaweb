@@ -37,6 +37,8 @@
             <label>Message</label>
             <textarea class="form-control" id="message" name="message" rows="3" placeholder="Mensaje completo"></textarea>
         </div>
+        <!-- Google Recaptcha -->
+        <div class="g-recaptcha mt-4" data-sitekey={{ config('services.recaptcha.key') }}></div>
 
         <div class="text-center">
             <button type="submit" class="faq-form-btn">Enviar mensaje</button>

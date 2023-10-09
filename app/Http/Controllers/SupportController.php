@@ -10,7 +10,9 @@ use Illuminate\Contracts\View\Factory;
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\RedirectResponse;
+use Illuminate\Support\Facades\Http;
 use RealRashid\SweetAlert\Facades\Alert;
+use Symfony\Component\HttpFoundation\IpUtils;
 
 class SupportController extends Controller
 {
@@ -32,12 +34,19 @@ class SupportController extends Controller
      */
     public function store(StoreSupportRequest $request): RedirectResponse
     {
-        $support = Support::create($request->validated());
-        $support->id_pqr = $support->generateUniqueRandomIdPqr();
-        $support->save();
-        Alert::success('PQRS Enviado','Mensaje enviado exitosamente con el número de ticket: '.$support->id_pqr.'.');
+        $verificationResult = $this->verifyCaptcha($request);
 
-        return back();
+        if ($verificationResult) {
+            $support = Support::create($request->validated());
+            $support->id_pqr = $support->generateUniqueRandomIdPqr();
+            $support->save();
+            Alert::success('PQRS Enviado','Mensaje enviado exitosamente con el número de ticket: '.$support->id_pqr.'.');
+
+            return back();
+        } else {
+            return redirect()->back()->with('status', 'Recaptcha verification failed, please try again.');
+        }
+
     }
 
     /**
@@ -58,7 +67,7 @@ class SupportController extends Controller
      * @param Support $support
      * @return RedirectResponse
      */
-    public function update(UpdateSupportRequest $request, Support $support)
+    public function update(UpdateSupportRequest $request, Support $support): RedirectResponse
     {
         $support->fill($request->validated())->save();
         Alert::success('PQRS Actualizado','Mensaje actualizado exitosamente');
@@ -89,5 +98,33 @@ class SupportController extends Controller
         $support = Support::where('id_pqr', $id)->firstOrFail();
         //return json response for ajax request
         return response()->json($support);
+    }
+
+    //recaptcha verification function
+
+    /**
+     * @param StoreSupportRequest $request
+     * @return bool
+     */
+    public function verifyCaptcha(StoreSupportRequest $request): bool
+    {
+        $recaptcha_response = $request->input('g-recaptcha-response');
+
+        if (is_null($recaptcha_response)) {
+            return redirect()->back()->with('status', 'Please Complete the Recaptcha to proceed');
+        }
+
+        $recaptcha_url = 'https://www.google.com/recaptcha/api/siteverify';
+
+        $body = [
+            'secret' => config('services.recaptcha.secret'),
+            'response' => $recaptcha_response,
+            'remoteip' => IpUtils::anonymize($request->ip())
+        ];
+
+        $response = Http::asForm()->post($recaptcha_url, $body);
+        $result = json_decode($response);
+
+        return $response->successful() && $result->success;
     }
 }
