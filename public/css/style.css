@@ -4548,6 +4548,7 @@ Privacy Policy Area
 }
 .privacy-policy .privacy-policy-text p {
   margin-bottom: 15px;
+  text-align: justify;
 }
 .privacy-policy .privacy-policy-text p:last-child {
   margin-bottom: 0;
