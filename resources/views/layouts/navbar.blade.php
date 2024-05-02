@@ -22,8 +22,7 @@
                  <div class="collapse navbar-collapse mean-menu">
                      <ul class="navbar-nav ms-auto">
                          <li class="nav-item">
-                             <a href="{{ route('page', '_home') }}"
-                                 class="nav-link {{ Request::path() == 'home' ? 'active' : '' }}">Inicio</a>
+                             <a href="{{ route('page', '_home') }}" class="nav-link {{ Request::path() == 'home' ? 'active' : '' }}">Inicio</a>
                          </li>
 
                          <li class="nav-item">
@@ -32,20 +31,17 @@
                              </a>
                              <ul class="dropdown-menu">
                                  <li class="nav-item">
-                                     <a href="{{ route('page', 'about') }}"
-                                         class="nav-link {{ Request::path() == 'about' ? 'active' : '' }}">Acerca
+                                     <a href="{{ route('page', 'about') }}" class="nav-link {{ Request::path() == 'about' ? 'active' : '' }}">Acerca
                                          de</a>
                                  </li>
                                  <li class="nav-item">
-                                     <a href="{{ route('page', 'faq') }}"
-                                         class="nav-link {{ Request::path() == 'faq' ? 'active' : '' }}">Formatos
+                                     <a href="{{ route('page', 'faq') }}" class="nav-link {{ Request::path() == 'faq' ? 'active' : '' }}">Formatos
                                          para transporte
                                          especializado</a>
                                  </li>
 
                                  <li class="nav-item">
-                                     <a href="{{ route('page', 'faq') }}"
-                                         class="nav-link {{ Request::path() == 'faq' ? 'active' : '' }}">Preguntas
+                                     <a href="{{ route('page', 'faq') }}" class="nav-link {{ Request::path() == 'faq' ? 'active' : '' }}">Preguntas
                                          Frecuentes</a>
                                  </li>
                              </ul>
@@ -57,21 +53,18 @@
                              </a>
                              <ul class="dropdown-menu">
                                  <li class="nav-item {{ Request::path() == 'sevice' ? 'active' : '' }}">
-                                     <a href="{{ route('page', 'service') . '#services' }}"
-                                         class="nav-link">Servicios</a>
+                                     <a href="{{ route('page', 'service') . '#services' }}" class="nav-link">Servicios</a>
                                  </li>
                                  <li class="nav-item">
-                                     <a href="{{ route('page', 'service') . '#buy-ticket' }}"
-                                         class="nav-link {{ Request::path() == 'sevice' ? 'active' : '' }}">Compra
+                                     <a href="{{ route('page', 'service') . '#buy-ticket' }}" class="nav-link {{ Request::path() == 'sevice' ? 'active' : '' }}">Compra
                                          tu
                                          tiquete</a>
                                  </li>
-                                 <li class="nav-item">
-                                     <a href="{{ route('page', 'service') . '#tracking' }}"
-                                         class="nav-link {{ Request::path() == 'sevice' ? 'active' : '' }}">Rastrea
+                                 <!--<li class="nav-item">
+                                     <a href="{{ route('page', 'service') . '#tracking' }}" class="nav-link {{ Request::path() == 'sevice' ? 'active' : '' }}">Rastrea
                                          tu
                                          ruta</a>
-                                 </li>
+                                 </li>-->
                              </ul>
                          </li>
 
@@ -81,29 +74,37 @@
                              </a>
                              <ul class="dropdown-menu">
                                  <li class="nav-item">
-                                     <a href="{{ route('page', 'policy') . '#rights' }}"
-                                         class="nav-link {{ Request::path() == 'policy' ? 'active' : '' }}">Derechos
-                                         y
-                                         Deberes De Los Pasajeros</a>
-                                 </li>
-                                 <li class="nav-item">
-                                     <a href="{{ route('page', 'policy') . '#security' }}"
-                                         class="nav-link {{ Request::path() == 'policy' ? 'active' : '' }}">Políticas
-                                         de
-                                         seguridad</a>
-                                 </li>
-                                 <li class="nav-item">
-                                     <a href="{{ route('page', 'policy') . '#terms' }}"
-                                         class="nav-link {{ Request::path() == 'policy' ? 'active' : '' }}">Terminos
+                                     <a href="{{ route('page', 'policy') . '#terms' }}" class="nav-link {{ Request::path() == 'policy' ? 'active' : '' }}">Terminos
                                          y
                                          condiciones</a>
                                  </li>
+                                 <li class="nav-item">
+                                     <a href="{{ route('page', 'policy') . '#security' }}" class="nav-link {{ Request::path() == 'policy' ? 'active' : '' }}">Política
+                                         integral y de prevención
+                                     </a>
+                                 </li>
+                                 <li class="nav-item">
+                                     <a href="{{ route('page', 'policy') . '#rights' }}" class="nav-link {{ Request::path() == 'policy' ? 'active' : '' }}">Política
+                                         de
+                                         equipaje</a>
+                                 </li>
+                                 <li class="nav-item">
+                                     <a href="{{ route('page', 'policy') . '#rights' }}" class="nav-link {{ Request::path() == 'policy' ? 'active' : '' }}">Política
+                                         de
+                                         reembolso</a>
+                                 </li>
+                                 <li class="nav-item">
+                                     <a href="{{ route('page', 'policy') . '#rights' }}" class="nav-link {{ Request::path() == 'policy' ? 'active' : '' }}">Derechos
+                                         y
+                                         Deberes De Los Pasajeros</a>
+                                 </li>
+
+
                              </ul>
                          </li>
 
                          <li class="nav-item">
-                             <a href="{{ route('page', 'contact') }}"
-                                 class="nav-link {{ Request::path() == 'contact' ? 'active' : '' }}">Contacto</a>
+                             <a href="{{ route('page', 'contact') }}" class="nav-link {{ Request::path() == 'contact' ? 'active' : '' }}">Contacto</a>
                          </li>
 
                          <li class="nav-item">

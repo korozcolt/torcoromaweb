@@ -54,8 +54,11 @@
                                             href="{{ asset('docs/F-GT-12_Autorizacion_Para_Transporte_Menores_de_Edad_Sin_Acompañante.pdf') }}">(Descargar
                                             Documento)</a>, luego imprimirlo y llenarlo con toda la información que allí es
                                         requerida.
-                                        ¡Recuerda! es indispensable que toda la información sea legible, sin tachones, ni
-                                        borrones.
+                                        <strong>¡Recuerda!</strong> es indispensable que toda la información sea legible, sin tachones, ni
+                                        borrones, adicional puede descargar la politica de transporte de menores de edad en el siguiente enlace
+                                        <a target="_blank"
+                                            href="{{ asset('docs/01 - D-GT-02 Politica Transporte Menor de Edad.pdf') }}">(Descargar
+                                            Documento)</a>.
                                     </p>
                                 </div>
                             </li>
