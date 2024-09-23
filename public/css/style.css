@@ -866,13 +866,13 @@ Hero Slider Area
   z-index: -1;
 }
 .hero-slider .hero-slider-item.item-bg1 {
-  background-image: url("../images/slide1.jpg");
+  background-image: url("../images/slide1.webp");
 }
 .hero-slider .hero-slider-item.item-bg2 {
-  background-image: url("../images/slide2.jpg");
+  background-image: url("../images/slide2.webp");
 }
 .hero-slider .hero-slider-item.item-bg3 {
-  background-image: url("../images/slide3.jpg");
+  background-image: url("../images/slide3.webp");
 }
 .hero-slider .banner-content {
   position: relative;
@@ -3117,13 +3117,13 @@ Page banner Area
   text-align: center;
 }
 .page-banner.bg-1 {
-  background-image: url("../images/banner-01.jpg");
+  background-image: url("../images/banner-01.webp");
 }
 .page-banner.bg-2 {
-  background-image: url("../images/banner-02.jpg");
+  background-image: url("../images/banner-02.webp");
 }
 .page-banner.bg-3 {
-  background-image: url("../images/banner-03.jpg");
+  background-image: url("../images/banner-03.webp");
 }
 .page-banner .page-content {
   margin-top: 115px;

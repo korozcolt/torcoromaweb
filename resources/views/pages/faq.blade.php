@@ -94,7 +94,7 @@
 
                     <div class="col-lg-6">
                         <div class="faq-image">
-                            <img src="{{ asset('images/about-page.jpg') }}" alt="image">
+                            <img src="{{ asset('images/about-page.webp') }}" alt="image">
                         </div>
                     </div>
                 </div>

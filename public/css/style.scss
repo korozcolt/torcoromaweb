@@ -1008,13 +1008,13 @@ Hero Slider Area
             z-index: -1;
         }
         &.item-bg1 {
-            background-image: url("../images/slide1.jpg");
+            background-image: url("../images/slide1.webp");
         }
         &.item-bg2 {
-            background-image: url("../images/slide2.jpg");
+            background-image: url("../images/slide2.webp");
         }
         &.item-bg3 {
-            background-image: url("../images/slide3.jpg");
+            background-image: url("../images/slide3.webp");
         }
     }
     .banner-content {
@@ -3392,13 +3392,13 @@ Page banner Area
     height: 450px;
     text-align: center;
     &.bg-1 {
-        background-image: url('../images/banner-01.jpg');
+        background-image: url('../images/banner-01.webp');
     }
     &.bg-2 {
-        background-image: url('../images/banner-02.jpg');
+        background-image: url('../images/banner-02.webp');
     }
     &.bg-3 {
-        background-image: url('../images/banner-03.jpg');
+        background-image: url('../images/banner-03.webp');
     }
     .page-content {
         margin-top: 115px;

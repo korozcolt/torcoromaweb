@@ -45,7 +45,7 @@
                 </div>
                 <div class="col-lg-6">
                     <div class="safe-image">
-                        <img src="{{ asset('images/about-page-main.jpg') }}" alt="image">
+                        <img src="{{ asset('images/about-page-main.webp') }}" alt="image">
                     </div>
                 </div>
             </div>
@@ -146,7 +146,7 @@
                 <div class="row align-items-center">
                     <div class="col-lg-6">
                         <div class="digital-image">
-                            <img src="{{ asset('images/about-bottom.jpg') }}" alt="image">
+                            <img src="{{ asset('images/about-bottom.webp') }}" alt="image">
                         </div>
                     </div>
 

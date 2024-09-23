@@ -163,7 +163,7 @@
 
                 <div class="col-lg-5">
                     <div class="about-image">
-                        <img src="{{ asset('images/about-page.jpg') }}" alt="about-image">
+                        <img src="{{ asset('images/about-page.webp') }}" alt="about-image">
                     </div>
                 </div>
 
@@ -396,7 +396,7 @@
                     </div>
                     <div class="col-lg-6">
                         <div class="logistic-image">
-                            <img src="{{ asset('images/buses_1.png') }}" alt="image">
+                            <img src="{{ asset('images/buses_1.webp') }}" alt="image">
                         </div>
                     </div>
                 </div>
@@ -408,7 +408,7 @@
                 <div class="row align-items-center">
                     <div class="col-lg-6">
                         <div class="logistic-image">
-                            <img src="{{ asset('images/buses_2.png') }}" alt="image">
+                            <img src="{{ asset('images/buses_2.webp') }}" alt="image">
                         </div>
                     </div>
                     <div class="col-lg-6">
